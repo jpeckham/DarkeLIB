@@ -1,0 +1,13 @@
+#/d/damned/inn/main_room.c
+props (["no scry":1,"no spell":1,"light":2,"no attack":0,"indoors":1,])
+__Smells ([])
+__Listens ([])
+__Searches ([])
+destinations (["west":"/d/daybreak/room/dbns2","east":"/d/damned/inn/gift_shop","south":"/d/damned/inn/foyer",])
+invis_exits ([])
+pre_exit_func ([])
+post_exit_func ([])
+tracks ({})
+__Items (["sun":,"green moon":,"sign":"Prices for rooms:(Real time, not Mud time)-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-Daily Rate:        1300 silverWeekly Rate:       410 goldMonthly Rate:      1500 gold","moon":,"luna":,"blue moon":,"moons":,"ankh":,"sky":,"warzau":,"red moon":,])
+reset_number 2
+owners (["/d/damned/virtual/inn_100.inn":(["owner":"parnell","time":1113702365,]),])

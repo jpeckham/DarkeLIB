@@ -1,0 +1,10 @@
+/daemon/tell_clean_d.c line 26: Warning: Unused local variable 'obj' before the end of line
+/daemon/tell_clean_d.c line 26: Warning: Unused local variable 'ob' before the end of line
+/daemon/tell_clean_d.c line 26: Warning: Unused local variable 'x' before the end of line
+/daemon/tell_clean_d.c line 36: Warning: Unused local variable 'inv' before the end of line
+/daemon/events_d.c line 181: Warning: Unused local variable 'who' before the end of line
+/daemon/events_d.c line 181: Warning: Unused local variable 'i' before the end of line
+/daemon/localpost.c line 123: Warning: Unused local variable 'g' before  
+/daemon/multi_d.c line 111: Warning: Expression has no side effects, and the value is unused before [name] = time();
+/daemon/player_d.c line 58: Warning: Unused local variable 'exp' before the end of line
+/daemon/save_all_d.c line 68: Warning: Unused local variable 'x' before the end of line

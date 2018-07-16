@@ -1,0 +1,16 @@
+inherit "std/room";
+
+
+void create() {
+  ::create();
+    set_property("light",3);
+    set_property("night light", 2);
+    add_exit("/d/damned/akkad/ak_slum1", "west");
+    add_exit("/d/damned/akkad/ak_victory8","east");
+    set("short","On Blessing Way west of Victory");
+    set("long","You are just east of the Slum Quarter where the lurkers live." +
+	"  This is definitely not a good place of town to be.  Perhaps you were " +
+	"looking for the clerics?  They are to the east.  To the west lies " +
+	"nothing but squalor, desolation, and death.");
+    
+}

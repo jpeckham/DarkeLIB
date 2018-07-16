@@ -1,0 +1,3 @@
+#/daemon/events_d.c
+__RebootInterval 24
+__Events (["/daemon/events_d":(["args":({}),"function":"change_sky","regular":0,"time":1111294561,]),"/daemon/mine_d":(["function":"stock_mines","args":({}),"time":1111302267,"regular":32400,]),"/daemon/castle_d":(["function":"check_upkeep","args":({}),"time":1111291444,"regular":86400,]),"/adm/daemon/inactivity_d":(["function":"check_inactivity","args":({}),"time":1111299766,"regular":64000,]),"/adm/daemon/wizchar_d":(["function":"output_log","args":({}),"time":1111302267,"regular":32400,]),])

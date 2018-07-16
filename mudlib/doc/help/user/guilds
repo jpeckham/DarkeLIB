@@ -1,0 +1,37 @@
+		    =-=-DarkeMUD Guild List-=-=
+		     =-Current <OPEN> Guilds-=
+Warrior		Mage		Priest		Semi-Warrior
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Fighter		Arch-Mage	Cleric		Chaotic-Lord
+Thief		Elementalist	War-Priest	Nightblade
+Tinker		Enchanter			Paladin
+		Necromancer			Sword-Mage
+
+		     =-=-Developing Guilds-=-=
+Warrior		Mage		Priest		Semi-Warrior
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Barbarian(-)	Moon-Mage(-)	Druid(+)	Crescent-Guard(*)
+Cavalier(+)			PoA(*)		Elemental-Warrior(+)
+Warrior-Monk(*)					Monk(*)
+						Ranger(+)
+
+*Note*	The classes are just general groupings on related abilities.
+	-Warrior      Combat oriented, no spells or similar abilities
+	-Mage	      Spell oriented, limited combat skills
+	-Priest	      Healing and protection type spells, limited combat
+	-SemiWarrior  Combination of combat and other unique abilities;
+			either spells or 'techniques' or 'abilities'
+
+(*)	These guilds are currently being developed and coded as you read
+	this text. They should be finished around the same time as other
+	continuing projects, within the present future (due to security 
+	reasons we may not release the finishing dates or we may be
+	mobbed, have another mud steal our secrets, and crash) =)
+
+(+)	Details and sketches of these guilds have been set aside or
+	worked on, but are not priorities. They will be coded after the
+	areas, priority guilds, and bug repairs.
+
+(-)	These guilds are on the backburner. The ideas have been merited
+	and the guilds will be coded sometime in the foreseable future,
+	possibly even sometime within our lifetime. =)

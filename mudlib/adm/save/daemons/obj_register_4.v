@@ -1,0 +1,1 @@
+(["locker_4":(["obj_34":"/d/damned/virtual/long-sword_6.weapon","obj_33":"/d/damned/virtual/long-sword_6.weapon","obj_32":"/d/damned/virtual/long-sword_6.weapon","obj_31":"/d/damned/virtual/long-sword_6.weapon",]),])

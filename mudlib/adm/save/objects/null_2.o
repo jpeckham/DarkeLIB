@@ -1,0 +1,6 @@
+#/std/diewarzau/obj/misc/greater_forge.c
+encumbrance 1300
+props (["value":100034,"no save":1,])
+true_name "forge"
+creator "/adm/daemon/save_items_d"
+register_idx 2

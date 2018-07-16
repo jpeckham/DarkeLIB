@@ -1,0 +1,52 @@
+#/std/user.c
+props (["base mp regen":6,"modify criticals":(["impact":-1,"cutting":-1,"plasma":1,"crushing":-1,"electricity":1,"strike":-1,"impaling":-1,"sweep":-1,]),"hp advance":30,"dev points":9915769,"extra mp regen":50,"mp advance":23,"reset max":0,"ambidextry":1,"dev cost":-10,"xp mod":-30,"magic resistance":15,"handedness":"right hand","light":0,"extra hp regen":20,"melee damage":(["crushing":5,]),"dev point base":50,"damage type":"vacid","base dev points":100,"base hp regen":6,])
+true_name "drizzt"
+creator "/adm/obj/login#9"
+max_internal_encumbrance 19700
+player_data (["general":(["max_hp":1000,"max_sp":7105,"quest points":152,"last adjust":836363331,"alignment":-278,"sp":478,"hp":1000,"exp buffer":0,"max exp":1635,"experience":1636,]),"kills":({1436,630,246,11,467,7,90,151,1,316,1441,1448,1424,1445,612,1461,1463,1442,1483,1481,1482,1480,1484,135,1443,1447,174,1511,1555,1449,1495,1526,1500,1690,1687,1513,1486,1836,1646,1476,1651,1040,1529,175,1910,1585,1870,296,1537,1790,1741,2051,1524,}),])
+magic (["points":100000,"max points":100000,])
+severed ([])
+healing (["quenched":0,])
+body (["left arm":(["armour_ob":({}),"weapon":0,"damage":0,"ac":0,"max_dam":333,"limb_ref":"left hand","crippled":0,"armour":({}),"weapons":0,]),"left foot":(["armour_ob":({}),"weapon":0,"damage":0,"ac":0,"max_dam":250,"limb_ref":"","crippled":0,"armour":({}),"weapons":0,]),"left hand":(["armour_ob":({}),"wieldable":1,"weapon":0,"damage":0,"ac":0,"max_dam":250,"limb_ref":"","crippled":0,"armour":({}),"weapons":0,]),"head":(["armour_ob":({}),"weapon":0,"damage":0,"ac":0,"max_dam":500,"limb_ref":"FATAL","crippled":0,"armour":({}),"weapons":0,]),"right hand":(["armour_ob":({}),"wieldable":1,"weapon":0,"damage":0,"ac":0,"max_dam":250,"limb_ref":"","crippled":0,"armour":({}),"weapons":0,]),"right foot":(["armour_ob":({}),"weapon":0,"damage":0,"ac":0,"max_dam":250,"limb_ref":"","crippled":0,"armour":({}),"weapons":0,]),"left leg":(["armour_ob":({}),"weapon":0,"damage":0,"ac":0,"max_dam":333,"limb_ref":"left foot","crippled":0,"armour":({}),"weapons":0,]),"right leg":(["armour_ob":({}),"weapon":0,"damage":0,"ac":0,"max_dam":333,"limb_ref":"right foot","crippled":0,"armour":({}),"weapons":0,]),"right arm":(["armour_ob":({}),"weapon":0,"damage":0,"ac":0,"max_dam":333,"limb_ref":"right hand","crippled":0,"armour":({}),"weapons":0,]),"torso":(["armour_ob":({}),"weapon":0,"damage":0,"ac":0,"max_dam":1000,"limb_ref":"FATAL","crippled":0,"armour":({}),"weapons":0,]),])
+limbs ({"right arm","right hand","right leg","right foot","head","left leg","torso","left arm","left hand","left foot",})
+all_my_fingers 5
+heal_rate 2
+char_class "chaotic-lord"
+skills (["two handed polearm":(["level":10,"last dev":({100,2,}),"stat":"dexterity",]),"compare":(["level":5,"last dev":({100,1,}),"stat":"intelligence",]),"detect magic":(["level":100,"stat":"intelligence",]),"control demon":(["level":150,"last dev":({0,0,}),"stat":"intelligence",]),"prayer":(["level":100,"last dev":({0,0,}),"stat":"wisdom",]),"attack":(["level":300,"max":0,"last dev":({0,0,}),"points":0,"stat":"dexterity",]),"disguise":(["level":5,"last dev":({100,1,}),"stat":"dexterity",]),"sorcery":(["level":200,"stat":"intelligence",]),"blunt":(["level":100,"last dev":({0,0,}),"stat":"dexterity",]),"enchantment":(["level":200,"last dev":({0,0,}),"stat":"intelligence",]),"illusionism":(["level":5,"last dev":({0,0,}),"stat":"intelligence",]),"blade":(["level":900,"last dev":({0,0,}),"stat":"dexterity",]),"parry":(["level":300,"last dev":({0,0,}),"stat":"dexterity",]),"melee":(["level":300,"max":0,"last dev":({0,0,}),"points":0,"stat":"strength",]),"perception":(["level":5000,"last dev":({0,0,}),"stat":"intelligence",]),"dodge":(["level":100,"last dev":({0,0,}),"stat":"dexterity",]),"body alteration":(["level":5,"last dev":({100,1,}),"stat":"wisdom",]),"martial arts":(["level":2000,"stat":"dexterity",]),"trade lore":(["level":5,"last dev":({0,0,}),]),"dual attack":(["level":400,"last dev":({0,0,}),"stat":"dexterity",]),"chaos magic":(["level":150,"last dev":({0,0,}),"stat":"intelligence",]),"whirlwind attack":(["level":500,"last use":826939710,"stat":"constitution",]),"magery":(["level":200,"last dev":({0,0,}),"stat":"intelligence",]),])
+spells (["enlarge":(["level":6,]),"summon rune":(["level":6,]),"stabilize familiar":(["level":6,"last dev":({100,6,}),]),"summon familiar":(["level":6,]),"diving transformation":(["level":6,]),"lesser demon sword":(["level":6,]),"armour of oblivion":(["level":6,]),"demon sword":(["level":6,]),"healing rune":(["level":6,]),"summon greater familiar":(["level":6,]),"stabalize familiar":(["level":6,]),"darkness":(["level":1,"last dev":({0,0,}),]),"exploding rune":(["level":6,]),"levitation":(["level":1,"last dev":({0,0,}),]),"clone":(["level":6,]),"summon lesser demon":(["level":6,]),"summon demon":(["level":2,]),"wrath of god":(["level":3,"last dev":({0,0,}),]),"faerie fire":(["level":1,"last dev":({0,0,}),]),"dispel magic":(["level":6,]),])
+wimpydir "out"
+env_var (["TERM":"ansi","start":"/wizards/drizzt/workroom","LINES":"30","TZONE":"CST","=-=-=":"$N =-=-=","TITLE":"$N is your Silicon Jesus","TRACE":"off","SCORE":"off","MINVIS":"$N jumps into a beer can.","INFORM":"on","title":"shit",])
+money (["gold":604806,"silver":1990,"electrum":2,"platinum":4500,"mithril":450990,])
+ok_to_heal 2289114
+player_age 2289114
+sight_bonus 34
+gender "male"
+stats (["constitution":600,"wisdom":70,"dex":1000000,"dexterity":1015,"intelligence":95,"strength":985,"charisma":1000,"constituion":90,])
+languages (["eltherian":10,"coderish":10,"common":9,"artrexcian":10,"farsi":10,"coderfish":10,"drow":10,"wraithish":10,"undead-tongue":10,])
+primary_language "common"
+language_exp (["elcharean":({6,0,}),"common":({19,0,}),"ersi":({0,0,}),"Coderish":({8,0,}),"terrakarn":({8,0,}),"farsi":({0,0,}),"tlinghan":({0,0,}),"farsiish":({1,0,}),"drow":({1,0,}),"Jamaican":({0,0,}),"gibberish":({3,0,}),])
+alias (["hm":"high-mortal","s":"south","sm":"sword-mage $*","cl":"chaotic-lord $*","crash":"echoall Atmos tells you think DarkeMUD is crashing!","d":"down","hp":"status","nw":"northwest",";":"admin $*","sw":"southwest","ss":"say shopkeeper, $*","se":"southeast","ne":"northeast","cemail":"call /daemon/email_d;query_player;\"$*\"","n":"north","u":"up","w":"west","la":"look at $*","i":"inventory","e":"east","l":"look $*","kk":"alias k kill $*","dd":"~diewarzau","lockers":"update /adm/daemon/save_items_d","cast":"hotcast $*","ga":"get all","k":"kill elf","crash2":"echoall Atmos forced you to: quit",])
+xverb (["$\"":"emote $*","$'":"say $*",])
+nicknames (["hd":"hdamodred","qf":"quickfire","emp":"empedocles","glor":"glorfindel","du":"deathurge","sho":"schoendrak","ev":"evangillion","zak":"zaknafein","nw":"nightwalker","cm":"claveman","die":"diewarzau","sw":"shadowraith","sb":"shadowbane",])
+auto_load ({})
+level 9999
+verbose_moves 1
+birth 763878781
+blocked (["intercre":1,"thief":1,"arena":1,"sword-mage":1,"shout":0,"paladin":1,"nightblade":1,"cre":0,"necromancer":1,"child":1,"arch-mage":1,"newbie":1,"fighter":1,"enchanter":1,"elementalist":1,"high-mortal":1,"cleric":1,"chaotic-lord":1,"council":0,"darke":1,"war-priest":1,"gossip":1,"tinker":1,"admin":0,])
+news (["general":2148,"arch":0,"immortal":1728,"class":-1,])
+snatch "on"
+default_who "normal"
+inf_block ({"net_dead_players",})
+real_name "Russell Epstein"
+email "drizzt@shadowlands.com"
+ip "localhost"
+last_on "Thu Jul  4 09:33:39 1996"
+password "f.$75s/RKh2su0QsTmKtm0ts1"
+cpath "/wizards/drizzt"
+race "drow-elf"
+original_site "131.151.1.59"
+position "superuser"
+primary_start "/wizards/drizzt/workroom"
+quests ({})
+mysites ({})
+guild "child"

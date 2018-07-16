@@ -1,0 +1,11 @@
+#/std/diewarzau/obj/misc/large_chest.c
+encumbrance 650
+props (["value":26000,])
+true_name "chest"
+creator "/cmds/system/_clone"
+possible_to_close 1
+is_closed 1
+max_internal_encumbrance 3200
+register_idx 1
+max_items 8
+closed_weight 90

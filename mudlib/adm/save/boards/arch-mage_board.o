@@ -1,0 +1,3 @@
+#/adm/daemon/bboard_d.c
+posts ({(["level":30,"date":1111199335,"message":"test test","title":"board","size":11,"owner":"parnell",]),})
+read_by ({({"parnell",}),})

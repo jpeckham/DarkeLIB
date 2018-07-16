@@ -1,0 +1,26 @@
+----------------------------------------------------------------------------
+DarkeDEV (MudOS v22.2b14) starting up on Linux - Sat Mar 19 19:57:21 2005
+
+
+Connection to address server (localhost 9990) refused.
+/adm/simul_efun/creator_file.c line 30: Warning: Unused local variable 'i' before the end of line
+/adm/simul_efun/resolv_path.c line 52: Warning: Unused local variable 't2' before the end of line
+/adm/simul_efun/resolv_path.c line 52: Warning: Unused local variable 't3' before the end of line
+/adm/simul_efun/resolv_path.c line 52: Warning: Unused local variable 't4' before the end of line
+/adm/simul_efun/overrides.c line 48: Warning: Unused local variable 'a' before the end of line
+/adm/simul_efun/to_object.c line 158: Warning: Unused local variable 'err' before the end of line
+/adm/simul_efun/effective_light.c line 22: Warning: Unused local variable 'i' before the end of line
+/adm/simul_efun/effective_light.c line 22: Warning: Unused local variable 'tmp' before the end of line
+/adm/obj/master.c line 379: Warning: Unused local variable 'tmp2' before the end of line
+/adm/obj/master.c line 522: Warning: Unused local variable 'x' before the end of line
+/adm/obj/master.c line 532: Warning: Unused local variable 'dir' before the end of line
+/adm/obj/master.c line 546: Warning: Unused local variable 'home' before the end of line
+/adm/obj/master.c line 612: Warning: Unused local variable 'x' before the end of line
+
+Loading preloaded files ...
+Initializations complete.
+
+Accepting connections on port 7878.
+Connection to address server (localhost 9990) refused.
+Connection to address server (localhost 9990) refused.
+Connection to address server (localhost 9990) refused.

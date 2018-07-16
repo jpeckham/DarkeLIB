@@ -1,0 +1,1 @@
+(["locker_1":(["obj_0":"/d/damned/virtual/long-sword_6.weapon",]),])

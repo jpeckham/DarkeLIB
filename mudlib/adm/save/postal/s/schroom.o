@@ -1,0 +1,4 @@
+#/daemon/localpost.c
+__Forward ""
+__MyGroups ([])
+__BoxInfo ({(["cc":({}),"subject":"test","date":1111253271,"read":1,"from":"parnell","to":({"schroom",}),"id":"1111253277",]),})

@@ -1,0 +1,4 @@
+#/daemon/localpost.c
+__Forward ""
+__MyGroups ([])
+__BoxInfo ({(["date":1111250418,"read":1,"subject":"test","cc":({}),"id":"1111250424","to":({"parnell",}),"from":"parnell",]),(["read":1,"date":1111253281,"subject":"test","cc":({}),"id":"1111253285","to":({"parnell",}),"from":"parnell",]),(["subject":"RE: test","date":1111253289,"cc":({}),"read":0,"id":"1111253295","to":({"parnell",}),"from":"schroom",]),})

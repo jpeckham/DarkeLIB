@@ -1,0 +1,2 @@
+/d/newbieville/rooms/bar.c line 84: Warning: Unused local variable 'i' before the end of line
+/d/newbieville/mon/barkeep.c line 11: Warning: Called function not compiled with type testing. before  {

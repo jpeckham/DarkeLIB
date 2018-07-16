@@ -1,0 +1,200 @@
+				%^RED%^Wed Feb 03 02:05:01 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] i'm gonna try to add combat color to the combat while you mess around
+				%^RED%^Wed Feb 03 02:05:15 1999 **
+[%^YELLOW%^admin%^RESET%^ : Zephlen] what is the file
+				%^RED%^Wed Feb 03 02:05:49 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] uh, i'd rather you not mess with combat...
+				%^RED%^Wed Feb 03 02:05:59 1999 **
+[%^YELLOW%^admin%^RESET%^ : Zephlen] gimme
+				%^RED%^Wed Feb 03 02:06:03 1999 **
+[%^YELLOW%^admin%^RESET%^ : Zephlen] I will not update
+				%^RED%^Wed Feb 03 02:06:11 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] you just want to know where?
+				%^RED%^Wed Feb 03 02:06:17 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] /std/living/combat.c
+				%^RED%^Wed Feb 03 02:07:15 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] armour is bitchin
+				%^RED%^Wed Feb 03 02:09:29 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] btw: you can view a file with more
+				%^RED%^Wed Feb 03 02:09:43 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] there's my armour code
+				%^RED%^Wed Feb 03 02:15:30 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] huh?
+				%^RED%^Wed Feb 03 02:17:40 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] do what?
+				%^RED%^Wed Feb 03 02:28:07 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] it says that cuz you have no files
+				%^RED%^Wed Feb 03 02:28:41 1999 **
+[%^YELLOW%^admin%^RESET%^ : Zephlen] did you do taht?
+				%^RED%^Wed Feb 03 02:29:07 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] now ls
+				%^RED%^Wed Feb 03 02:29:32 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] can't force gods =(
+				%^RED%^Wed Feb 03 02:29:33 1999 **
+[%^YELLOW%^admin%^RESET%^ : Zephlen] nope
+				%^RED%^Wed Feb 03 02:29:39 1999 **
+[%^YELLOW%^admin%^RESET%^ : Zephlen] I noticed
+				%^RED%^Wed Feb 03 02:31:08 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] one more try
+				%^RED%^Wed Feb 03 02:32:02 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] you have to define all functions with a type, i took out default typing
+				%^RED%^Wed Feb 03 02:33:19 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] ok exit ed a sec
+				%^RED%^Wed Feb 03 02:33:54 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] wait i see it, before create put void
+				%^RED%^Wed Feb 03 02:35:11 1999 **
+[%^YELLOW%^admin%^RESET%^] Parnell crosses his fingeres
+				%^RED%^Wed Feb 03 02:39:53 1999 **
+[%^YELLOW%^admin%^RESET%^ : Zephlen] how you do that?
+				%^RED%^Wed Feb 03 02:39:59 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] what?
+				%^RED%^Wed Feb 03 02:40:15 1999 **
+[%^YELLOW%^admin%^RESET%^ : Zephlen] reboot the mud
+				%^RED%^Wed Feb 03 02:40:29 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] help end
+				%^RED%^Wed Feb 03 02:41:29 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] what on earth are you thinking?
+				%^RED%^Wed Feb 03 02:42:28 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] oh geez
+				%^RED%^Wed Feb 03 02:43:44 1999 **
+[%^YELLOW%^admin%^RESET%^ : Zephlen] woops
+				%^RED%^Wed Feb 03 02:43:50 1999 **
+[%^YELLOW%^admin%^RESET%^] Parnell rofls
+				%^RED%^Wed Feb 03 02:45:07 1999 **
+[%^YELLOW%^admin%^RESET%^ : Zephlen] LOL!
+				%^RED%^Wed Feb 03 02:46:14 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] hrm spells seem to not be working
+				%^RED%^Wed Feb 03 20:19:34 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] bored?
+				%^RED%^Wed Feb 03 20:19:48 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] did you check mudlist?
+				%^RED%^Wed Feb 03 20:21:03 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] i haven't added darkchat to the channel daemon yet
+				%^RED%^Wed Feb 03 20:21:38 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] so what do you think of my coding skills?
+				%^RED%^Wed Feb 03 20:23:52 1999 **
+[%^YELLOW%^admin%^RESET%^ : Zephlen] the shit
+				%^RED%^Wed Feb 03 20:26:49 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] intermud tells are working decent
+				%^RED%^Wed Feb 03 20:27:12 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] and... i got my startup script automated, so now you can reboot and have it come back
+				%^RED%^Wed Feb 03 20:29:21 1999 **
+[%^YELLOW%^admin%^RESET%^ : Zephlen] cool
+				%^RED%^Wed Feb 03 20:29:44 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] i wish i could keep this thing up all the time and have players rip up the guilds for me... hehe
+				%^RED%^Wed Feb 03 20:30:06 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] oh pets seem to save too
+				%^RED%^Wed Feb 03 20:32:49 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] you want something tedious to do?
+				%^RED%^Wed Feb 03 20:32:53 1999 **
+[%^YELLOW%^admin%^RESET%^] Parnell grins
+				%^RED%^Wed Feb 03 20:38:07 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] this thing doesn't hog much memory ... maybe if there was fighting going on... i think i'll make a buff char and fight some stuff
+				%^RED%^Wed Feb 03 20:54:46 1999 **
+[%^YELLOW%^admin%^RESET%^ : Zephlen] sorry idle
+				%^RED%^Wed Feb 03 20:59:05 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] woo long terms fixed =)
+				%^RED%^Wed Feb 03 21:03:45 1999 **
+[%^YELLOW%^admin%^RESET%^ : Zephlen] bbl
+				%^RED%^Wed Feb 03 21:56:11 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] quick boot, combat's f'd
+				%^RED%^Wed Feb 03 21:56:52 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] hey
+				%^RED%^Wed Feb 03 21:56:59 1999 **
+[%^YELLOW%^admin%^RESET%^ : Zephlen] hehe.
+				%^RED%^Wed Feb 03 21:57:08 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] i don't want it -11
+				%^RED%^Wed Feb 03 21:57:09 1999 **
+[%^YELLOW%^admin%^RESET%^ : Zephlen] installing heriteck 2
+				%^RED%^Wed Feb 03 21:57:27 1999 **
+[%^YELLOW%^admin%^RESET%^ : Zephlen] haritic
+				%^RED%^Wed Feb 03 21:58:04 1999 **
+[%^YELLOW%^admin%^RESET%^ : Zephlen] how bout shutdown
+				%^RED%^Wed Feb 03 21:58:56 1999 **
+[%^YELLOW%^admin%^RESET%^ : Zephlen] better?
+				%^RED%^Wed Feb 03 21:59:03 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] checking
+				%^RED%^Wed Feb 03 21:59:06 1999 **
+[%^YELLOW%^admin%^RESET%^ : Zephlen] you going to open a mud?
+				%^RED%^Wed Feb 03 21:59:34 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] oh gee tons less work on the cpu =)
+				%^RED%^Wed Feb 03 21:59:50 1999 **
+[%^YELLOW%^admin%^RESET%^ : Zephlen] cool
+				%^RED%^Wed Feb 03 21:59:57 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] somethings f'd tho
+				%^RED%^Wed Feb 03 22:00:01 1999 **
+[%^YELLOW%^admin%^RESET%^ : Zephlen] I feel special and shit
+				%^RED%^Wed Feb 03 22:00:06 1999 **
+[%^YELLOW%^admin%^RESET%^ : Zephlen] with arch access
+				%^RED%^Wed Feb 03 22:00:14 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] doh nm
+				%^RED%^Wed Feb 03 22:02:19 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] ok one more try
+				%^RED%^Wed Feb 03 22:04:32 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] that should work
+				%^RED%^Wed Feb 03 22:04:44 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] ok i'm afk now, gotta do some work around the house
+				%^RED%^Wed Feb 03 22:05:00 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] btw help invis and help vis
+				%^RED%^Wed Feb 03 22:05:02 1999 **
+[%^YELLOW%^admin%^RESET%^ : Someone] give me one sec
+				%^RED%^Wed Feb 03 22:05:09 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] np, it's your game too =)
+				%^RED%^Wed Feb 03 22:05:25 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] hey, do you think i should remove thranx?
+				%^RED%^Wed Feb 03 22:07:38 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] doh i wanted to add frickin color... foo
+				%^RED%^Wed Feb 03 22:08:27 1999 **
+[%^YELLOW%^admin%^RESET%^ : Someone] how do I rename files?
+				%^RED%^Wed Feb 03 22:09:20 1999 **
+[%^YELLOW%^admin%^RESET%^ : Someone] par?
+				%^RED%^Wed Feb 03 22:09:47 1999 **
+[%^YELLOW%^admin%^RESET%^ : Someone] PAR
+				%^RED%^Wed Feb 03 22:14:12 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] yeah?
+				%^RED%^Wed Feb 03 22:15:35 1999 **
+[%^YELLOW%^admin%^RESET%^ : Someone] I got it
+				%^RED%^Wed Feb 03 22:15:43 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] ah ok...
+				%^RED%^Wed Feb 03 22:15:58 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] ok, combat color should work but there will be no command for it after this boot
+				%^RED%^Wed Feb 03 22:16:26 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] just call me;set_property;combat color;% ^RED% ^ (without the spaces) for example
+				%^RED%^Wed Feb 03 22:16:28 1999 **
+[%^YELLOW%^admin%^RESET%^ : Someone] FUCK
+				%^RED%^Wed Feb 03 22:16:41 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] what happened?
+				%^RED%^Wed Feb 03 22:19:04 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] the damned mudlist isn't expanding like it should
+				%^RED%^Wed Feb 03 22:20:15 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] woo a whole meg of data, this thing sure doesn't use much ram but it fucking hogs the cpu like dick
+				%^RED%^Wed Feb 03 22:21:24 1999 **
+[%^YELLOW%^admin%^RESET%^ : Someone] look at elder man.c for me
+				%^RED%^Wed Feb 03 22:21:31 1999 **
+[%^YELLOW%^admin%^RESET%^ : Someone] I can't see what is fucked about it
+				%^RED%^Wed Feb 03 22:22:01 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] it has a space in the file name... for one
+				%^RED%^Wed Feb 03 22:24:26 1999 **
+[%^YELLOW%^admin%^RESET%^ : Zephlen] still fucked
+				%^RED%^Wed Feb 03 22:25:24 1999 **
+[%^YELLOW%^admin%^RESET%^ : Zephlen] do you see it yet
+				%^RED%^Wed Feb 03 22:25:36 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] yes, you had that 'more' crap in your header file
+				%^RED%^Wed Feb 03 22:25:44 1999 **
+[%^YELLOW%^admin%^RESET%^ : Zephlen] hold up
+				%^RED%^Fri Feb 05 00:57:58 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] Swanky ain't it? =)
+				%^RED%^Fri Feb 05 00:58:34 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] i busted my ass on the lib this week, got most stuff fixed
+				%^RED%^Fri Feb 05 00:59:06 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] combat tolls the cpu by about half now... even by badass chars
+				%^RED%^Fri Feb 05 01:00:55 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] we could bug other muds on intercre =)
+				%^RED%^Fri Feb 05 01:07:01 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] wiender
+				%^RED%^Fri Feb 05 01:07:06 1999 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] wiener
+				%^RED%^Fri Feb 05 01:07:11 1999 **
+[%^YELLOW%^admin%^RESET%^ : Someone] heh
+				%^RED%^Sat Mar 19 19:32:37 2005 **
+[%^YELLOW%^admin%^RESET%^ : Parnell] history
