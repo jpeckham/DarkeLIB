@@ -1,0 +1,5 @@
+.vscode/settings.json
+mudlib/log/*
+mudlib/www/wholist.html
+mudlib/adm/save/*
+mudlib/daemon/save/*
