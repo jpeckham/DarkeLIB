@@ -6,10 +6,10 @@ thrace and i hosted darkelib as daybreak ridge in 1998 with traer. i got the dar
 # How to use
 
 * Download and install docker
-** set docker to linux mode if you're on windows
+..* set docker to linux mode if you're on windows
 * Clone or download this repo into a folder
 * execute `docker-compose up`
 * if you don't have docker-compose then:
-** `docker build -t darkelib:latest .`
-** windows: `docker run --rmi -p 7878:7878 -v %CD%:/home/parnell/mud darkelib`
+..** `docker build -t darkelib:latest .`
+..** windows: `docker run --rmi -p 7878:7878 -v %CD%:/home/parnell/mud darkelib`
 
