@@ -1,10 +1,10 @@
 #/std/user.c
 encumbrance 500
-props (["extra mp regen":50,"light":0,"castle rooms":6,"xp mod":-20,"hp advance":32,"melee damage":(["crushing":5,]),"handedness":"right hand","last reinc":917917179,"dev point base":72,"mp advance":21,"last read news":1531884413,"has castle":1,"sp points":0,"castle doors":({"wood door",}),"ambidextry":1,"base mp regen":4,"base hp regen":4,"combat color":"%^GREEN%^","dev points":143,])
+props (["extra mp regen":50,"light":0,"castle rooms":6,"xp mod":-20,"hp advance":32,"melee damage":(["crushing":5,]),"handedness":"right hand","last reinc":917917179,"dev point base":72,"mp advance":21,"last read news":1538343830,"has castle":1,"sp points":0,"castle doors":({"wood door",}),"ambidextry":1,"base mp regen":4,"base hp regen":4,"combat color":"%^GREEN%^","dev points":143,])
 true_name "parnell"
 creator "/adm/obj/login#0"
 max_internal_encumbrance 30000
-player_data (["kills":({0,1,0,0,2,0,0,7,8,9,}),"general":(["alignment":40,"exp buffer":1163807,"sp":1,"max_hp":1500,"hp":1500,"max exp":593591,"experience":-817461337,"quest points":14,"last adjust":1531884414,"max_sp":840,]),])
+player_data (["kills":({0,1,0,0,2,0,0,7,8,9,}),"general":(["alignment":40,"exp buffer":1209607,"sp":1,"max_hp":1500,"hp":1500,"max exp":593591,"experience":-816153260,"quest points":14,"last adjust":1538343886,"max_sp":840,]),])
 magic (["max points":2000,"points":2000,])
 severed ([])
 healing (["quenched":0,])
@@ -16,10 +16,10 @@ char_class "child"
 skills (["sorcery":(["stat":"intelligence","level":5,]),"wizinscribe xen mora":(["stat":"dexterity","level":120,]),"magery":(["stat":"intelligence","level":120,]),"prepare corpse":(["stat":"intelligence","level":100,]),"back stab":(["stat":"dexterity","level":100,]),"wizinscribe malsa xen":(["stat":"dexterity","level":120,]),"martial arts":(["stat":"dexterity","level":1,]),"blade":(["stat":"dexterity","level":200,]),"wizinscribe_malsa_xen":(["stat":"dexterity","level":120,]),"necromancy":(["stat":"intelligence","level":150,]),"spell sense":(["stat":"intelligence","level":120,]),"detect magic":(["stat":"intelligence","level":120,]),"wizinscribe harah lit":(["stat":"dexterity","level":120,]),"wizinscribe_xen_mora":(["stat":"dexterity","level":120,]),"wizinscribe_harah_lit":(["stat":"dexterity","level":120,]),"dual attack":(["stat":"dexterity","level":120,]),"swimming":(["stat":"constitution","level":100,]),"blunt":(["stat":"dexterity","level":300,]),"illusionism":(["stat":"intelligence","level":5,]),"trade lore":(["stat":"charisma","level":5,]),"parry":(["stat":"dexterity","level":120,]),"enchantment":(["stat":"intelligence","level":100,]),"attack":(["stat":"dexterity","max":0,"points":0,"level":100,]),])
 spells (["wiztrue armour":(["level":6,]),"animate skeleton":(["level":6,]),"light":(["level":1,]),"icy weapon":(["level":6,]),"haste":(["level":6,]),"wiztrue weapon":(["level":6,]),])
 wimpydir "out"
-env_var (["TITLE":"$N is on his rise to power","start":"/d/standard/square","TRACE":"on","SCORE":"off","TERM":"ansi",])
+env_var (["TITLE":"$N is on his rise to power","start":"/d/standard/square","TRACE":"on","LINES":"300","SCORE":"off","TERM":"ansi",])
 money (["silver":1962,"gold":2144,"mithril":9967445,])
-ok_to_heal 56879
-player_age 56870
+ok_to_heal 57274
+player_age 57270
 sight_bonus 3
 gender "female"
 stats (["wisdom":55,"dexterity":120,"intelligence":65,"constitution":65,"strength":1000,"charisma":60,])
@@ -39,8 +39,8 @@ inf_block ({})
 real_name "james"
 email "parnell@primenet.com"
 ip "172.17.0.1"
-last_on "Wed Jul 18 03:26:53 2018"
-password "ogdka!bjhkacjmgfcacbci`fakmjmibmhhohhn"
+last_on "Sun Sep 30 21:43:50 2018"
+password "ogdka!cln`nidno``hmiadgjoeknffmngoii`c"
 cpath "/std/diewarzau/obj/misc"
 race "high-elf"
 original_site "127.0.0.1"

@@ -69,7 +69,7 @@ mudlib directory : /home/parnell/mud/mudlib
 # This should be the absolute pathname to where you placed your copy of
 # the driver that you built.
 #
-binary directory : /home/parnell/mud/bin
+binary directory : /usr/bin
 
 
 # ------------------------------------------------------------------------

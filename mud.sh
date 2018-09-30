@@ -1,2 +1,2 @@
 #/bin/bash
-./bin/driver ./mudlib/config.darke
+/usr/bin/driver /home/parnell/mud/mudlib/config.darke
