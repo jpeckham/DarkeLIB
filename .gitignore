@@ -9,3 +9,16 @@ mudlib/log/errors/std
 mudlib/log/errors/damned
 mudlib/log/errors/daemon
 mudlib/log/errors/cmds
+mudlib/adm/save/daemons/inactivity.o
+mudlib/daemon/save/economy.o
+mudlib/daemon/save/events.o
+mudlib/log/auto_remove
+mudlib/log/crashes
+mudlib/log/domain_stats
+mudlib/log/enter
+mudlib/log/security
+mudlib/log/update_lockers
+mudlib/log/wizchar_time
+mudlib/log/errors/adm
+mudlib/log/errors/cmds
+mudlib/log/errors/daemon
