@@ -3,3 +3,9 @@ mudlib/log/*
 mudlib/www/wholist.html
 mudlib/adm/save/**/*
 mudlib/daemon/save/**/*
+mudlib/www/wholist.html
+mudlib/log/watch/logon
+mudlib/log/errors/std
+mudlib/log/errors/damned
+mudlib/log/errors/daemon
+mudlib/log/errors/cmds
