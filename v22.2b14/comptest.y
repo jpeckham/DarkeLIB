@@ -1,3 +1,0 @@
-%token FOO
-%%
-all: FOO

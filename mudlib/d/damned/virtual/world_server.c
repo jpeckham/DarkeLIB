@@ -88,7 +88,7 @@ add_exit("/d/damned/arena/booths_room", "arena");
     set("short", "A darke and eerie forest");
     if(!random(2)) {
       set_smell("default", "The smell of evergreens pervades your nostrils.");
-      set_smell(({ "evergreen" , "evergreens" }), "The evergreens smell very pleasant.");
+      set_smell("evergreen", "The evergreens smell very pleasant.");
     }
     break;
   case "J":

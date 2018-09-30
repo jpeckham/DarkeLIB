@@ -1,1 +1,1 @@
-(["locker_6":(["obj_27":"/d/damned/virtual/long-sword_6.weapon","obj_26":"/d/damned/virtual/long-sword_6.weapon",]),])
+([])

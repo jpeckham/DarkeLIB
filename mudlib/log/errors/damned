@@ -18,3 +18,12 @@
 /d/damned/inn/main_room.c line 75: Warning: Unused local variable 'i' before the end of line
 /d/damned/inn/main_room.c line 132: Warning: Unused local variable 'room_keys' before the end of line
 /d/damned/inn/inn_clerk.c line 169: Warning: Unused local variable 'room' before the end of line
+/d/damned/guilds/child/child_gm.c line 25: Warning: Unused local variable 'ob' before the end of line
+/d/damned/guilds/child/child_gm.c line 25: Warning: Unused local variable 'ob' before the end of line
+/d/damned/virtual/server.c line 35: Warning: Unused local variable 'obj' before the end of line
+/d/damned/virtual/world_server.c line 91: Bad type for argument 1 of set_smell ( string vs mixed * ) before ;
+/d/damned/virtual/world_server.c line 91: Bad type for argument 1 of set_smell ( string vs mixed * ) before ;
+/d/damned/virtual/world_server.c line 91: Bad type for argument 1 of set_smell ( string vs mixed * ) before ;
+/d/damned/inn/main_room.c line 75: Warning: Unused local variable 'i' before the end of line
+/d/damned/inn/main_room.c line 132: Warning: Unused local variable 'room_keys' before the end of line
+/d/damned/inn/inn_clerk.c line 169: Warning: Unused local variable 'room' before the end of line

@@ -1,31 +1,31 @@
 #/std/user.c
 encumbrance 500
-props (["combat color":"%^GREEN%^","dev point base":72,"base hp regen":4,"light":0,"handedness":"right hand","melee damage":(["crushing":5,]),"castle doors":({"wood door",}),"last reinc":917917179,"ambidextry":1,"has castle":1,"castle rooms":6,"extra mp regen":50,"last read news":1111283845,"sp points":0,"mp advance":21,"xp mod":-20,"base mp regen":4,"hp advance":32,"dev points":143,])
+props (["extra mp regen":50,"light":0,"castle rooms":6,"xp mod":-20,"hp advance":32,"melee damage":(["crushing":5,]),"handedness":"right hand","last reinc":917917179,"dev point base":72,"mp advance":21,"last read news":1531884413,"has castle":1,"sp points":0,"castle doors":({"wood door",}),"ambidextry":1,"base mp regen":4,"base hp regen":4,"combat color":"%^GREEN%^","dev points":143,])
 true_name "parnell"
 creator "/adm/obj/login#0"
 max_internal_encumbrance 30000
-player_data (["general":(["max exp":593591,"max_hp":1500,"experience":-818815214,"hp":1500,"alignment":40,"quest points":14,"last adjust":1111283845,"exp buffer":1242812,"max_sp":840,"sp":1,]),"kills":({0,1,0,0,2,0,0,7,8,9,}),])
-magic (["points":2000,"max points":2000,])
+player_data (["kills":({0,1,0,0,2,0,0,7,8,9,}),"general":(["alignment":40,"exp buffer":1163807,"sp":1,"max_hp":1500,"hp":1500,"max exp":593591,"experience":-817461337,"quest points":14,"last adjust":1531884414,"max_sp":840,]),])
+magic (["max points":2000,"points":2000,])
 severed ([])
 healing (["quenched":0,])
-body (["right hand":(["weapons":0,"damage":0,"armour_ob":({}),"ac":0,"max_dam":375,"armour":({}),"weapon":0,"limb_ref":"","wieldable":1,]),"torso":(["armour":({}),"weapons":0,"weapon":0,"max_dam":1500,"ac":0,"damage":0,"limb_ref":"FATAL","armour_ob":({}),]),"left foot":(["armour":({}),"weapons":0,"weapon":0,"max_dam":375,"ac":0,"damage":0,"limb_ref":"","armour_ob":({}),]),"left leg":(["armour":({}),"weapons":0,"weapon":0,"max_dam":500,"ac":0,"damage":0,"limb_ref":"left foot","armour_ob":({}),]),"head":(["armour":({}),"weapons":0,"weapon":0,"max_dam":750,"ac":0,"damage":0,"limb_ref":"FATAL","armour_ob":({}),]),"left arm":(["armour":({}),"weapons":0,"weapon":0,"max_dam":500,"ac":0,"damage":0,"limb_ref":"left hand","armour_ob":({}),]),"left hand":(["weapons":0,"damage":0,"armour_ob":({}),"ac":0,"max_dam":375,"armour":({}),"weapon":0,"limb_ref":"","wieldable":1,]),"right leg":(["armour":({}),"weapons":0,"weapon":0,"max_dam":500,"ac":0,"damage":0,"limb_ref":"right foot","armour_ob":({}),]),"right foot":(["armour":({}),"weapons":0,"weapon":0,"max_dam":375,"ac":0,"damage":0,"limb_ref":"","armour_ob":({}),]),"right arm":(["armour":({}),"weapons":0,"weapon":0,"max_dam":500,"ac":0,"damage":0,"limb_ref":"right hand","armour_ob":({}),]),])
+body (["head":(["damage":0,"armour_ob":({}),"weapon":0,"max_dam":750,"weapons":0,"ac":0,"limb_ref":"FATAL","armour":({}),]),"right leg":(["damage":0,"armour_ob":({}),"weapon":0,"max_dam":500,"weapons":0,"ac":0,"limb_ref":"right foot","armour":({}),]),"right foot":(["damage":0,"armour_ob":({}),"weapon":0,"max_dam":375,"weapons":0,"ac":0,"limb_ref":"","armour":({}),]),"left foot":(["damage":0,"armour_ob":({}),"weapon":0,"max_dam":375,"weapons":0,"ac":0,"limb_ref":"","armour":({}),]),"left arm":(["damage":0,"armour_ob":({}),"weapon":0,"max_dam":500,"weapons":0,"ac":0,"limb_ref":"left hand","armour":({}),]),"torso":(["damage":0,"armour_ob":({}),"weapon":0,"max_dam":1500,"weapons":0,"ac":0,"limb_ref":"FATAL","armour":({}),]),"left leg":(["damage":0,"armour_ob":({}),"weapon":0,"max_dam":500,"weapons":0,"ac":0,"limb_ref":"left foot","armour":({}),]),"right hand":(["damage":0,"armour_ob":({}),"weapon":0,"max_dam":375,"weapons":0,"wieldable":1,"ac":0,"limb_ref":"","armour":({}),]),"left hand":(["damage":0,"armour_ob":({}),"weapon":0,"max_dam":375,"weapons":0,"wieldable":1,"ac":0,"limb_ref":"","armour":({}),]),"right arm":(["damage":0,"armour_ob":({}),"weapon":0,"max_dam":500,"weapons":0,"ac":0,"limb_ref":"right hand","armour":({}),]),])
 limbs ({"left foot","left leg","torso","head","right arm","left hand","right hand","left arm","right foot","right leg",})
 all_my_fingers 5
 heal_rate 1
 char_class "child"
-skills (["prepare corpse":(["level":100,"stat":"intelligence",]),"dual attack":(["level":120,"stat":"dexterity",]),"spell sense":(["level":120,"stat":"intelligence",]),"trade lore":(["level":5,"stat":"charisma",]),"blunt":(["level":300,"stat":"dexterity",]),"illusionism":(["level":5,"stat":"intelligence",]),"sorcery":(["level":5,"stat":"intelligence",]),"back stab":(["level":100,"stat":"dexterity",]),"necromancy":(["level":150,"stat":"intelligence",]),"detect magic":(["level":120,"stat":"intelligence",]),"martial arts":(["level":1,"stat":"dexterity",]),"parry":(["level":120,"stat":"dexterity",]),"blade":(["level":200,"stat":"dexterity",]),"swimming":(["level":100,"stat":"constitution",]),"wizinscribe malsa xen":(["level":120,"stat":"dexterity",]),"wizinscribe xen mora":(["level":120,"stat":"dexterity",]),"wizinscribe_malsa_xen":(["level":120,"stat":"dexterity",]),"wizinscribe harah lit":(["level":120,"stat":"dexterity",]),"attack":(["points":0,"level":100,"stat":"dexterity","max":0,]),"enchantment":(["level":100,"stat":"intelligence",]),"magery":(["level":120,"stat":"intelligence",]),"wizinscribe_xen_mora":(["level":120,"stat":"dexterity",]),"wizinscribe_harah_lit":(["level":120,"stat":"dexterity",]),])
-spells (["wiztrue armour":(["level":6,]),"animate skeleton":(["level":6,]),"light":(["level":1,]),"wiztrue weapon":(["level":6,]),"haste":(["level":6,]),"icy weapon":(["level":6,]),])
+skills (["sorcery":(["stat":"intelligence","level":5,]),"wizinscribe xen mora":(["stat":"dexterity","level":120,]),"magery":(["stat":"intelligence","level":120,]),"prepare corpse":(["stat":"intelligence","level":100,]),"back stab":(["stat":"dexterity","level":100,]),"wizinscribe malsa xen":(["stat":"dexterity","level":120,]),"martial arts":(["stat":"dexterity","level":1,]),"blade":(["stat":"dexterity","level":200,]),"wizinscribe_malsa_xen":(["stat":"dexterity","level":120,]),"necromancy":(["stat":"intelligence","level":150,]),"spell sense":(["stat":"intelligence","level":120,]),"detect magic":(["stat":"intelligence","level":120,]),"wizinscribe harah lit":(["stat":"dexterity","level":120,]),"wizinscribe_xen_mora":(["stat":"dexterity","level":120,]),"wizinscribe_harah_lit":(["stat":"dexterity","level":120,]),"dual attack":(["stat":"dexterity","level":120,]),"swimming":(["stat":"constitution","level":100,]),"blunt":(["stat":"dexterity","level":300,]),"illusionism":(["stat":"intelligence","level":5,]),"trade lore":(["stat":"charisma","level":5,]),"parry":(["stat":"dexterity","level":120,]),"enchantment":(["stat":"intelligence","level":100,]),"attack":(["stat":"dexterity","max":0,"points":0,"level":100,]),])
+spells (["wiztrue armour":(["level":6,]),"animate skeleton":(["level":6,]),"light":(["level":1,]),"icy weapon":(["level":6,]),"haste":(["level":6,]),"wiztrue weapon":(["level":6,]),])
 wimpydir "out"
-env_var (["TRACE":"on","TITLE":"$N is on his rise to power","start":"/d/standard/square","SCORE":"off","TERM":"ansi",])
-money (["silver":1962,"mithril":9967445,"gold":2144,])
-ok_to_heal 56862
-player_age 56862
+env_var (["TITLE":"$N is on his rise to power","start":"/d/standard/square","TRACE":"on","SCORE":"off","TERM":"ansi",])
+money (["silver":1962,"gold":2144,"mithril":9967445,])
+ok_to_heal 56879
+player_age 56870
 sight_bonus 3
 gender "female"
-stats (["intelligence":65,"constitution":65,"wisdom":55,"strength":1000,"charisma":60,"dexterity":120,])
-languages (["elvish":10,"common":5,])
+stats (["wisdom":55,"dexterity":120,"intelligence":65,"constitution":65,"strength":1000,"charisma":60,])
+languages (["common":5,"elvish":10,])
 primary_language "Common"
-alias (["bio":"biography","e":"east","d":"down","st":"status","s":"south","exa":"look at $*","ui":"say %^GREEN%^$*%^RESET%^","u":"up","ne":"northeast","l":"look $*","w":"west","sw":"southwest","i":"inventory","nw":"northwest","n":"north","se":"southeast",])
+alias (["nw":"northwest","w":"west","exa":"look at $*","sw":"southwest","u":"up","st":"status","s":"south","ui":"say %^GREEN%^$*%^RESET%^","bio":"biography","n":"north","l":"look $*","ne":"northeast","i":"inventory","e":"east","d":"down","se":"southeast",])
 xverb (["$:":"emote $*","$\"":"say $*","$'":"say $*",])
 auto_load ({})
 level 30
@@ -38,8 +38,8 @@ snatch "off"
 inf_block ({})
 real_name "james"
 email "parnell@primenet.com"
-ip "192.168.1.100"
-last_on "Sat Mar 19 19:57:25 2005"
+ip "172.17.0.1"
+last_on "Wed Jul 18 03:26:53 2018"
 password "ogdka!bjhkacjmgfcacbci`fakmjmibmhhohhn"
 cpath "/std/diewarzau/obj/misc"
 race "high-elf"

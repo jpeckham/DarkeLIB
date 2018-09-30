@@ -46,8 +46,7 @@
 
 #include <debug.h>
 
-static object
-e(object p, int outside)
+static object e(object p, int outside)
 {
    if (outside) {
       return p ? environment(p) : 0;
@@ -56,8 +55,7 @@ e(object p, int outside)
    }
 }
 
-object
-to_object(mixed target)
+object to_object(mixed target)
 {
    int ch;
    string err;

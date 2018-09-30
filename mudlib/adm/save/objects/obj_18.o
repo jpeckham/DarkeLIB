@@ -1,7 +1,0 @@
-#/d/damned/virtual/long-sword_6.weapon.c
-encumbrance 90
-props (["value":655,"material_name":"iron","material_type":"metal",])
-true_name "Parnell's sword 7"
-creator "/d/damned/virtual/weapon_server"
-material "/metal/iron"
-__Weapon (["quality":6,"wc":(["impaling":6,"cutting":10,]),"original wc":(["impaling":6,"cutting":10,]),"verb":"slice","type":"blade","decay rate":200,"ac":(["impact":4,"holy":4,"fire":4,"disruption":4,"impaling":4,"depression":4,"cutting":4,"cold":4,"crushing":4,"vacuum":4,"infernal":4,"plasma":4,"strike":4,"acid":4,"stress":4,"time":4,"electricity":4,"aether":4,]),"short desc":"longsword","parry bonus":5,])
