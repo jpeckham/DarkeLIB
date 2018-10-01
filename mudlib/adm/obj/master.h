@@ -1,52 +1,23 @@
 /* FILE: /adm/obj/master.h */
-
-
-
 #include <config.h>
-
 #include <daemons.h>
-
 #include <databases.h>
-
 #include <dirs.h>
-
 #include <law.h>
-
 #include <objects.h>
-
 #include <rooms.h>
-
 #include <security.h>
-
-
-
 #define READ 0
-
 #define WRITE 1
 
-
-
 #define GROUP_DAEMON "/adm/obj/master/group_d"
-
 #define PRIVS_DAEMON "/adm/obj/master/privs_d"
-
 #define ACCESS_DAEMON "/adm/obj/master/access_d"
-
-
-
 static mapping access,
-
                groups,
-
                privs;
-
-
-
 /* Required function definitions */
-
 string creator_file(string str);
-
-
 
 void preload(string str);
 
@@ -56,17 +27,12 @@ void load_groups();
 
 void load_privs();
 
-
-
 nomask int check_access(string file, object ob, int ind);
 
-
-
 /* Optional function definitions */
-
 void flag(string str);
 
-string *epilog(int x);
+string *epilog(int load_empty);
 
 string error_handler(mapping errs, int caught);
 
@@ -143,4 +109,3 @@ int is_locked();
 int query_member_group(string who, string grp);
 
 mapping query_groups();
-

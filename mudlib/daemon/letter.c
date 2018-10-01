@@ -73,6 +73,7 @@ int clean_up_mudmails(){
             }
         }
     }
+    seteuid(getuid());
     return removed;
 }    
 

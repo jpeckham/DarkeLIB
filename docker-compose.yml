@@ -3,6 +3,6 @@ services:
   mud:
     build: .
     ports:
-    - "7878:7878"
+      - "7878:7878"
     volumes:
-    - .:/home/parnell/mud
+      - .:/home/parnell/mud

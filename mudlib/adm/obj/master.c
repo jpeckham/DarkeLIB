@@ -11,30 +11,61 @@
 #include <config.h>
 #include "master.h"
 
+/*
+flag(4)                   Driver Applies                  flag(4)
+
+NAME
+       flag  -  handle  mudlib specific flags specified at driver
+       startup
+
+SYNOPSIS
+       void flag( string );
+
+DESCRIPTION
+       This master apply is called for each command  line  option
+       passed to the driver with the -f flag.
+
+MudOS                       5 Sep 1994     
+*/
 void flag(string str)
 {
-  string file,
-         arg;
-  int i,
-      x;
-  if(previous_object()) return;
-  if(sscanf(str, "for %d", x) == 1)
-  {
-    for(i=0; i<x; i++) {}
-    return;
-  }
-  if(sscanf(str, "call %s %s", file, arg))
-  {
-    write("Flag "+
-      (string)call_other(file, arg)+
-      " returned.\n");
-    return;
-  }
-  write("ERROR: master.c->flag(): unknown flag.\n");
+  write( sprintf("SKIPPED: driver -f %s ignored\n", str));
 }
 
-string *epilog(int x)
+/*
+epilog(4)                 Driver Applies                epilog(4)
+
+NAME
+       epilog  - returns an array of the filenames of the objects
+       to be preloaded.
+
+SYNOPSIS
+       string *epilog( int load_empty );
+       void preload( string filename );
+
+DESCRIPTION
+       The driver calls  epilog()  in  master  after  the  master
+       object  has  been loaded.  Mudlibs typically use epilog to
+       initialize data structures in  master  (such  as  security
+       tables  etc).   epilog()  should returns an array of file-
+       names which correspond to objects that the mudlib wants to
+       have  preloaded;  that  is, loaded before the first player
+       logs in.  For each filename returned  in  the  array,  the
+       driver will called preload(filename) in master.
+
+       The variable 'load_empty' is non-zero if the -e option was
+       specified when starting up the driver.  It can be used  as
+       a signal to the mudlib to not load castles, etc.
+
+SEE ALSO
+       preload(4)
+
+MudOS                       5 Sep 1994                          1
+*/
+string *epilog(int load_empty)
 {
+  if(load_empty)
+    write("driver -e ignored. No load_empty option enabled in master.c");
   call_out("socket_preload", 5);
   return read_database(PRELOAD_DB);
 }
@@ -186,7 +217,8 @@ int valid_save_binary(string file)
     return 0;
 }
 
-void load_access() {
+void load_access() 
+{
   string *lines,
          *borg;
   string str,
@@ -204,47 +236,42 @@ void load_access() {
   if(!maxi || !intp(maxi))
   {
   	error("Error in reading access database.\n");
-	write("Error in reading access database.\n");
-	shutdown();
-	return;
+    write("Error in reading access database.\n");
+    shutdown();
+    return;
   }
   for(i=0; i < sizeof(lines); i++) 
   {
-  if(!lines[i] || lines[i] == "" || lines[i][0] == '#') continue;
-  if(sscanf(lines[i], "(%s): %s", dir,tmp) !=2) 
-      {
+    if(!lines[i] || lines[i] == "" || lines[i][0] == '#') 
+      continue;
+    if(sscanf(lines[i], "(%s): %s", dir,tmp) !=2) 
+    {
       error("Error in reading access database at line "+(i+1)+".\n");
       write("Error in reading access database at line "+(i+1)+".\n");
       shutdown();
       return;
-      }
-  borg = explode(tmp, " ");
-  maxj = sizeof(borg);
-  if(!maxj || !intp(maxj)) continue;
-  access[dir] = ([]);
-  for(j=0; j < sizeof(borg); j++)
-      {
+    }
+    borg = explode(tmp, " ");
+    maxj = sizeof(borg);
+    if(!maxj || !intp(maxj)) continue;
+    access[dir] = ([]);
+    for(j=0; j < sizeof(borg); j++)
+    {
       if(sscanf(borg[j], "(%s)[%s]", tmp, str) != 2) 
-           {
-    	   write("Error in reading access database at line "+(i+1)+".\n");
-           shutdown();
-           return;
-           }
+      {
+        write("Error in reading access database at line "+(i+1)+".\n");
+        shutdown();
+        return;
+      }
       access[dir][tmp] = ({ 0, 0 });
-      if(str == "r") access[dir][tmp][READ] = 1;
-      if(str == "w") access[dir][tmp][WRITE] = 1;
-      if(str == "rw" || str == "wr") access[dir][tmp] = ({ 1, 1 });
-    
-/* recoding this switches suck i think .. the above is better no? parn 2003
-      switch(str) {
-      case "r": access[dir][tmp][READ] = 1; break;
-      case "w": access[dir][tmp][WRITE] = 1; break;
-      case "wr": case "rw": access[dir][tmp] = ({ 1, 1 }); break;
-      default: access[dir][tmp] = ({ 0, 0 });
-      }
-*/
-      }
-   }
+      if(str == "r") 
+        access[dir][tmp][READ] = 1;
+      if(str == "w") 
+        access[dir][tmp][WRITE] = 1;
+      if(str == "rw" || str == "wr") 
+        access[dir][tmp] = ({ 1, 1 });
+    }
+  }
 }
 
 void load_privs() {
@@ -272,19 +299,13 @@ void load_privs() {
 
 void preload(string str) {
     string err;
-    int t;
-/******************************* REMOVE ME REMOVE ME REMOVE ME ****/
-//	write("DEBUG MODE /adm/obj/master.c line 265: Not preloading "+str+"\n");
-//	return;
-/*
- *
- **********************************************/
-
-    if(!file_exists(str+".c")) return;
-    t = time();
-    write("Preloading: "+str+"...\n");
+    if(!file_exists(str+".c")) 
+    {
+      write(sprintf("ERROR: Preload failed no file found: %s", str));
+    }
+    write(sprintf("Preloading: %s...\n", str));
     if(err=catch(call_other(str, "???")))
-  write("\nGot error "+err+" when loading "+str+".\n");
+    write("\nGot error "+err+" when loading "+str+".\n");
 }
 
 void socket_preload() {
@@ -293,11 +314,14 @@ void socket_preload() {
 
     max = sizeof(items=explode(read_file(PRELOAD_SOCKET_DB), "\n"));
     for(i=0; i<max; i++) {
-  if(!items[i] || items[i] == "" || items[i][0] == '#') continue;
-/*
-  catch(call_other(items[i], "???"));
-*/
-// catch(call_other(items[i], "create"));
+      if(!items[i] || items[i] == "" || items[i][0] == '#') 
+      {
+        //continue;
+        //catch(call_other(items[i], "???"));
+        write(sprintf("socket_preload begin - %s\n",items[i]));
+        catch(call_other(items[i], "create"));
+        write(sprintf("socket_preload end - %s\n",items[i]));
+      }
     }
 }
 

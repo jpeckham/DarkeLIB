@@ -12,7 +12,7 @@ static private mapping __MudGroups, __Remote;
 static private string enkey(string str); 
 static private int valid_access(object ob); 
 static private void remote_post(mapping borg);
-static private void load_post_box(string who); 
+void load_post_box(string who); 
 static private void save_post_box(); 
 string *post_letter(mapping borg); 
 static private int local_post(string who, mapping borg); 
@@ -48,7 +48,7 @@ static private int valid_access(object ob) {
     return (geteuid(ob) == UID_POSTAL || geteuid(ob) == UID_ROOT); 
 } 
  
-static private void load_post_box(string who) { 
+void load_post_box(string who) { 
     if(__File == DIR_POSTAL+"/"+who[0..0]+"/"+who) return; 
     if(__File && __File != "") save_post_box(); 
     if(file_size(DIR_POSTAL+"/"+who[0..0]) != -2) { 

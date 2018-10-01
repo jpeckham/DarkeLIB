@@ -12,8 +12,7 @@ void create() {
     seteuid(getuid());
     atmos = allocate_mapping(250);
     line = 1;
-    message("broadcast", "Soul Daemon shouts: Welcome to Daybreak Ridge!",
-users());
+    message("broadcast", "Soul Daemon shouts: Welcome to Daybreak Ridge!", users());
     set_heart_beat(1);
 }
 
@@ -308,7 +307,7 @@ void heart_beat()
 	if( i < 10 )
 	{
 		set_heart_beat( 0 );
-message("broadcast", "Soul Daemon shouts: I am alive!", users());
+		message("broadcast", "Soul Daemon shouts: I am alive!", users());
 		line = -1;
 	}
 }
