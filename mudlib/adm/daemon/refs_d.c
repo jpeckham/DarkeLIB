@@ -28,7 +28,7 @@ mixed ref_ob( mixed a )
 {
   mixed tmp;
 
-  a = resolv_refi( a );
+  a = resolv_ref( a );
   if( stringp( a ) && ( tmp = get_objects( a, 0, 1 ) ) ) a = tmp;
   return a;
 }
