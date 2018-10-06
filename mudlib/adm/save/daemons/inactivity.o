@@ -1,2 +1,0 @@
-#/adm/daemon/inactivity_d.c
-remove_info (["max player time":960000,"positions protected":({"superuser","assist",}),"max wiz time":1920000,"who protected":({}),])

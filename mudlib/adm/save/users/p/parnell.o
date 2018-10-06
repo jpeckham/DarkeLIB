@@ -1,10 +1,10 @@
 #/std/user.c
 encumbrance 500
-props (["extra mp regen":50,"light":0,"castle rooms":6,"xp mod":-20,"hp advance":32,"melee damage":(["crushing":5,]),"handedness":"right hand","last reinc":917917179,"dev point base":72,"mp advance":21,"last read news":1538343830,"has castle":1,"sp points":0,"castle doors":({"wood door",}),"ambidextry":1,"base mp regen":4,"base hp regen":4,"combat color":"%^GREEN%^","dev points":143,])
+props (["extra mp regen":50,"light":0,"castle rooms":6,"xp mod":-20,"hp advance":32,"melee damage":(["crushing":5,]),"handedness":"right hand","last reinc":917917179,"dev point base":72,"mp advance":21,"last read news":1538452017,"has castle":1,"sp points":0,"castle doors":({"wood door",}),"ambidextry":1,"base mp regen":4,"base hp regen":4,"combat color":"%^GREEN%^","dev points":143,])
 true_name "parnell"
 creator "/adm/obj/login#0"
 max_internal_encumbrance 30000
-player_data (["kills":({0,1,0,0,2,0,0,7,8,9,}),"general":(["alignment":40,"exp buffer":1209607,"sp":1,"max_hp":1500,"hp":1500,"max exp":593591,"experience":-816153260,"quest points":14,"last adjust":1538343886,"max_sp":840,]),])
+player_data (["kills":({0,1,0,0,2,0,0,7,8,9,}),"general":(["alignment":40,"exp buffer":1256552,"sp":1,"max_hp":1500,"hp":1500,"max exp":593591,"experience":-813182156,"quest points":14,"last adjust":1538452018,"max_sp":840,]),])
 magic (["max points":2000,"points":2000,])
 severed ([])
 healing (["quenched":0,])
@@ -18,8 +18,8 @@ spells (["wiztrue armour":(["level":6,]),"animate skeleton":(["level":6,]),"ligh
 wimpydir "out"
 env_var (["TITLE":"$N is on his rise to power","start":"/d/standard/square","TRACE":"on","LINES":"300","SCORE":"off","TERM":"ansi",])
 money (["silver":1962,"gold":2144,"mithril":9967445,])
-ok_to_heal 57274
-player_age 57270
+ok_to_heal 57320
+player_age 57310
 sight_bonus 3
 gender "female"
 stats (["wisdom":55,"dexterity":120,"intelligence":65,"constitution":65,"strength":1000,"charisma":60,])
@@ -38,8 +38,8 @@ snatch "off"
 inf_block ({})
 real_name "james"
 email "parnell@primenet.com"
-ip "172.17.0.1"
-last_on "Sun Sep 30 21:43:50 2018"
+ip "172.23.0.1"
+last_on "Tue Oct  2 03:46:57 2018"
 password "ogdka!cln`nidno``hmiadgjoeknffmngoii`c"
 cpath "/std/diewarzau/obj/misc"
 race "high-elf"

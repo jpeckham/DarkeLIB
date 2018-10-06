@@ -2,6 +2,7 @@ version: '3'
 services:
   mud:
     build: .
+    image: parnell78/darkelib
     ports:
       - "7878:7878"
     volumes:

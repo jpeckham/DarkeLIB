@@ -362,7 +362,7 @@ int valid_read(string file, object ob, string fun) {
 
 nomask int check_access(string file, object ob, int ind) {
     string *path, *grps;
-    string euid, tmp, fn, tmp2;
+    string euid, tmp, fn;
     int i, j;
 
     while(strlen(file) > 2 && file[0..1] == "//")
@@ -401,28 +401,81 @@ nomask int check_access(string file, object ob, int ind) {
     }
     return 0;
 }
+/*
+connect(4)                Driver Applies               connect(4)
 
+NAME
+       connect - get an object for a new user
+
+SYNOPSIS
+       object connect( void );
+
+DESCRIPTION
+       The driver calls connect() in the master object whenever a
+       new user logs into the driver.   The  object  returned  by
+       connect()  is  used as the initial user object.  Note that
+       it is possible to use exec(3) to switch the  user  connec-
+       tion from the initial user object to some other object.
+
+SEE ALSO
+       exec(3), logon(4)
+
+MudOS                       5 Sep 1994                          1
+*/
 object connect() {
     object ob;
     string err;
 
     if(err=catch(ob = clone_object(OB_LOGIN))) {
-  write("It looks like someone is working on the user object.\n");
-  write(err);
-  destruct(this_object());
+      write("It looks like someone is working on the user object.\n");
+      write(err);
+      //this is odd, are we destructing master.c ???
+      destruct(this_object());
+      //don't return uninitialized ob
+      return 0;
     }
     return ob;
 }
 
+/*
+compile_object(4)         Driver Applies        compile_object(4)
+
+NAME
+       compile_object  -  serves  as the mudlib interface for the
+       virtual object facility
+
+SYNOPSIS
+       object compile_object( string pathname );
+
+DESCRIPTION
+       The driver calls compile_object(3) in the event  that  the
+       mudlib  instructs  the driver to load a file that does not
+       exist.   For  example,   the   driver   will   call   com-
+       pile_object("/obj/file.r")  in  master if the mudlib calls
+       call_other("/obj/file.r",       "some_function")        or
+       new("/obj/file.r")  and  /obj/file.r.c  names  a file that
+       does not exist.  The compile_object() function is expected
+       to  return  0  if the mudlib does not wish to associate an
+       object with the file name "/obj/file.r".   If  the  mudlib
+       does  wish  to  associate  an  object  with  the  filename
+       "/obj/file.r", then the mudlib should return the object it
+       wishes  associated.   After an association is made between
+       an object and a filename, then it will be as if the  file,
+       file.r.c,  did  exist (to the driver) and when loaded pro-
+       duced the object that compile_object() returned.
+
+MudOS                       5 Sep 1994                          1
+*/
+/*
+In DarkeLIB this is a key thing used for creation of the overworld map, castles, mines, and 'generic' items like crafted weapons/armor.
+*/
 mixed compile_object(string file) {
     return (mixed)VIRTUAL_D->compile_object(file);
 }
 
 static void crash(string err) {
-    log_file("crashes", mud_name()+" crashed "+ctime(time())+" with error "+
-      err+".\n");
-    shout("Atmos tells you think "+mud_name()+" is crashing!\n");
-    shout("Atmos forced you to: quit\n");
+    log_file("crashes", ctime(time())+ ": Crash with error " + err + ".\n");
+    shout("You are being forced to quit due to crash!\n");
 }
 
 int valid_shutdown(string euid) {
@@ -533,7 +586,6 @@ int load_player_from_file(string nom, object ob) {
 
 void save_player_to_file(object ob) {
     string nom;
-    int x;
 
     if(base_name(previous_object()) != OB_USER) return;
     if(!(nom = (string)ob->query_name())) return;
@@ -546,7 +598,7 @@ void save_player_to_file(object ob) {
 }
 
 string get_wiz_name(string file) {
-    string nom, dir, tmp;
+    string nom, tmp;
 
     if(file[0] != '/') file = "/"+file;
     if(sscanf(file, REALMS_DIRS+"/%s/%s", nom, tmp) == 2) return nom;
@@ -560,7 +612,7 @@ string get_wiz_name(string file) {
  * - Geldron 030696
  */
 void log_error(string file, string msg) {
-    string nom, home;
+    string nom;
 
     if(!(nom = get_wiz_name(file))) nom = "log";
     if(!catch(write_file(DIR_ERROR_LOGS + "/" + nom, msg)))
@@ -596,20 +648,75 @@ string creator_file(string str) {
      //  return (string)call_other(OB_SIMUL_EFUN, "creator_file", str); //old way returned 0 which caused NOT STRING errors
 }
 
+/*
+
+domain_file(4)            Driver Applies           domain_file(4)
+
+NAME
+       domain_file - determine the domain for a given object
+
+SYNOPSIS
+       string domain_file( string file );
+
+DESCRIPTION
+       This  function  must  exist  in  the master object.  It is
+       called by the domain statistic functions in the driver  to
+       determine  what domain a given object should be associated
+       with.  This is totally arbitrary  and  up  to  the  mudlib
+       designers wishes.  It should be noted that the domain that
+       the object is assigned to will receive "credit" for all of
+       the objects behavior (errors, heart_beats, worth, etc).
+
+SEE ALSO
+       author_stats(3), domain_stats(3), author_file(4)
+
+AUTHOR
+       Wayfarer@Portals
+
+MudOS                       5 Sep 1994                          1
+
+*/
 string domain_file(string str) {
     string nom, tmp;
 
     if(str[0] != '/') str = "/"+str;
-    if(sscanf(str, DOMAINS_DIRS+"/%s/%s", nom, tmp) == 2) return nom;
-    return (string)0;
+    if(sscanf(str, DOMAINS_DIRS+"/%s/%s", nom, tmp) == 2) 
+      return nom;
+    return "unknown-domain";
 }
+/*
 
+author_file(4)            Driver Applies           author_file(4)
+
+NAME
+       author_file - determine the author for a given object
+
+SYNOPSIS
+       string author_file (string file);
+
+DESCRIPTION
+       This  function  must  exist  in  the master object.  It is
+       called by the author statistic functions in the driver  to
+       determine  what author a given object should be associated
+       with.  This is totally arbitrary  and  up  to  the  mudlib
+       designers wishes.  It should be noted that the author that
+       the object is assigned to will receive "credit" for all of
+       the objects behavior (errors, heart_beats, worth, etc).
+
+SEE ALSO
+       author_stats(3), domain_stats(3), domain_file(4)
+
+MudOS                       5 Sep 1994                          1
+*/
 string author_file(string str) {
     string nom, tmp;
 
-    if(str[0] != '/') str = "/"+str;
-    if(sscanf(str, REALMS_DIRS+"/%s/%s", nom, tmp) == 2) return nom;
-    return 0;
+    if(str[0] != '/') 
+      str = "/"+str;
+    //basically return the sub folder under /wizards (wiz name)
+    if(sscanf(str, REALMS_DIRS+"/%s/%s", nom, tmp) == 2) 
+      return nom;
+    return "unknown-author";
 }
 
 static int slow_shutdown() {
@@ -629,9 +736,9 @@ int save_ed_setup(object who, int code) {
 
 int retrieve_ed_setup(object who) {
     string file;
-    int x;
 
-    if(!file_exists(file = user_path(getuid(who))+".edrc")) return 0;
+    if(!file_exists(file = user_path(getuid(who))+".edrc")) 
+      return 0;
     return atoi(read_file(file));
 }
 

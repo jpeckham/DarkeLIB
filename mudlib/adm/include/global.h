@@ -1,7 +1,7 @@
 #ifndef __GLOBAL_H__
 #define __GLOBAL_H__
 
-#include <std.h>
+//#include <std.h>
 
 #define ENV         environment
 #define CAP         capitalize
