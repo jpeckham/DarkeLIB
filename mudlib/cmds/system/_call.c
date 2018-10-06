@@ -42,18 +42,7 @@ int cmd_call( string a )
   this_player()->set("error report", 0);
   seteuid( geteuid( previous_object() ) );
 
-  // In general logging calls is a bad idea since the effect can be duplicated
-  // very easily by eval or by an object in the wizards directory
-  // *shrug* Nightmare wanted it however, so I've #ifdef'ed it.
-#ifdef THIS_MUD
-  if( THIS_MUD == "nightmare" )
-  {
-    log_file( "calls",
-      this_player()-> query_name() + " under euid " + geteuid() + " " +
-      ctime( time() ) + "\n" + a + "\n" 
-    );
-  }
-#endif /* THIS_MUD */
+
   exp_a = explode( a, ";" );
   s = sizeof( exp_a );
   objs = exp_a[0];

@@ -52,9 +52,9 @@ int query_stats(string str);
 int query_stat_bonus(string stat);
 int query_base_stats(string stat);
 int query_poisoning();
-  int query_potion_healing();
+int query_potion_healing();
 void add_poisoning(int x);
-  void add_potion_healing(int x);
+void add_potion_healing(int x);
 string query_gender();
 void set_gender(string str);
 string query_objective();
@@ -83,43 +83,31 @@ static void init_living() {
 void override_add_exp(int exp) {
     object ob;
 
-    
-/*
-#if 0
-    if(!previous_object() || geteuid(previous_object()) != UID_ROOT)
-	return;
-    ob = previous_object();
-#endif
-*/
     ob = this_object();
-    if(!this_object()->is_player()) return;
+    if(!this_object()->is_player()) 
+        return;
     player_data["general"]["experience"] += exp;
-    if(player_data["general"]["experience"] >
-      player_data["general"]["max exp"] ||
-      !player_data["general"]["max exp"])
+    if(player_data["general"]["experience"] > player_data["general"]["max exp"] || !player_data["general"]["max exp"])
 	{
-	player_data["general"]["max exp"] =
-	(player_data["general"]["experience"] - 1);
+	    player_data["general"]["max exp"] =	(player_data["general"]["experience"] - 1);
 //ADDED NEW DEV SYS TO HERE (parnell feb99)
        if(!query("no add dev") && dev_rate_int = get_dev_rate())
 		{
-if(!xp_to_next_dev) xp_to_next_dev = player_data["general"]["max exp"] + dev_rate_int;
-		while( player_data["general"]["max exp"] > xp_to_next_dev )
-		{
-		xp_to_next_dev += dev_rate_int;
-		this_object()->add_dev(1);
-		}
-                }
+            if(!xp_to_next_dev) 
+                xp_to_next_dev = player_data["general"]["max exp"] + dev_rate_int;
+            while( player_data["general"]["max exp"] > xp_to_next_dev )
+            {
+                xp_to_next_dev += dev_rate_int;
+                this_object()->add_dev(1);
+            }
+        }
 
 	}
     ob = previous_object();
     if(ob && file_name(ob) != "/cmds/mortal/_advance")
-	log_file("override_exp",
-	  "Override exp: "+exp+" to "+query_name()+".\n"+
-	  "Object: "+file_name(ob)+"  Uid: "+getuid(ob)+"\n");
+	log_file("override_exp", "Override exp: "+exp+" to "+query_name()+".\n"+ "Object: "+file_name(ob)+"  Uid: "+getuid(ob)+"\n");
     if(this_player() && this_player() != this_object())
-	log_file("override_exp", sprintf("By: %s  Euid: %s\n",
-	    this_player()->query_name(), geteuid(this_player())));
+	    log_file("override_exp", sprintf("By: %s  Euid: %s\n", this_player()->query_name(), geteuid(this_player())));
     this_object()->add_exp2(0);
     return;
 }

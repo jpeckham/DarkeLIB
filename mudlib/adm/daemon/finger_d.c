@@ -9,7 +9,7 @@
 #include <daemons.h>
 #include <config.h>
  
-inherit OB_USER;
+inherit OB_USER;//why does the daemon inherit from a user?
 string true_name;
 object ob;
  

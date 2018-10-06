@@ -9,7 +9,25 @@
  * object can be found in the man master_object file.
  */
 #include <config.h>
+#include <localtime.h>
 #include "master.h"
+
+static mapping access,
+               groups,
+               privs;
+
+void ERROR(string msg) {
+    log_file("master", sprintf("%s [%s] - %s\n",ctime(time()),"ERROR",msg));
+}
+void WARN(string msg) {
+    log_file("master", sprintf("%s [%s] - %s\n",ctime(time()),"WARN",msg));
+}
+void INFO(string msg) {
+    log_file("master", sprintf("%s [%s] - %s\n",ctime(time()),"INFO",msg));
+}
+void TRACE(string msg) {
+    log_file("master", sprintf("%s [%s] - %s\n",ctime(time()),"TRACE",msg));
+}
 
 /*
 flag(4)                   Driver Applies                  flag(4)
@@ -26,10 +44,12 @@ DESCRIPTION
        passed to the driver with the -f flag.
 
 MudOS                       5 Sep 1994     
+
+Example driver [config.file] -fTEST
 */
 void flag(string str)
 {
-  write( sprintf("SKIPPED: driver -f %s ignored\n", str));
+  WARN( sprintf("SKIPPED: driver command: -f%s no flag found", str));
 }
 
 /*
@@ -64,13 +84,36 @@ MudOS                       5 Sep 1994                          1
 */
 string *epilog(int load_empty)
 {
-  if(load_empty)
-    write("driver -e ignored. No load_empty option enabled in master.c");
+  //it appears FluffOS does not have valid -e flag so we ignore load_empty
   call_out("socket_preload", 5);
   return read_database(PRELOAD_DB);
 }
 
+void socket_preload() {
+    string *items;
+    int i, lines;
+    mixed err;
+
+    TRACE("socket_preload BEGIN");
+    lines = sizeof(items=explode(read_file(PRELOAD_SOCKET_DB), "\n"));
+    TRACE(sprintf("socket_preload - lines=%d", lines));
+    for(i=0; i<lines; i++) {
+      //Skipped commented or empty lines
+      if(!items[i] || items[i] == "" || items[i][0] == '#') 
+      {
+        continue;
+      }
+
+      TRACE(sprintf("socket_preload - [%s]->create()",items[i]));
+      err = catch(call_other(items[i], "create"));
+      if(err)
+        ERROR(err);
+    }
+    TRACE("socket_preload END");
+}
+
 void load_groups() {
+  //TODO: make this just use object saving and forget this custom file stuff. - Parnell 2018
   string *lines,
          *members,
          *names;
@@ -84,15 +127,16 @@ void load_groups() {
 
   groups = ([]);
   if(!(max=sizeof(lines=explode(read_file(GROUPS_DB), "\n")))) {
-    write("ERROR: master.c->load_groups(): groups.db corruption.\n");
+    ERROR("ERROR: master.c->load_groups(): groups.db corruption/empty.\n");
     message("info","Security error (10B3) detected...Aborting Process",users());
     shutdown();
     return;
   }
   for(i=0; i<max; i++) {
-    if(!lines[i] || lines[i] == "" || lines[i][0] == '#') continue;
+    if(!lines[i] || lines[i] == "" || lines[i][0] == '#') 
+      continue;
     if(sscanf(lines[i], "(%s): %s", grp, str) != 2) {
-      write("ERROR: master.c->load_groups(): groups.db read failure on line"+(i+1)+".\n");
+      ERROR("ERROR: master.c->load_groups(): groups.db read failure on line"+(i+1)+".\n");
       message("info","Security error (10B4) detected...Aborting Process",users());
       shutdown();
       return;
@@ -107,12 +151,13 @@ void load_groups() {
         }
         else {
           members += ({ names[k] });
-//        message("info","Groups Integrity Check: "+names[k], users() );
         }
       }
-      if(!sizeof(groups[grp] = members)) map_delete(groups, grp);
+      if(!sizeof(groups[grp] = members)) 
+        map_delete(groups, grp);
     } 
   }
+  TRACE(sprintf("load_groups: result of groups %O", groups));
 }
 
 //ZNOTE: Pospone rewrite of this function to Phase 5
@@ -191,7 +236,8 @@ string error_handler(mapping errs, int caught)
 
 int view_errors(object user) 
 {
-  if(wizardp(user)) return 1;
+  if(wizardp(user)) 
+    return 1;
   return 0;
 }
 
@@ -306,23 +352,6 @@ void preload(string str) {
     write(sprintf("Preloading: %s...\n", str));
     if(err=catch(call_other(str, "???")))
     write("\nGot error "+err+" when loading "+str+".\n");
-}
-
-void socket_preload() {
-    string *items;
-    int i, max;
-
-    max = sizeof(items=explode(read_file(PRELOAD_SOCKET_DB), "\n"));
-    for(i=0; i<max; i++) {
-      if(!items[i] || items[i] == "" || items[i][0] == '#') 
-      {
-        //continue;
-        //catch(call_other(items[i], "???"));
-        write(sprintf("socket_preload begin - %s\n",items[i]));
-        catch(call_other(items[i], "create"));
-        write(sprintf("socket_preload end - %s\n",items[i]));
-      }
-    }
 }
 
 int valid_write(string file, object ob, string fun) {

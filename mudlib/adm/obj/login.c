@@ -26,7 +26,7 @@ static void enter_real_name(string str);
 static void idle();
 static void receive_message(string cl, string msg);
 static private void internal_remove();
-private int who_be_on(object ob);
+
 void remove();
 
 void create() { 
@@ -37,81 +37,20 @@ void create() {
   } 
  
 static void logon() { 
-     string name;
+    string name;
 
     call_out("idle", LOGON_TIMEOUT); 
     if(catch(__Player = new(OB_USER))) { 
-        message("logon", "Someone appears to be messing with the user object.\n" 
-          "Please try again in a few minutes.\n", this_object()); 
+        message("logon", "Someone appears to be messing with the user object.\n", this_object()); 
+        message("logon", "Please try again in a few minutes.\n", this_object()); 
         internal_remove();
         return; 
-      } 
-    message("logon", read_file(WELCOME), this_object()); 
-    message("logon", sprintf("\n        Driver: %s        Mudlib: %s %s\n", 
-      version(), mudlib(), mudlib_version()), this_object()); 
-    message("logon", "\n"
-	    "What do you wish to do?\n"
-	    "\n"
-	    "1.  Log in to the mud (or create a new character).\n"
-	    "2.  See who is on the mud.\n"
-	    "3.  Log out.\n"
-	    "\n"
-	    "choice: ", this_object());
-    input_to("my_choice");
-}
-
-int who_be_on(object ob) {
-  if(ob->query_invis() && wizardp(ob)) return 0;
-  return (stringp(ob->query_name())? 1 : 0)&&!(ob == this_object());
-}
-
-static void my_choice(string str) {
-  switch(str) {
-  case "1":
-    if(users() && MAX_USERS > 0 && sizeof(users()) >= MAX_USERS) {
-      message("logon", sprintf("\nThere is currently a limit of %d users.",
-			       MAX_USERS)+
-	      "\nThat limit has been exceeded.\n\n", this_object());
-      internal_remove();
     }
-    message("logon", "\nLogin (enter your handle for new players): ",
-	    this_object());
+    message("logon", read_file(WELCOME), this_object()); 
+    
+    message("logon", "\nLogin (enter your handle for new players): \n", this_object());
+    
     input_to("get_name");
-    return;
-   case "2":
-    message("logon",
-	    sprintf("Online users (%d total):\n", 
-		     sizeof(filter_array(users(), (: who_be_on :))))
-	    +repeat_string("-=", 36)+"\n"
-	    +format_page(map_array(filter_array(users(),
-						(: who_be_on :)),
-				   (: capitalize($1->query_name()) :)), 4)
-	    +repeat_string("-=", 36)+"\n", this_object());
-    message("logon", "\nPress [enter]: ", this_object());
-    input_to("press_enter");
-    return;
-  case "3":
-    message("logon", "Have a nice day!\n\n", this_object());
-    internal_remove();
-    return;
-  default:
-   message("logon", "Please enter 1, 2, or 3: ", this_object());
-    input_to("my_choice");
-    return;
-  }
-}
-
-static void press_enter(string null) {
-  message("logon", "\n"
-	  "What do you wish to do?\n"
-	  "\n"
-	  "1.  Log in to the mud (or create a new character).\n"
-	  "2.  See who is on the mud.\n"
-	  "3.  Log out.\n"
-	  "\n"
-	  "choice: ", this_object());
-  input_to("my_choice");
-  return;
 }
 
 static void get_name(string str) { 
@@ -189,6 +128,7 @@ static void get_password(string str) {
 
       if(!check_password(str)) { 
         message("logon", "\nInvalid password.\n", this_object()); 
+        //TODO: this would be a security vulnerability. People can just reconnect before the count fail. needs to be persisted to the user obj per try and multi thread aware. -Parnell 2018
         if(++__CrackCount > MAX_PASSWORD_TRIES) {
             INFORM_D->do_inform("watch_register",
               "[%^YELLOW%^%^BOLD%^SECURITY%^RESET%^] "+__Name+" -> "+
@@ -207,7 +147,8 @@ static void get_password(string str) {
         return; 
       }
 
-    if(!is_copy()) exec_user();
+    if(!is_copy()) 
+      exec_user();
   } 
  
 static private int locked_access() { 
