@@ -21,6 +21,6 @@
 #define LONGEST_DAY 101
 #define SHORTEST_DAY 1
 
-#define DAYS ({ "Darkeday", "Greyday", "Stoneday", "Skullday", "Blackday" })
-#define MONTHS ({ "Karthus", "Vanthus", "Epsirus", "Nocturnus", "Orgus",\
-"Felthus", "Corpus", "Sextus", "Biggus", "Dickus" })
+#define DAYS ({ "Oneday", "Twoday", "Threeday", "Fourday", "Lastday" })
+#define MONTHS ({ "Onery", "Twoery", "Threery", "Fourey", "Fivey",\
+"Sixy", "Seveny", "Eighty", "Niney", "Yearend" })
