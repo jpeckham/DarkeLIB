@@ -743,8 +743,10 @@ string author_file(string str) {
     if(str[0] != '/') 
       str = "/"+str;
     //basically return the sub folder under /wizards (wiz name)
-    if(sscanf(str, REALMS_DIRS+"/%s/%s", nom, tmp) == 2) 
+    if(sscanf(str, REALMS_DIRS+"/%s/%s", nom, tmp) == 2) {
       return nom;
+    }
+      
     return "unknown-author";
 }
 
@@ -758,7 +760,8 @@ static int slow_shutdown() {
 int save_ed_setup(object who, int code) {
     string file;
 
-    if(!intp(code)) return 0;
+    if(!intp(code)) 
+      return 0;
     rm(file = user_path(getuid(who))+".edrc");
     return write_file(file, code+"");
 }

@@ -79,8 +79,6 @@ void create() {
     set_property("no cast", 1);
     set("long",
       "This is the race setter room.\n \n"
-      "We Need A Web Page!!!!!!!!!!!!!!\n"
-      "Anyone that knows Apache web server mail Traer!\n\n"
       "Directions: 1) Read the faq... <help newbie>.\n"
       "            2) Read the race help... <help races>.\n"
       "            3) Pick the race... pick <race>.\n \n"

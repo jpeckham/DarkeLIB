@@ -13,9 +13,7 @@
 #define GROUP_DAEMON "/adm/obj/master/group_d"
 #define PRIVS_DAEMON "/adm/obj/master/privs_d"
 #define ACCESS_DAEMON "/adm/obj/master/access_d"
-static mapping access,
-               groups,
-               privs;
+
 /* Required function definitions */
 string creator_file(string str);
 

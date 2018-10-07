@@ -47,7 +47,7 @@ static void logon() {
         return; 
     }
     message("logon", read_file(WELCOME), this_object()); 
-    
+    message("logon", sprintf("\nLP Mud Driver: %s \nMudlib: %s %s\n", version(), mudlib(), mudlib_version()), this_object()); 
     message("logon", "\nLogin (enter your handle for new players): \n", this_object());
     
     input_to("get_name");

@@ -58,6 +58,8 @@ void change_currency(string type, string key, float x) {
     seteuid(getuid());
 }
 
-float __Query(string type, string key) { return Currencies[type][key]; }
+float __Query(string type, string key) {
+    return Currencies[type][key]; 
+}
 
 string *__QueryCurrencies() { return keys(Currencies); }
