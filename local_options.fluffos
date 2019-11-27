@@ -6,8 +6,8 @@
  * cause the driver to behave oddly.                                        *
  ****************************************************************************/
 
-#ifndef _LOCAL_OPTIONS_H_ 
-#define _LOCAL_OPTIONS_H_ 
+#ifndef _LOCAL_OPTIONS_H_
+#define _LOCAL_OPTIONS_H_
 
 /* NOTES:
  * Many of the configurable options are now set via the configuration file
@@ -280,7 +280,7 @@
 /* PACKAGE_EXTERNAL: Allows the driver to exec() commands specified in the
  * config file.
  */
-#define PACKAGE_EXTERNAL
+#undef PACKAGE_EXTERNAL
 
 /* PACKAGE_DB: efuns for external database access using msql */
 #undef PACKAGE_DB

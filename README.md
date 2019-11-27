@@ -13,3 +13,5 @@ thrace and i hosted darkelib as daybreak ridge in 1998 with traer. i got the dar
   * `docker build -t darkelib:latest .`
   * windows: `docker run --rmi -p 7878:7878 -v %CD%:/home/parnell/mud darkelib`
 
+Log in as parnell `password` to be admin
+
