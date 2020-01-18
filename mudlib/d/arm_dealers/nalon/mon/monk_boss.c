@@ -1,6 +1,6 @@
 #include <std.h>
 #include <nevin.h>
-#include "/wizards/shanus/defs/monk.h"
+#include "/d/arms_dealers/nalon/monk.h"
 inherit MONSTER;
 
 void create() {
@@ -20,7 +20,7 @@ void create() {
 "Regear is the leader of the warrior-monk trainers.  He "
 "coordinates the training program, making sure it is run "
 "efficiently, and all are trained as they should be.  He "
-"is one of the strongest of the warrior-monks, second " 
+"is one of the strongest of the warrior-monks, second "
 "only to the Guildmaster!"
   );
        set_gender("male");

@@ -1,0 +1,910 @@
+Wed Nov 27 03:07:28 2019 [TRACE] - load_groups: result of groups ([ /* sizeof() == 24 */
+  "nfd" : ({ /* sizeof() == 1 */
+      "Nfd"
+    }),
+  "elder" : ({ /* sizeof() == 5 */
+      "noone",
+      "bron",
+      "stoney",
+      "",
+      "cyric"
+    }),
+  "caves" : ({ /* sizeof() == 2 */
+      "Caves",
+      "cyric"
+    }),
+  "illuminarae" : ({ /* sizeof() == 1 */
+      "Illuminarae"
+    }),
+  "ambassador" : ({ /* sizeof() == 1 */
+      "noone"
+    }),
+  "wizard" : ({ /* sizeof() == 8 */
+      "noone",
+      "zephlen",
+      "geire",
+      "dreadnought",
+      "nual",
+      "felice",
+      "tailwind",
+      "hellbringer"
+    }),
+  "mudlib" : ({ /* sizeof() == 1 */
+      "noone"
+    }),
+  "admin" : ({ /* sizeof() == 2 */
+      "noone",
+      "rhasper"
+    }),
+  "law" : ({ /* sizeof() == 1 */
+      "noone"
+    }),
+  "approval" : ({ /* sizeof() == 1 */
+      "parnell"
+    }),
+  "newbieville" : ({ /* sizeof() == 3 */
+      "Newbieville",
+      "tailwind",
+      "thrace"
+    }),
+  "siteadmin" : ({ /* sizeof() == 1 */
+      "parnell"
+    }),
+  "mines" : ({ /* sizeof() == 1 */
+      "Mines"
+    }),
+  "mentor" : ({ /* sizeof() == 3 */
+      "noone",
+      "bron",
+      "stoney"
+    }),
+  "weavers" : ({ /* sizeof() == 1 */
+      "Weavers"
+    }),
+  "assist" : ({ /* sizeof() == 2 */
+      "noone",
+      "mitchell"
+    }),
+  "nocte" : ({ /* sizeof() == 1 */
+      "Nocte"
+    }),
+  "superuser" : ({ /* sizeof() == 6 */
+      "parnell",
+      "traer",
+      "helios",
+      "thrace",
+      "caeri",
+      "rhasper"
+    }),
+  "arch" : ({ /* sizeof() == 10 */
+      "parnell",
+      "traer",
+      "helios",
+      "thrace",
+      "caeri",
+      "rhasper",
+      "noone",
+      "mitchell",
+      "rhasper",
+      "schroom"
+    }),
+  "arm_dealers" : ({ /* sizeof() == 1 */
+      "Arm_dealers"
+    }),
+  "advocate" : ({ /* sizeof() == 1 */
+      "noone"
+    }),
+  "camps" : ({ /* sizeof() == 1 */
+      "Camps"
+    }),
+  "standard" : ({ /* sizeof() == 1 */
+      "Standard"
+    }),
+  "god" : ({ /* sizeof() == 3 */
+      "parnell",
+      "traer",
+      "helios"
+    }),
+])
+Preloading: /adm/daemon/delayed_function_d...
+Preloading: /adm/daemon/astronomy_d...
+Preloading: /daemon/castle_d...
+Preloading: /adm/daemon/guild_d...
+Preloading: /adm/daemon/race_d...
+Preloading: /adm/daemon/inactivity_d...
+Preloading: /daemon/localpost...
+Preloading: /daemon/remotepost...
+Preloading: /daemon/letter...
+Preloading: /daemon/economy_d...
+Preloading: /daemon/events_d...
+Preloading: /adm/daemon/save_items_d...
+Preloading: /daemon/voter...
+Preloading: /daemon/terminal_d...
+Preloading: /d/damned/data/armour_db...
+Preloading: /d/damned/data/weapon_db...
+Preloading: /adm/daemon/wizchar_d...
+Wed Nov 27 03:07:35 2019 [TRACE] - socket_preload BEGIN
+Wed Nov 27 03:07:35 2019 [TRACE] - socket_preload - lines=2
+Wed Nov 27 03:07:35 2019 [TRACE] - socket_preload - [/daemon/network]->create()
+Wed Nov 27 03:07:35 2019 [TRACE] - socket_preload - [/daemon/services]->create()
+Wed Nov 27 03:07:35 2019 [TRACE] - socket_preload END
+Wed Nov 27 03:08:15 2019 [TRACE] - load_groups: result of groups ([ /* sizeof() == 24 */
+  "nfd" : ({ /* sizeof() == 1 */
+      "Nfd"
+    }),
+  "elder" : ({ /* sizeof() == 5 */
+      "noone",
+      "bron",
+      "stoney",
+      "",
+      "cyric"
+    }),
+  "caves" : ({ /* sizeof() == 2 */
+      "Caves",
+      "cyric"
+    }),
+  "illuminarae" : ({ /* sizeof() == 1 */
+      "Illuminarae"
+    }),
+  "ambassador" : ({ /* sizeof() == 1 */
+      "noone"
+    }),
+  "wizard" : ({ /* sizeof() == 8 */
+      "noone",
+      "zephlen",
+      "geire",
+      "dreadnought",
+      "nual",
+      "felice",
+      "tailwind",
+      "hellbringer"
+    }),
+  "mudlib" : ({ /* sizeof() == 1 */
+      "noone"
+    }),
+  "admin" : ({ /* sizeof() == 2 */
+      "noone",
+      "rhasper"
+    }),
+  "law" : ({ /* sizeof() == 1 */
+      "noone"
+    }),
+  "approval" : ({ /* sizeof() == 1 */
+      "parnell"
+    }),
+  "newbieville" : ({ /* sizeof() == 3 */
+      "Newbieville",
+      "tailwind",
+      "thrace"
+    }),
+  "siteadmin" : ({ /* sizeof() == 1 */
+      "parnell"
+    }),
+  "mines" : ({ /* sizeof() == 1 */
+      "Mines"
+    }),
+  "mentor" : ({ /* sizeof() == 3 */
+      "noone",
+      "bron",
+      "stoney"
+    }),
+  "weavers" : ({ /* sizeof() == 1 */
+      "Weavers"
+    }),
+  "assist" : ({ /* sizeof() == 2 */
+      "noone",
+      "mitchell"
+    }),
+  "nocte" : ({ /* sizeof() == 1 */
+      "Nocte"
+    }),
+  "superuser" : ({ /* sizeof() == 6 */
+      "parnell",
+      "traer",
+      "helios",
+      "thrace",
+      "caeri",
+      "rhasper"
+    }),
+  "arch" : ({ /* sizeof() == 10 */
+      "parnell",
+      "traer",
+      "helios",
+      "thrace",
+      "caeri",
+      "rhasper",
+      "noone",
+      "mitchell",
+      "rhasper",
+      "schroom"
+    }),
+  "arm_dealers" : ({ /* sizeof() == 1 */
+      "Arm_dealers"
+    }),
+  "advocate" : ({ /* sizeof() == 1 */
+      "noone"
+    }),
+  "camps" : ({ /* sizeof() == 1 */
+      "Camps"
+    }),
+  "standard" : ({ /* sizeof() == 1 */
+      "Standard"
+    }),
+  "god" : ({ /* sizeof() == 3 */
+      "parnell",
+      "traer",
+      "helios"
+    }),
+])
+Preloading: /adm/daemon/delayed_function_d...
+Preloading: /adm/daemon/astronomy_d...
+Preloading: /daemon/castle_d...
+Preloading: /adm/daemon/guild_d...
+Preloading: /adm/daemon/race_d...
+Preloading: /adm/daemon/inactivity_d...
+Preloading: /daemon/localpost...
+Preloading: /daemon/remotepost...
+Preloading: /daemon/letter...
+Preloading: /daemon/economy_d...
+Preloading: /daemon/events_d...
+Preloading: /adm/daemon/save_items_d...
+Preloading: /daemon/voter...
+Preloading: /daemon/terminal_d...
+Preloading: /d/damned/data/armour_db...
+Preloading: /d/damned/data/weapon_db...
+Preloading: /adm/daemon/wizchar_d...
+Wed Nov 27 03:08:21 2019 [TRACE] - socket_preload BEGIN
+Wed Nov 27 03:08:21 2019 [TRACE] - socket_preload - lines=2
+Wed Nov 27 03:08:21 2019 [TRACE] - socket_preload - [/daemon/network]->create()
+Wed Nov 27 03:08:21 2019 [TRACE] - socket_preload - [/daemon/services]->create()
+Wed Nov 27 03:08:21 2019 [TRACE] - socket_preload END
+Wed Jan 15 00:33:45 2020 [TRACE] - load_groups: result of groups ([ /* sizeof() == 24 */
+  "nfd" : ({ /* sizeof() == 1 */
+      "Nfd"
+    }),
+  "elder" : ({ /* sizeof() == 5 */
+      "noone",
+      "bron",
+      "stoney",
+      "",
+      "cyric"
+    }),
+  "caves" : ({ /* sizeof() == 2 */
+      "Caves",
+      "cyric"
+    }),
+  "illuminarae" : ({ /* sizeof() == 1 */
+      "Illuminarae"
+    }),
+  "ambassador" : ({ /* sizeof() == 1 */
+      "noone"
+    }),
+  "wizard" : ({ /* sizeof() == 8 */
+      "noone",
+      "zephlen",
+      "geire",
+      "dreadnought",
+      "nual",
+      "felice",
+      "tailwind",
+      "hellbringer"
+    }),
+  "mudlib" : ({ /* sizeof() == 1 */
+      "noone"
+    }),
+  "admin" : ({ /* sizeof() == 2 */
+      "noone",
+      "rhasper"
+    }),
+  "law" : ({ /* sizeof() == 1 */
+      "noone"
+    }),
+  "approval" : ({ /* sizeof() == 1 */
+      "parnell"
+    }),
+  "newbieville" : ({ /* sizeof() == 3 */
+      "Newbieville",
+      "tailwind",
+      "thrace"
+    }),
+  "siteadmin" : ({ /* sizeof() == 1 */
+      "parnell"
+    }),
+  "mines" : ({ /* sizeof() == 1 */
+      "Mines"
+    }),
+  "mentor" : ({ /* sizeof() == 3 */
+      "noone",
+      "bron",
+      "stoney"
+    }),
+  "weavers" : ({ /* sizeof() == 1 */
+      "Weavers"
+    }),
+  "assist" : ({ /* sizeof() == 2 */
+      "noone",
+      "mitchell"
+    }),
+  "nocte" : ({ /* sizeof() == 1 */
+      "Nocte"
+    }),
+  "superuser" : ({ /* sizeof() == 6 */
+      "parnell",
+      "traer",
+      "helios",
+      "thrace",
+      "caeri",
+      "rhasper"
+    }),
+  "arch" : ({ /* sizeof() == 10 */
+      "parnell",
+      "traer",
+      "helios",
+      "thrace",
+      "caeri",
+      "rhasper",
+      "noone",
+      "mitchell",
+      "rhasper",
+      "schroom"
+    }),
+  "arm_dealers" : ({ /* sizeof() == 1 */
+      "Arm_dealers"
+    }),
+  "advocate" : ({ /* sizeof() == 1 */
+      "noone"
+    }),
+  "camps" : ({ /* sizeof() == 1 */
+      "Camps"
+    }),
+  "standard" : ({ /* sizeof() == 1 */
+      "Standard"
+    }),
+  "god" : ({ /* sizeof() == 3 */
+      "parnell",
+      "traer",
+      "helios"
+    }),
+])
+Preloading: /adm/daemon/delayed_function_d...
+Preloading: /adm/daemon/astronomy_d...
+Preloading: /daemon/castle_d...
+Preloading: /adm/daemon/guild_d...
+Preloading: /adm/daemon/race_d...
+Preloading: /adm/daemon/inactivity_d...
+Preloading: /daemon/localpost...
+Preloading: /daemon/remotepost...
+Preloading: /daemon/letter...
+Preloading: /daemon/economy_d...
+Preloading: /daemon/events_d...
+Preloading: /adm/daemon/save_items_d...
+Preloading: /daemon/voter...
+Preloading: /daemon/terminal_d...
+Preloading: /d/damned/data/armour_db...
+Preloading: /d/damned/data/weapon_db...
+Preloading: /adm/daemon/wizchar_d...
+Wed Jan 15 00:33:52 2020 [TRACE] - socket_preload BEGIN
+Wed Jan 15 00:33:52 2020 [TRACE] - socket_preload - lines=2
+Wed Jan 15 00:33:52 2020 [TRACE] - socket_preload - [/daemon/network]->create()
+Wed Jan 15 00:33:52 2020 [TRACE] - socket_preload - [/daemon/services]->create()
+Wed Jan 15 00:33:52 2020 [TRACE] - socket_preload END
+Wed Jan 15 00:42:11 2020 [TRACE] - load_groups: result of groups ([ /* sizeof() == 24 */
+  "nfd" : ({ /* sizeof() == 1 */
+      "Nfd"
+    }),
+  "elder" : ({ /* sizeof() == 5 */
+      "noone",
+      "bron",
+      "stoney",
+      "",
+      "cyric"
+    }),
+  "caves" : ({ /* sizeof() == 2 */
+      "Caves",
+      "cyric"
+    }),
+  "illuminarae" : ({ /* sizeof() == 1 */
+      "Illuminarae"
+    }),
+  "ambassador" : ({ /* sizeof() == 1 */
+      "noone"
+    }),
+  "wizard" : ({ /* sizeof() == 8 */
+      "noone",
+      "zephlen",
+      "geire",
+      "dreadnought",
+      "nual",
+      "felice",
+      "tailwind",
+      "hellbringer"
+    }),
+  "mudlib" : ({ /* sizeof() == 1 */
+      "noone"
+    }),
+  "admin" : ({ /* sizeof() == 2 */
+      "noone",
+      "rhasper"
+    }),
+  "law" : ({ /* sizeof() == 1 */
+      "noone"
+    }),
+  "approval" : ({ /* sizeof() == 1 */
+      "parnell"
+    }),
+  "newbieville" : ({ /* sizeof() == 3 */
+      "Newbieville",
+      "tailwind",
+      "thrace"
+    }),
+  "siteadmin" : ({ /* sizeof() == 1 */
+      "parnell"
+    }),
+  "mines" : ({ /* sizeof() == 1 */
+      "Mines"
+    }),
+  "mentor" : ({ /* sizeof() == 3 */
+      "noone",
+      "bron",
+      "stoney"
+    }),
+  "weavers" : ({ /* sizeof() == 1 */
+      "Weavers"
+    }),
+  "assist" : ({ /* sizeof() == 2 */
+      "noone",
+      "mitchell"
+    }),
+  "nocte" : ({ /* sizeof() == 1 */
+      "Nocte"
+    }),
+  "superuser" : ({ /* sizeof() == 6 */
+      "parnell",
+      "traer",
+      "helios",
+      "thrace",
+      "caeri",
+      "rhasper"
+    }),
+  "arch" : ({ /* sizeof() == 10 */
+      "parnell",
+      "traer",
+      "helios",
+      "thrace",
+      "caeri",
+      "rhasper",
+      "noone",
+      "mitchell",
+      "rhasper",
+      "schroom"
+    }),
+  "arm_dealers" : ({ /* sizeof() == 1 */
+      "Arm_dealers"
+    }),
+  "advocate" : ({ /* sizeof() == 1 */
+      "noone"
+    }),
+  "camps" : ({ /* sizeof() == 1 */
+      "Camps"
+    }),
+  "standard" : ({ /* sizeof() == 1 */
+      "Standard"
+    }),
+  "god" : ({ /* sizeof() == 3 */
+      "parnell",
+      "traer",
+      "helios"
+    }),
+])
+Preloading: /adm/daemon/delayed_function_d...
+Preloading: /adm/daemon/astronomy_d...
+Preloading: /daemon/castle_d...
+Preloading: /adm/daemon/guild_d...
+Preloading: /adm/daemon/race_d...
+Preloading: /adm/daemon/inactivity_d...
+Preloading: /daemon/localpost...
+Preloading: /daemon/remotepost...
+Preloading: /daemon/letter...
+Preloading: /daemon/economy_d...
+Preloading: /daemon/events_d...
+Preloading: /adm/daemon/save_items_d...
+Preloading: /daemon/voter...
+Preloading: /daemon/terminal_d...
+Preloading: /d/damned/data/armour_db...
+Preloading: /d/damned/data/weapon_db...
+Preloading: /adm/daemon/wizchar_d...
+Wed Jan 15 00:42:17 2020 [TRACE] - socket_preload BEGIN
+Wed Jan 15 00:42:17 2020 [TRACE] - socket_preload - lines=2
+Wed Jan 15 00:42:17 2020 [TRACE] - socket_preload - [/daemon/network]->create()
+Wed Jan 15 00:42:17 2020 [TRACE] - socket_preload - [/daemon/services]->create()
+Wed Jan 15 00:42:17 2020 [TRACE] - socket_preload END
+Thu Jan 16 01:12:32 2020 [TRACE] - load_groups: result of groups ([ /* sizeof() == 24 */
+  "nfd" : ({ /* sizeof() == 1 */
+      "Nfd"
+    }),
+  "elder" : ({ /* sizeof() == 5 */
+      "noone",
+      "bron",
+      "stoney",
+      "",
+      "cyric"
+    }),
+  "caves" : ({ /* sizeof() == 2 */
+      "Caves",
+      "cyric"
+    }),
+  "illuminarae" : ({ /* sizeof() == 1 */
+      "Illuminarae"
+    }),
+  "ambassador" : ({ /* sizeof() == 1 */
+      "noone"
+    }),
+  "wizard" : ({ /* sizeof() == 8 */
+      "noone",
+      "zephlen",
+      "geire",
+      "dreadnought",
+      "nual",
+      "felice",
+      "tailwind",
+      "hellbringer"
+    }),
+  "mudlib" : ({ /* sizeof() == 1 */
+      "noone"
+    }),
+  "admin" : ({ /* sizeof() == 2 */
+      "noone",
+      "rhasper"
+    }),
+  "law" : ({ /* sizeof() == 1 */
+      "noone"
+    }),
+  "approval" : ({ /* sizeof() == 1 */
+      "parnell"
+    }),
+  "newbieville" : ({ /* sizeof() == 3 */
+      "Newbieville",
+      "tailwind",
+      "thrace"
+    }),
+  "siteadmin" : ({ /* sizeof() == 1 */
+      "parnell"
+    }),
+  "mines" : ({ /* sizeof() == 1 */
+      "Mines"
+    }),
+  "mentor" : ({ /* sizeof() == 3 */
+      "noone",
+      "bron",
+      "stoney"
+    }),
+  "weavers" : ({ /* sizeof() == 1 */
+      "Weavers"
+    }),
+  "assist" : ({ /* sizeof() == 2 */
+      "noone",
+      "mitchell"
+    }),
+  "nocte" : ({ /* sizeof() == 1 */
+      "Nocte"
+    }),
+  "superuser" : ({ /* sizeof() == 6 */
+      "parnell",
+      "traer",
+      "helios",
+      "thrace",
+      "caeri",
+      "rhasper"
+    }),
+  "arch" : ({ /* sizeof() == 10 */
+      "parnell",
+      "traer",
+      "helios",
+      "thrace",
+      "caeri",
+      "rhasper",
+      "noone",
+      "mitchell",
+      "rhasper",
+      "schroom"
+    }),
+  "arm_dealers" : ({ /* sizeof() == 1 */
+      "Arm_dealers"
+    }),
+  "advocate" : ({ /* sizeof() == 1 */
+      "noone"
+    }),
+  "camps" : ({ /* sizeof() == 1 */
+      "Camps"
+    }),
+  "standard" : ({ /* sizeof() == 1 */
+      "Standard"
+    }),
+  "god" : ({ /* sizeof() == 3 */
+      "parnell",
+      "traer",
+      "helios"
+    }),
+])
+Preloading: /adm/daemon/delayed_function_d...
+Preloading: /adm/daemon/astronomy_d...
+Preloading: /daemon/castle_d...
+Preloading: /adm/daemon/guild_d...
+Preloading: /adm/daemon/race_d...
+Preloading: /adm/daemon/inactivity_d...
+Preloading: /daemon/localpost...
+Preloading: /daemon/remotepost...
+Preloading: /daemon/letter...
+Preloading: /daemon/economy_d...
+Preloading: /daemon/events_d...
+Preloading: /adm/daemon/save_items_d...
+Preloading: /daemon/voter...
+Preloading: /daemon/terminal_d...
+Preloading: /d/damned/data/armour_db...
+Preloading: /d/damned/data/weapon_db...
+Preloading: /adm/daemon/wizchar_d...
+Thu Jan 16 01:12:39 2020 [TRACE] - socket_preload BEGIN
+Thu Jan 16 01:12:39 2020 [TRACE] - socket_preload - lines=2
+Thu Jan 16 01:12:39 2020 [TRACE] - socket_preload - [/daemon/network]->create()
+Thu Jan 16 01:12:39 2020 [TRACE] - socket_preload - [/daemon/services]->create()
+Thu Jan 16 01:12:39 2020 [TRACE] - socket_preload END
+Fri Jan 17 01:42:50 2020 [TRACE] - load_groups: result of groups ([ /* sizeof() == 24 */
+  "nfd" : ({ /* sizeof() == 1 */
+      "Nfd"
+    }),
+  "elder" : ({ /* sizeof() == 5 */
+      "noone",
+      "bron",
+      "stoney",
+      "",
+      "cyric"
+    }),
+  "caves" : ({ /* sizeof() == 2 */
+      "Caves",
+      "cyric"
+    }),
+  "illuminarae" : ({ /* sizeof() == 1 */
+      "Illuminarae"
+    }),
+  "ambassador" : ({ /* sizeof() == 1 */
+      "noone"
+    }),
+  "wizard" : ({ /* sizeof() == 8 */
+      "noone",
+      "zephlen",
+      "geire",
+      "dreadnought",
+      "nual",
+      "felice",
+      "tailwind",
+      "hellbringer"
+    }),
+  "mudlib" : ({ /* sizeof() == 1 */
+      "noone"
+    }),
+  "admin" : ({ /* sizeof() == 2 */
+      "noone",
+      "rhasper"
+    }),
+  "law" : ({ /* sizeof() == 1 */
+      "noone"
+    }),
+  "approval" : ({ /* sizeof() == 1 */
+      "parnell"
+    }),
+  "newbieville" : ({ /* sizeof() == 3 */
+      "Newbieville",
+      "tailwind",
+      "thrace"
+    }),
+  "siteadmin" : ({ /* sizeof() == 1 */
+      "parnell"
+    }),
+  "mines" : ({ /* sizeof() == 1 */
+      "Mines"
+    }),
+  "mentor" : ({ /* sizeof() == 3 */
+      "noone",
+      "bron",
+      "stoney"
+    }),
+  "weavers" : ({ /* sizeof() == 1 */
+      "Weavers"
+    }),
+  "assist" : ({ /* sizeof() == 2 */
+      "noone",
+      "mitchell"
+    }),
+  "nocte" : ({ /* sizeof() == 1 */
+      "Nocte"
+    }),
+  "superuser" : ({ /* sizeof() == 6 */
+      "parnell",
+      "traer",
+      "helios",
+      "thrace",
+      "caeri",
+      "rhasper"
+    }),
+  "arch" : ({ /* sizeof() == 10 */
+      "parnell",
+      "traer",
+      "helios",
+      "thrace",
+      "caeri",
+      "rhasper",
+      "noone",
+      "mitchell",
+      "rhasper",
+      "schroom"
+    }),
+  "arm_dealers" : ({ /* sizeof() == 1 */
+      "Arm_dealers"
+    }),
+  "advocate" : ({ /* sizeof() == 1 */
+      "noone"
+    }),
+  "camps" : ({ /* sizeof() == 1 */
+      "Camps"
+    }),
+  "standard" : ({ /* sizeof() == 1 */
+      "Standard"
+    }),
+  "god" : ({ /* sizeof() == 3 */
+      "parnell",
+      "traer",
+      "helios"
+    }),
+])
+Preloading: /adm/daemon/delayed_function_d...
+Preloading: /adm/daemon/astronomy_d...
+Preloading: /daemon/castle_d...
+Preloading: /adm/daemon/guild_d...
+Preloading: /adm/daemon/race_d...
+Preloading: /adm/daemon/inactivity_d...
+Preloading: /daemon/localpost...
+Preloading: /daemon/remotepost...
+Preloading: /daemon/letter...
+Preloading: /daemon/economy_d...
+Preloading: /daemon/events_d...
+Preloading: /adm/daemon/save_items_d...
+Preloading: /daemon/voter...
+Preloading: /daemon/terminal_d...
+Preloading: /d/damned/data/armour_db...
+Preloading: /d/damned/data/weapon_db...
+Preloading: /adm/daemon/wizchar_d...
+Fri Jan 17 01:42:57 2020 [TRACE] - socket_preload BEGIN
+Fri Jan 17 01:42:57 2020 [TRACE] - socket_preload - lines=2
+Fri Jan 17 01:42:57 2020 [TRACE] - socket_preload - [/daemon/network]->create()
+Fri Jan 17 01:42:57 2020 [TRACE] - socket_preload - [/daemon/services]->create()
+Fri Jan 17 01:42:57 2020 [TRACE] - socket_preload END
+Sat Jan 18 02:13:18 2020 [TRACE] - load_groups: result of groups ([ /* sizeof() == 24 */
+  "nfd" : ({ /* sizeof() == 1 */
+      "Nfd"
+    }),
+  "elder" : ({ /* sizeof() == 5 */
+      "noone",
+      "bron",
+      "stoney",
+      "",
+      "cyric"
+    }),
+  "caves" : ({ /* sizeof() == 2 */
+      "Caves",
+      "cyric"
+    }),
+  "illuminarae" : ({ /* sizeof() == 1 */
+      "Illuminarae"
+    }),
+  "ambassador" : ({ /* sizeof() == 1 */
+      "noone"
+    }),
+  "wizard" : ({ /* sizeof() == 8 */
+      "noone",
+      "zephlen",
+      "geire",
+      "dreadnought",
+      "nual",
+      "felice",
+      "tailwind",
+      "hellbringer"
+    }),
+  "mudlib" : ({ /* sizeof() == 1 */
+      "noone"
+    }),
+  "admin" : ({ /* sizeof() == 2 */
+      "noone",
+      "rhasper"
+    }),
+  "law" : ({ /* sizeof() == 1 */
+      "noone"
+    }),
+  "approval" : ({ /* sizeof() == 1 */
+      "parnell"
+    }),
+  "newbieville" : ({ /* sizeof() == 3 */
+      "Newbieville",
+      "tailwind",
+      "thrace"
+    }),
+  "siteadmin" : ({ /* sizeof() == 1 */
+      "parnell"
+    }),
+  "mines" : ({ /* sizeof() == 1 */
+      "Mines"
+    }),
+  "mentor" : ({ /* sizeof() == 3 */
+      "noone",
+      "bron",
+      "stoney"
+    }),
+  "weavers" : ({ /* sizeof() == 1 */
+      "Weavers"
+    }),
+  "assist" : ({ /* sizeof() == 2 */
+      "noone",
+      "mitchell"
+    }),
+  "nocte" : ({ /* sizeof() == 1 */
+      "Nocte"
+    }),
+  "superuser" : ({ /* sizeof() == 6 */
+      "parnell",
+      "traer",
+      "helios",
+      "thrace",
+      "caeri",
+      "rhasper"
+    }),
+  "arch" : ({ /* sizeof() == 10 */
+      "parnell",
+      "traer",
+      "helios",
+      "thrace",
+      "caeri",
+      "rhasper",
+      "noone",
+      "mitchell",
+      "rhasper",
+      "schroom"
+    }),
+  "arm_dealers" : ({ /* sizeof() == 1 */
+      "Arm_dealers"
+    }),
+  "advocate" : ({ /* sizeof() == 1 */
+      "noone"
+    }),
+  "camps" : ({ /* sizeof() == 1 */
+      "Camps"
+    }),
+  "standard" : ({ /* sizeof() == 1 */
+      "Standard"
+    }),
+  "god" : ({ /* sizeof() == 3 */
+      "parnell",
+      "traer",
+      "helios"
+    }),
+])
+Preloading: /adm/daemon/delayed_function_d...
+Preloading: /adm/daemon/astronomy_d...
+Preloading: /daemon/castle_d...
+Preloading: /adm/daemon/guild_d...
+Preloading: /adm/daemon/race_d...
+Preloading: /adm/daemon/inactivity_d...
+Preloading: /daemon/localpost...
+Preloading: /daemon/remotepost...
+Preloading: /daemon/letter...
+Preloading: /daemon/economy_d...
+Preloading: /daemon/events_d...
+Preloading: /adm/daemon/save_items_d...
+Preloading: /daemon/voter...
+Preloading: /daemon/terminal_d...
+Preloading: /d/damned/data/armour_db...
+Preloading: /d/damned/data/weapon_db...
+Preloading: /adm/daemon/wizchar_d...
+Sat Jan 18 02:13:25 2020 [TRACE] - socket_preload BEGIN
+Sat Jan 18 02:13:25 2020 [TRACE] - socket_preload - lines=2
+Sat Jan 18 02:13:25 2020 [TRACE] - socket_preload - [/daemon/network]->create()
+Sat Jan 18 02:13:25 2020 [TRACE] - socket_preload - [/daemon/services]->create()
+Sat Jan 18 02:13:25 2020 [TRACE] - socket_preload END

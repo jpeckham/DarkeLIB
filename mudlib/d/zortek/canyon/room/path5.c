@@ -4,7 +4,7 @@
 // 031596
 
 #include <std.h>
-#include "/wizards/zortek/canyon/canyon.h"
+#include "/d/zortek/canyon/canyon.h"
 
 inherit ROOM;
 

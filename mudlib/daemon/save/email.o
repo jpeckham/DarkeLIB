@@ -1,0 +1,2 @@
+#/daemon/email_d.c
+email (["james.peckham@hotmail.com":"parnelli","test@test.com":"parnelli",])

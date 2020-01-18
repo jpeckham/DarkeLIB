@@ -1,0 +1,52 @@
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Heart beat error in: guildmaster (/d/damned/guilds/paladin/paladin_gm#8)
+Error in object: /d/damned/guilds/paladin/paladin_gm#8 (Wed Nov 27 03:12:30 2019)
+> *call_other() couldn't find object
+
+File: /std/living/combat.c           line 758
+
+Traceback
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+1:   heart_beat() in /d/damned/guilds/paladin/paladin_gm#8
+     Program: /std/monster.c
+     File:               /std/monster.c line 131
+
+2:   continue_attack() in /d/damned/guilds/paladin/paladin_gm#8
+     Program: /std/living/combat.c
+     File:         /std/living/combat.c line 304
+
+3:   execute_attack() in /d/damned/guilds/paladin/paladin_gm#8
+     Program: /std/living/combat.c
+     File:         /std/living/combat.c line 643
+
+4:   do_criticals() in /d/damned/guilds/paladin/paladin_gm#8
+     Program: /std/living/combat.c
+     File:         /std/living/combat.c line 758
+
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Heart beat error in: guildmaster (/d/damned/guilds/paladin/paladin_gm#38)
+Error in object: /d/damned/guilds/paladin/paladin_gm#38 (Wed Nov 27 03:21:25 2019)
+> *call_other() couldn't find object
+
+File: /std/living/combat.c           line 758
+
+Traceback
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+1:   heart_beat() in /d/damned/guilds/paladin/paladin_gm#38
+     Program: /std/monster.c
+     File:               /std/monster.c line 131
+
+2:   continue_attack() in /d/damned/guilds/paladin/paladin_gm#38
+     Program: /std/living/combat.c
+     File:         /std/living/combat.c line 304
+
+3:   execute_attack() in /d/damned/guilds/paladin/paladin_gm#38
+     Program: /std/living/combat.c
+     File:         /std/living/combat.c line 643
+
+4:   do_criticals() in /d/damned/guilds/paladin/paladin_gm#38
+     Program: /std/living/combat.c
+     File:         /std/living/combat.c line 758
+
+

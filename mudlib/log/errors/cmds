@@ -1,0 +1,26 @@
+/cmds/system/_ls.c line 139: Warning: Unused local variable 'idx' before the end of line
+/cmds/system/_ls.c line 139: Warning: Unused local variable 'max_len' before the end of line
+/cmds/system/_ls.c line 211: Warning: Unused local variable 'out' before the end of line
+/cmds/mortal/_say.c line 38: Warning: Unused local variable 'tmp' before the end of line
+/cmds/mortal/_say.c line 38: Warning: Unused local variable 'prof' before the end of line
+/cmds/mortal/_say.c line 38: Warning: Unused local variable 'tmp' before the end of line
+/cmds/mortal/_say.c line 38: Warning: Unused local variable 'prof' before the end of line
+/cmds/system/_ls.c line 139: Warning: Unused local variable 'idx' before the end of line
+/cmds/system/_ls.c line 139: Warning: Unused local variable 'max_len' before the end of line
+/cmds/system/_ls.c line 211: Warning: Unused local variable 'out' before the end of line
+/cmds/mortal/_say.c line 38: Warning: Unused local variable 'tmp' before the end of line
+/cmds/mortal/_say.c line 38: Warning: Unused local variable 'prof' before the end of line
+/cmds/mortal/_who.c line 140: Warning: Unused local variable 'num' before the end of line
+/cmds/mortal/_who.c line 140: Warning: Unused local variable 'num' before the end of line
+/cmds/mortal/_say.c line 38: Warning: Unused local variable 'tmp' before the end of line
+/cmds/mortal/_say.c line 38: Warning: Unused local variable 'prof' before the end of line
+/cmds/mortal/_kill.c line 55: Warning: Unused local variable 'i' before the end of line
+/cmds/system/_massup.c line 233: Warning: Unused local variable 'i' before  /* do_update */
+/cmds/mortal/_say.c line 38: Warning: Unused local variable 'tmp' before the end of line
+/cmds/mortal/_say.c line 38: Warning: Unused local variable 'prof' before the end of line
+/cmds/mortal/_inventory.c line 35: Warning: Unused local variable 'silly' before the end of line
+/cmds/mortal/_peer.c line 61: Warning: Unused local variable 'destlist' before the end of line
+/cmds/mortal/_peer.c line 61: Warning: Unused local variable 'ret' before the end of line
+/cmds/mortal/_peer.c line 61: Warning: Unused local variable 'l' before the end of line
+/cmds/mortal/_say.c line 38: Warning: Unused local variable 'tmp' before the end of line
+/cmds/mortal/_say.c line 38: Warning: Unused local variable 'prof' before the end of line

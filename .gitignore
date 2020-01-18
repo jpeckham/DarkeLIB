@@ -1,5 +1,2 @@
 .vscode/settings.json
-mudlib/log/**
-mudlib/adm/save/**
-mudlib/daemon/save/**
 mudlib/www/wholist.html

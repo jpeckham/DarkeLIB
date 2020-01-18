@@ -1,0 +1,14 @@
+/d/damned/virtual/server.c line 35: Warning: Unused local variable 'obj' before the end of line
+/d/damned/virtual/server.c line 35: Warning: Unused local variable 'obj' before the end of line
+/d/damned/virtual/server.c line 35: Warning: Unused local variable 'obj' before the end of line
+/d/damned/guilds/child/child_gm.c line 25: Warning: Unused local variable 'ob' before the end of line
+/d/damned/virtual/server.c line 35: Warning: Unused local variable 'obj' before the end of line
+/d/damned/guilds/child/child_gm.c line 25: Warning: Unused local variable 'ob' before the end of line
+/d/damned/virtual/server.c line 35: Warning: Unused local variable 'obj' before the end of line
+/d/damned/guilds/child/child_gm.c line 25: Warning: Unused local variable 'ob' before the end of line
+/d/damned/guilds/child/child_gm.c line 25: Warning: Unused local variable 'ob' before the end of line
+/d/damned/guilds/paladin/gm_sword.c line 35: Warning: get() inherited from both /std/autoload.c and /std/Object.c (via /std/weapon.c); using the definition in /std/autoload.c. before the end of file
+/d/damned/guilds/paladin/gm_plate.c line 35: Warning: get() inherited from both /std/autoload.c and /std/Object.c (via /std/armour.c); using the definition in /std/autoload.c. before the end of file
+/d/damned/guilds/child/child_gm.c line 25: Warning: Unused local variable 'ob' before the end of line
+/d/damned/virtual/server.c line 35: Warning: Unused local variable 'obj' before the end of line
+/d/damned/guilds/child/child_gm.c line 25: Warning: Unused local variable 'ob' before the end of line

@@ -1,5 +1,5 @@
 #include <std.h>
-#include "/wizards/shanus/defs/monk.h"
+#include "/d/arms_dealers/nalon/monk.h"
 #include <nevin.h>
 inherit MONSTER;
 

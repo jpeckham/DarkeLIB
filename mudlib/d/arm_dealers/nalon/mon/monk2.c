@@ -1,6 +1,6 @@
 #include <std.h>
 #include <nevin.h>
-#include "/wizards/shanus/defs/monk.h"
+#include "/d/arms_dealers/nalon/monk.h"
 inherit MONSTER;
 
 void create() {
@@ -46,7 +46,7 @@ void create() {
   set_skill("martial arts", 60 + (4*(LEV-5) ) );
        add_money("silver", 20 + random(40) );
        new(MONKOBJ+"robe.c")->move(this_object());
-       force_me("wear robe"); 
+       force_me("wear robe");
 }
 void catch_tell(string str) {
        string a;

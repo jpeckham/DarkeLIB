@@ -1,6 +1,6 @@
 #include <std.h>
 #include <nevin.h>
-#include "/wizards/shanus/defs/monk.h"
+#include "/d/arms_dealers/nalon/monk.h"
 inherit MONSTER;
 
 void create() {
