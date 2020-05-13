@@ -1,7 +1,7 @@
 FROM ubuntu:18.04
 
 RUN apt-get update -y
-RUN apt-get install -y build-essential bison libevent-dev libjemalloc-dev libmysqlclient-dev libpcre3-dev libpq-dev libsqlite3-dev libssl-dev libz-dev
+RUN apt-get install -y build-essential bison libevent-dev libjemalloc-dev libmysqlclient-dev libpcre3-dev libpq-dev libsqlite3-dev libssl-dev libz-dev libicu-dev
 RUN apt-get install -y git && \
     apt-get install -y python libgtest-dev googletest python3-pip
 
