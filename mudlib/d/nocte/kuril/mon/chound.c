@@ -5,7 +5,7 @@
 #include <nevin.h>
 inherit MONSTER;
 
-static int GROWL, KILLING;
+nosave int GROWL, KILLING;
 
 void init() {
 	::init();

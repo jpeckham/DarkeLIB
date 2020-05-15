@@ -16,8 +16,8 @@ inherit "/std/locker_logic";
 private string my_file;
 string block_exit;
 mapping Pet_data;
-static mapping blocked;
-static int saved_here = 1;
+nosave mapping blocked;
+nosave int saved_here = 1;
 
 string *query_non_aggr();
 void add_non_aggr(string who);

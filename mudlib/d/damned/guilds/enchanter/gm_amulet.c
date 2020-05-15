@@ -4,7 +4,7 @@
 inherit "/std/armour";
 inherit AUTOLOAD;
 
-static private object worn_by;
+nosave private object worn_by;
 
 int query_always_keep() { return 1; }
 int query_worn();

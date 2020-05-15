@@ -17,11 +17,11 @@ inherit CONTAINER;
 
 mixed *deaths;
 mapping player_data, magic, severed, healing, body;
-static mapping wielded;
-static string target_limb;
+nosave mapping wielded;
+nosave string target_limb;
 string *limbs;
 int all_my_fingers;
-static int num_wielded;
+nosave int num_wielded;
 private int heal_rate;
 
 void set_wielding_limbs(string *str);

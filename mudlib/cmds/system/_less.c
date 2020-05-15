@@ -152,7 +152,7 @@ swap_out()
 
 
 
-static void
+protected void
 
 write_menu_bar()
 
@@ -178,7 +178,7 @@ write_menu_bar()
 
  
 
-static void
+protected void
 
 display_page()
 
@@ -202,7 +202,7 @@ display_page()
 
 
 
-static void
+protected void
 
 cont_more()
 
@@ -310,7 +310,7 @@ search_string( string str )
 
 
 
-static void
+protected void
 
 get_more_com( string str )
 

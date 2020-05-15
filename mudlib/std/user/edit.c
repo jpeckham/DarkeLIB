@@ -12,10 +12,10 @@
 
 void display_ed_help();
 
-private static string edit_filename, callback;
-private static mixed edit_args;
-private static object act_ob;
-private static int mtime;
+private nosave string edit_filename, callback;
+private nosave mixed edit_args;
+private nosave object act_ob;
+private nosave int mtime;
 
 varargs int edit (string fname, string fun, object ob, mixed args) {
    string tmp;
@@ -54,7 +54,7 @@ varargs int edit (string fname, string fun, object ob, mixed args) {
    return 1;
 }
 
-static void lines(string str) {
+protected void lines(string str) {
    string file;
  
    if (str == "." || str == "**") {

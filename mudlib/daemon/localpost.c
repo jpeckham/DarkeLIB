@@ -6,23 +6,23 @@
 private string __Forward; 
 private mapping __MyGroups; 
 private mapping *__BoxInfo; 
-static private string __File; 
-static private mapping __MudGroups, __Remote; 
+nosave private string __File; 
+nosave private mapping __MudGroups, __Remote; 
  
-static private string enkey(string str); 
-static private int valid_access(object ob); 
-static private void remote_post(mapping borg);
+private string enkey(string str); 
+private int valid_access(object ob); 
+private void remote_post(mapping borg);
 void load_post_box(string who); 
-static private void save_post_box(); 
+private void save_post_box(); 
 string *post_letter(mapping borg); 
-static private int local_post(string who, mapping borg); 
+private int local_post(string who, mapping borg); 
 string *expand_list(string *who); 
 string *expand_group(string grp); 
 void add_post(string *local, mapping borg); 
 void remove_post(string who, string id); 
-static private int get_post_number(string id); 
+private int get_post_number(string id); 
 mapping mail_status(string who); 
-static private void notify_online(string *who, string de, string sub); 
+private void notify_online(string *who, string de, string sub); 
 mapping add_group(string who, string grp, string *in_grp); 
 mapping remove_group(string who, string grp, string *out_grp); 
 void mark_read(string who, string id); 
@@ -39,11 +39,11 @@ void create() {
     __Forward = ""; 
 } 
  
-static private string enkey(string str) {  
+private string enkey(string str) {  
     return replace_string(lower_case(str), " ", "."); 
 } 
  
-static private int valid_access(object ob) { 
+private int valid_access(object ob) { 
     if(base_name(ob) == OB_POSTAL) return 1;
     return (geteuid(ob) == UID_POSTAL || geteuid(ob) == UID_ROOT); 
 } 
@@ -65,7 +65,7 @@ void load_post_box(string who) {
     seteuid(getuid()); 
 } 
  
-static private void save_post_box() { 
+private void save_post_box() { 
     seteuid(UID_POSTALSAVE); 
     if(!sizeof(__BoxInfo) && !sizeof(__MyGroups) && __Forward == "") 
       rm(__File+".o");
@@ -86,7 +86,7 @@ string *post_letter(mapping borg) {
     return tmp; 
 } 
  
-static int local_post(string who, mapping borg) { 
+protected int local_post(string who, mapping borg) { 
     string pl, mud; 
  
     __Remote = ([]); 
@@ -181,7 +181,7 @@ void remove_post(string who, string id) {
     __BoxInfo = exclude_array(__BoxInfo, x); 
 } 
  
-static private int get_post_number(string id) { 
+private int get_post_number(string id) { 
     int i; 
  
     i = sizeof(__BoxInfo); 
@@ -201,7 +201,7 @@ mapping mail_status(string who) {
     return ([ "unread":un, "total":tot ]); 
 } 
  
-static private void notify_online(string *who, string de, string sub) { 
+private void notify_online(string *who, string de, string sub) { 
     object ob, mail; 
     string str; 
     int i; 
@@ -263,7 +263,7 @@ void mark_read(string who, string id) {
     while(i--) if(id == __BoxInfo[i]["id"]) __BoxInfo[i]["read"] = 1; 
 } 
  
-static private void remote_post(mapping borg) { 
+private void remote_post(mapping borg) { 
     string *muds; 
     int i; 
  

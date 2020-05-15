@@ -10,7 +10,7 @@
 string char_class;
 mapping skills;
 mapping spells;
-static mapping skill_bonus;
+nosave mapping skill_bonus;
 int query_skill_bonus(string skill);
 
 void init_skills(string cl);
@@ -219,7 +219,7 @@ string query_skill_stat(string skill) {
     return skills[skill]["stat"];
 }
 
-static void reduce_skills() {
+protected void reduce_skills() {
     string *tmp_skills;
     int lvl, i;
 

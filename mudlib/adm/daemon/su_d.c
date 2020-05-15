@@ -31,13 +31,13 @@ int *count = ({ });
 string *name = ({ });
 int *samep = ({ });
 
-static void get_password(string pass);
-static void enter_world();
-static int check_password(string pass);
-static void try_again();
-static void switch_player();
-static void remove_player();
-private static string pname;
+protected void get_password(string pass);
+protected void enter_world();
+protected int check_password(string pass);
+protected void try_again();
+protected void switch_player();
+protected void remove_player();
+private nosave string pname;
 
 int temp;
 
@@ -99,7 +99,7 @@ NME
   return 1;
 }
 
-static void get_password(string pass){
+protected void get_password(string pass){
   int i;
   
   i = member_array(this_player(),oplayer);
@@ -123,7 +123,7 @@ static void get_password(string pass){
   enter_world();
 }
 
-static void enter_world() {
+protected void enter_world() {
   int i;
   i = member_array(this_player(), oplayer);
   /*
@@ -134,7 +134,7 @@ static void enter_world() {
   nplayer[i]->secure();
 }
 
-static int check_password(string pass){
+protected int check_password(string pass){
   int i;
   string password;
   i=member_array(this_player(),oplayer);
@@ -149,7 +149,7 @@ static int check_password(string pass){
   return 1;
 }
 
-static void try_again(){
+protected void try_again(){
   int i;
   i=member_array(this_player(),oplayer);
   if(nplayer[i]) destruct(nplayer[i]);
@@ -157,7 +157,7 @@ static void try_again(){
   write("Sorry, that isn't a valid entry.\n");
 }
 
-static void switch_player() {
+protected void switch_player() {
   int pos, volume, capacity, err;
   pos=member_array(this_player(),oplayer);
   if(!nplayer[pos]){
@@ -197,7 +197,7 @@ static void switch_player() {
   }
 }
 
-static void remove_player(){
+protected void remove_player(){
   int i;
   
   i=member_array(this_player(),oplayer);

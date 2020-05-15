@@ -2,8 +2,8 @@
 
 inherit "/std/Object";
 
-static object caster;
-static object spell_ob;
+nosave object caster;
+nosave object spell_ob;
 
 void create() {
   ::create();

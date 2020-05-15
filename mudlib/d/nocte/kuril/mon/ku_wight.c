@@ -2,7 +2,7 @@
 #include <nevin.h>
 inherit MONSTER;
 
-static int KILL;
+nosave int KILL;
 
 void init() {
 	::init();

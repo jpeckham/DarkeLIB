@@ -7,11 +7,11 @@
 
 private int __RebootInterval;
 private mapping __Events;
-private static int __InReboot;
-private static string __TimeOfDay;
-private static mapping __Almanac;
+private nosave int __InReboot;
+private nosave string __TimeOfDay;
+private nosave mapping __Almanac;
 
-static void Save();
+protected void Save();
 void change_sky();
 mapping almanac_data();
 int query_minutes(int x);
@@ -26,7 +26,7 @@ int query_week(int x);
 string query_time_of_day();
 void next_change();
 void configure_day();
-static void reboot();
+protected void reboot();
 
 void create() {
     seteuid(UID_DAEMONSAVE);
@@ -53,7 +53,7 @@ varargs void add_events(object ob, string fun, int when, mixed *args, int reg) {
     Save();
 }
 
-static void check_events() {
+protected void check_events() {
     string *events;
     int i, x;
 
@@ -77,13 +77,13 @@ static void check_events() {
     Save();
 }
 
-static void Save() {
+protected void Save() {
     seteuid(UID_DAEMONSAVE);
     save_object(SAVE_EVENTS);
     seteuid(getuid());
 }
 
-static void reboot() {
+protected void reboot() {
     seteuid(UID_SHUTDOWN);
     catch(call_other(SHUT_D, "do_armageddon"));
     seteuid(getuid());

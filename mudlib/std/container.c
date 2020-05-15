@@ -20,7 +20,7 @@ inherit OBJECT;
 
 
 
-private static int internal_encumbrance;
+private nosave int internal_encumbrance;
 
 int possible_to_close;
 

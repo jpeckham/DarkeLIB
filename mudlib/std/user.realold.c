@@ -26,15 +26,15 @@ int platinum, gold, electrum, silver, copper;
 
 int level, ghost, crash_money, rolls, verbose_moves;
 int birth;
-static int disable, time_of_login, autosave;
+nosave int disable, time_of_login, autosave;
 mapping blocked, news;
-static	status	snoop, earmuffs;
-static string *inf_heard;
+nosave	status	snoop, earmuffs;
+nosave string *inf_heard;
 string default_who;
 string *inf_block;
 string	real_name, email, ip, last_on, password, cpath, race, original_site;
 private string position, primary_start;
-private static string *channels;
+private nosave string *channels;
 mapping mini_quests;
 string *quests;
 string *mysites;
@@ -42,9 +42,9 @@ string guild;
 string	*message;
 string married;
 mixed *current_marriage, *divorced;
-static string net_died_here;
-static mapping term_info;
-static object died_here;
+nosave string net_died_here;
+nosave mapping term_info;
+nosave object died_here;
 
 int query_blocked(string str);
 int set_mini_quest(string str, int x, string desc);
@@ -56,8 +56,8 @@ string query_default_who();
 void set_default_who(string str);
 mapping get_mini_quest_map();
 string *query_quests();
-private static register_channels();
-private static setup_inform();
+private protected register_channels();
+private protected setup_inform();
 void set_inf_block(string *new_inf_block);
 nomask string *query_inform();
 nomask string *query_all_inf_blocked();
@@ -903,7 +903,7 @@ void set_name(string str) {
 
 nomask string *query_channels() { return channels; }
 
-static private register_channels() {
+protected private register_channels() {
     if(wizardp(this_object()))
       channels = ({ "cleric","fighter","kataan","mage","monk","rogue"});
     else channels = (query_class() ? ({ query_class() }) : ({}));
@@ -919,7 +919,7 @@ static private register_channels() {
     CHAT_D->add_user(channels);
 }
 
-static private setup_inform() {
+protected private setup_inform() {
     if(!inf_block) inf_block = ({});
     inf_heard = ({ "net_dead_players","logins_and_quits" });
     inf_heard += ({ "impending_shutdowns" });

@@ -8,7 +8,7 @@
 inherit OBJECT;
 
 private mapping armour_save;
-private static mapping armour_static;
+private nosave mapping armour_static;
 
 void unwear();
 void extinguish_glow();

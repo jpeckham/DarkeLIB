@@ -10,7 +10,7 @@
 
 inherit "/std/vault_locker_room";
 
-static int has_error;
+nosave int has_error;
 
 void re_create(string arg);
 

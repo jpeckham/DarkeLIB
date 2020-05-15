@@ -7,9 +7,9 @@
 inherit "/std/vault";
 inherit "/std/virtual/compile";
 
-static int ch_open;
+nosave int ch_open;
 mapping minerals;
-static int lower_room;
+nosave int lower_room;
 
 void save_this();
 

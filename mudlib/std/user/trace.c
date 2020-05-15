@@ -5,7 +5,7 @@
  * last modified: 2/5/92
  */
 
-private static object find_item(object prev, string str)
+private nosave object find_item(object prev, string str)
 {
    object ob;
    string tmp;

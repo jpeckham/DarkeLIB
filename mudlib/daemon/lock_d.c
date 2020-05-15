@@ -8,8 +8,8 @@
 
 #include <clock.h>
 
-static int hour;
-static object *rooms;
+nosave int hour;
+nosave object *rooms;
 
 void create() {
   int i;

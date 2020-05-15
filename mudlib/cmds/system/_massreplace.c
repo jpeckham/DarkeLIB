@@ -56,7 +56,7 @@ string usage()
 
 /*Used to sort of the flags in the commmand*/
 
-static void take_out_arg(string tmp) {
+protected void take_out_arg(string tmp) {
 
     for(;strlen(tmp) > 0;tmp = tmp[1..-1]) flags[tmp[0..0]] = 1;
 

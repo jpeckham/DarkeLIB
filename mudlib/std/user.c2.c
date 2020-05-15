@@ -38,17 +38,17 @@ int platinum, gold, electrum, silver, copper;
 
 int level, ghost, crash_money, rolls, verbose_moves;
 int birth;
-static int count, challenged, count2, disable, time_of_login, autosave;
+nosave int count, challenged, count2, disable, time_of_login, autosave;
 mapping blocked, colours, bank, exp_log;
 string *keep;
 string snatch;
-static	int	snoop, earmuffs;
-static string *inf_heard;
+nosave	int	snoop, earmuffs;
+nosave string *inf_heard;
 string default_who;
 string *inf_block;
 string	real_name, email, ip, last_on, password, cpath, race, original_site;
 private string position, primary_start;
-private static string *channels;
+private nosave string *channels;
 mapping mini_quests;
 string *quests;
 string *mysites;
@@ -57,12 +57,12 @@ string guild_security;
 string	*message;
 string married;
 mixed *current_marriage, *divorced;
-static string net_died_here;
-static mapping term_info;
+nosave string net_died_here;
+nosave mapping term_info;
 varargs void net_dead(int flag);
-static int finish_quit(object ob);
-static object died_here, bet;
-static int bet_allowed;
+protected int finish_quit(object ob);
+nosave object died_here, bet;
+nosave int bet_allowed;
 
 int query_blocked(string str);
 void set_bank(string str, int val);
@@ -77,8 +77,8 @@ string query_default_who();
 void set_default_who(string str);
 mapping get_mini_quest_map();
 string *query_quests();
-private static register_channels();
-private static setup_inform();
+private register_channels();
+private setup_inform();
 void set_inf_block(string *new_inf_block);
 nomask string *query_inform();
 nomask string *query_all_inf_blocked();
@@ -353,7 +353,7 @@ void remove() {
     living::remove();
 }
 
-static int quit(string str) {
+protected int quit(string str) {
     if (str) {
 	notify_fail("Quit what?\n");
 	return 0;
@@ -368,7 +368,7 @@ static int quit(string str) {
     return finish_quit(TP);
 }
 
-static int finish_quit(object ob) {
+protected int finish_quit(object ob) {
     crash_money = 0;
     count = 1;
     if(query_challenged())
@@ -557,7 +557,7 @@ void setup() {
 
 // Added these lines so wizzes couldn't just call heart_beat() and
 // get age.  - Geldron 051296
-varargs static void heart_beat(int recurs_flag) {
+varargs protected void heart_beat(int recurs_flag) {
     object *inv, lyc_ob;
     string tod, *cns;
     int i, tmp;
@@ -1365,7 +1365,7 @@ nomask void reinit_channels() {
     register_channels();
     return;
 }
-static private register_channels() {
+private register_channels() {
     string *dir, class_name, join_room, gm;
     int i;
 
@@ -1403,7 +1403,7 @@ static private register_channels() {
     }
     CHAT_D->add_user(channels);
 }
-static private setup_inform() {
+private setup_inform() {
     if(!inf_block) inf_block = ({});
     inf_heard = ({ "net_dead_players","logins_and_quits","murders" });
     inf_heard += ({ "impending_shutdowns" });

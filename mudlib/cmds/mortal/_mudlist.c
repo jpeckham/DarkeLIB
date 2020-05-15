@@ -64,7 +64,7 @@ cmd_mudlist(string str)
     return 1;
 }
 
-static int 
+protected int 
 compare(string one, string two)
 {
     return strcmp(borg[one]["NAME"], borg[two]["NAME"]);

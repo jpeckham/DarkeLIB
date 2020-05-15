@@ -18,7 +18,7 @@ inherit ROOM;
 
 
 
-static mapping bet;
+nosave mapping bet;
 
 
 

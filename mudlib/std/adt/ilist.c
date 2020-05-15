@@ -64,7 +64,7 @@ private mixed *theHead, *theTail;
 
 
 
-static mixed *set_head(mixed *arg)
+protected mixed *set_head(mixed *arg)
 
 {
 
@@ -74,7 +74,7 @@ static mixed *set_head(mixed *arg)
 
 
 
-static mixed *set_tail(mixed *arg)
+protected mixed *set_tail(mixed *arg)
 
 {
 
@@ -84,7 +84,7 @@ static mixed *set_tail(mixed *arg)
 
 
 
-static void set_prev(mixed *arg, mixed *before)
+protected void set_prev(mixed *arg, mixed *before)
 
 {
 
@@ -96,7 +96,7 @@ static void set_prev(mixed *arg, mixed *before)
 
 
 
-static void set_next(mixed *arg, mixed *after)
+protected void set_next(mixed *arg, mixed *after)
 
 {
 
@@ -128,7 +128,7 @@ mixed *query_tail()
 
 
 
-static mixed *new_elt(mixed thisObj, mixed *nextObj, mixed *prevObj)
+protected mixed *new_elt(mixed thisObj, mixed *nextObj, mixed *prevObj)
 
 {
 

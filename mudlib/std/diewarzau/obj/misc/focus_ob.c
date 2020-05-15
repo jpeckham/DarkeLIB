@@ -4,8 +4,8 @@
 
 inherit "/std/Object";
 
-static object caster;
-static string type;
+nosave object caster;
+nosave string type;
 
 void create() {
   ::create();

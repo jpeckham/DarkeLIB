@@ -2,8 +2,8 @@
 //    Based on Diewarzau's Rune Code
 inherit "/wizards/zortek/canyon/obj/glyph";
 
-static int hb_on;
-static int heal_status;
+nosave int hb_on;
+nosave int heal_status;
 
 int living_filter(object who) { return living(who); }
 

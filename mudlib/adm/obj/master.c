@@ -12,7 +12,7 @@
 #include <localtime.h>
 #include "master.h"
 
-static mapping access,
+protected mapping access,
                groups,
                privs;
 
@@ -502,7 +502,7 @@ mixed compile_object(string file) {
     return (mixed)VIRTUAL_D->compile_object(file);
 }
 
-static void crash(string err) {
+protected void crash(string err) {
     log_file("crashes", ctime(time())+ ": Crash with error " + err + ".\n");
     shout("You are being forced to quit due to crash!\n");
 }
@@ -750,7 +750,7 @@ string author_file(string str) {
     return "unknown-author";
 }
 
-static int slow_shutdown() {
+protected int slow_shutdown() {
     log_file("game_log", "Armageddon loaded by master: "+ctime(time())+".\n");
     new(OB_SHUT)->move(ROOM_START);
     SHUT_D->do_armageddon();

@@ -13,10 +13,10 @@
 #define I3_DEBUG_IN  0x02
 #define I3_DEBUG_LST 0x04
  
-static object router_socket, oob_socket, debugger;
-static mapping services;
-static int debug_level;
-static int bootflag; // Used to recognize the first channel list we get.
+nosave object router_socket, oob_socket, debugger;
+nosave mapping services;
+nosave int debug_level;
+nosave int bootflag; // Used to recognize the first channel list we get.
 int router_password, mudlist_id, chanlist_id;
 mapping mudlist, chanlist;
  
@@ -37,7 +37,7 @@ mixed *query_debugging(){
     return ({ debugger, debug_level });
 }
  
-static private void debug_stuff(mixed message){
+private void debug_stuff(mixed message){
 
   if(debugger)
     message("I3",sprintf("%c[1;32m[I3]: %O%c[0m\n", 27, message, 27), debugger);    
@@ -115,7 +115,7 @@ int send_packet(string type, string user, string mud, string target, mixed *data
     return 1;
 }    
  
-static private int send_chanlist_req(){
+private int send_chanlist_req(){
     send_packet(PRT_CHANLIST_REQ, 0, ROUTER_NAME, 0, ({ chanlist_id }) );
 }    
 
@@ -159,7 +159,7 @@ void process_chanlist_reply(mixed *info){
     save_object(I3_SAVE_FILE);
 }    
     
-static private int send_startup_req_1() {
+private int send_startup_req_1() {
     mixed *packet;
  
     packet = ({ router_password, 

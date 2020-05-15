@@ -8,7 +8,7 @@
 inherit DAEMON;
 
 
-private static mapping vote;
+private nosave mapping vote;
 
 int clean_up() {return 1;}
 void create() { 

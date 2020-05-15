@@ -8,7 +8,7 @@
 inherit OBJECT;
 
 
-private static mapping vote;
+private nosave mapping vote;
 
 void create() { 
     ::create();

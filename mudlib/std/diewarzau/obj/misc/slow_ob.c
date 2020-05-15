@@ -3,7 +3,7 @@
 
 inherit "/std/Object";
 
-static string moving;
+nosave string moving;
 
 int drop() { return 1; }
 
