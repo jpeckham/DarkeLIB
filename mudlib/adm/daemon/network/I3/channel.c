@@ -9,34 +9,34 @@ void send_channel_e(string from, string visname, string channel, string message)
 ;
 
 // Inserted channel things here.
-private static
+private
 void send_chan_who_req( string from, string target, string channel ) {
   target=I3_DAEMON->query_network_name(target);
   I3_DAEMON->send_packet( PRT_CHAN_WHO_REQ, from, target, 0, 
 			({ channel }) );
 }
 
-private static
+private
 void send_channel_listen( string channel, int on_or_off ) {
   I3_DAEMON->send_packet( PRT_CHANNEL_LISTEN, 0, ROUTER_NAME, 0,
 			({ channel, on_or_off }) );
 }
 
-private static
+private
 void send_channel_add( string from, string channel, int type )
 { 
   I3_DAEMON->send_packet( PRT_CHANNEL_ADD, from, ROUTER_NAME, 0,
 			  ({ channel, type }) );
 }
 
-private static
+private
 void send_channel_remove( string from, string channel )
 { 
   I3_DAEMON->send_packet( PRT_CHANNEL_REMOVE, from, ROUTER_NAME, 0,
                           ({ channel }) );
 }
 
-private static
+private
 void send_channel_admin( string from, string channel, string *add_to_list,
 						      string *remove_from_list )
 { int i;
@@ -52,7 +52,7 @@ void send_channel_admin( string from, string channel, string *add_to_list,
 }
 
 			
-private static void send_channel_m(string from, string visname, string channel, string message){
+private void send_channel_m(string from, string visname, string channel, string message){
 
     I3_DAEMON->send_packet(PRT_CHANNEL_M, from, 0, 0, ({ channel, visname, message }));
 }
@@ -107,7 +107,7 @@ int daemon_apply(object user, int type, mixed *action )
   }
 }
 
-private static
+private
 void send_chan_who_reply( mixed *info ) {
 /*      (string)   "chan-who-reply",
         (int)      5,
@@ -126,7 +126,7 @@ void send_chan_who_reply( mixed *info ) {
 
 }
 
-private static
+private
 void send_chan_filter_reply( mixed *info )
 { 
 /*      (string)   "chan-filter-reply",
@@ -213,7 +213,7 @@ void process_channel_m(mixed *info){
     CHANNELS_D->parse_channel(info[6], info[8], info[7]+"@"+info[2],0);
 }
  
-private static
+private
 void send_channel_e(string from, string visname, string channel, string message){
 
 // Lousy hack to fix emote problem ...
@@ -238,7 +238,7 @@ CHANNELS_D->parse_channel(info[6],message,"",1);
     return;
 }
  
-private static        
+private
 void send_channel_t(mixed *info){
 /* Info should contain the following 
         originator_username,                               
@@ -279,4 +279,3 @@ void process_channel_t(mixed *info){
     message("I3",sprintf("[%s] %s\n",info[6], mess_t), ob);
     return;
 }
-       

@@ -18,7 +18,7 @@ class uil {
   string bitlist;
 }
 
-static int count;
+nosave int count;
 mapping all_lockers;
 mapping *obj_register = allocate(10);
 class uil *unique_id = allocate(10);

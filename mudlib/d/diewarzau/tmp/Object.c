@@ -22,11 +22,11 @@ inherit MOVE;
 //    Global variables defined in this file
 //   =======================================
 mapping props;                    // Object data that does get saved.
-private static mapping ob_data;   // Object data that does not get saved.
-private static string cap_name;   // kept in seperate variable for security
+private nosave mapping ob_data;   // Object data that does not get saved.
+private nosave string cap_name;   // kept in seperate variable for security
 private string true_name;         // kept in seperate variable for security
 private string creator;           // File name of the ob that created an object
-static string d_master;           // File name of an object's domain master ob
+nosave string d_master;           // File name of an object's domain master ob
 string material;                  // Substance object is made from.
 
 //    Functions defined in this file
@@ -77,7 +77,7 @@ void set(string what, mixed arg) {
     else ob_data += ([ what: arg ]);
 }
 
-static void add(string what, mixed arg) {
+protected void add(string what, mixed arg) {
     if(!ob_data) ob_data = ([]);
     if(functionp(arg) && geteuid(this_object()) != geteuid(arg[0])) return;
     if(stringp(arg) || intp(arg)) arg = ({ arg });

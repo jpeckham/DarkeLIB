@@ -8,15 +8,15 @@
 #define DARKELIBS ({ "land.of.the.chosen", "darkemud", "darkemudtest", "darkprophecy", "dark.prophecy", "darkedomain", "daybreak.ridge"})
  
 private mapping __Muds; 
-static private int __ReceivedMudlist, __ServerPort; 
-static private string __ServerAddr; 
-static private mapping __Network;
-static private string *banned;
+nosave private int __ReceivedMudlist, __ServerPort; 
+nosave private string __ServerAddr; 
+nosave private mapping __Network;
+nosave private string *banned;
  
 int mud_exists(string mud);
-static void manage_muds();
-static private void restore_network();
-static private void save_network();
+protected void manage_muds();
+private void restore_network();
+private void save_network();
 
 void create() { 
     seteuid(getuid()); 
@@ -62,7 +62,7 @@ string *query_banned(){
    return banned;
 }
  
-static void setup() { 
+protected void setup() { 
     __Network = ([]); 
     __Network["udp"] = ([]);
     __Network["udp"]["port"] = PORT_UDP; 
@@ -86,14 +86,14 @@ static void setup() {
     manage_muds(); 
 } 
  
-static void manage_muds() { 
+protected void manage_muds() { 
     call_out("manage_muds", 300); 
     seteuid(UID_SOCKET); 
     SERVICES_D->send_mudlist_q(__ServerAddr, __ServerPort); 
     seteuid(getuid()); 
   } 
  
-static void check_mudlist(int i) { 
+protected void check_mudlist(int i) { 
     string *muds; 
  
     if(__ReceivedMudlist) return; 
@@ -106,7 +106,7 @@ static void check_mudlist(int i) {
     call_out("check_mudlist", 45, i); 
   } 
  
-static void ping_muds() { 
+protected void ping_muds() { 
     string *muds; 
     int i; 
  
@@ -258,13 +258,13 @@ string query_real_name(string mud) {
  
 int query_port(string svc) { return __Network[svc]["port"]; } 
  
-static private void save_network() { 
+private void save_network() { 
     seteuid(UID_DAEMONSAVE); 
     save_object(SAVE_NAMESERVER); 
     seteuid(getuid()); 
   } 
 
-static private void restore_network() {
+private void restore_network() {
     seteuid(UID_DAEMONSAVE);
     restore_object(SAVE_NAMESERVER);
     seteuid(getuid());

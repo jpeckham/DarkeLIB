@@ -8,7 +8,7 @@
 
 inherit DAEMON;
 
-static void my_choice(string str) {
+protected void my_choice(string str) {
     object ob;
     string name;
     string em;

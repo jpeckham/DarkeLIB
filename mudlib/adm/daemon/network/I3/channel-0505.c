@@ -7,7 +7,7 @@
 void send_channel_e(string from, string visname, string channel, string message)
 ;
  
-private static void send_channel_m(string from, string visname, string channel, string message){
+private void send_channel_m(string from, string visname, string channel, string message){
 
 if(channel=="gwiz") channel = "imud_gossip" ;
   if(channel=="code") channel = "imud_code" ;

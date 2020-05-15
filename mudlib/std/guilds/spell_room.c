@@ -7,8 +7,8 @@
 
 inherit ROOM;
 
-static mapping skill_list;
-static string join_room;
+nosave mapping skill_list;
+nosave string join_room;
 
 int dev_cost(object who, string skill);
 int prereq_check(object who, string str);

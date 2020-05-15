@@ -10,7 +10,7 @@
 
 inherit DAEMON;
 
-private static string tmp;
+private nosave string tmp;
 
 int
 cmd_passwd() {
@@ -41,7 +41,7 @@ cmd_passwd() {
     return 1;
 }
 
-nomask static int oldpass(string pass) {
+nomask protected int oldpass(string pass) {
     string password;
 
     if (!pass) return 0;    
@@ -57,7 +57,7 @@ nomask static int oldpass(string pass) {
     return 1;
 }
 
-nomask static int newpass(string pass) {
+nomask protected int newpass(string pass) {
     tmp = pass;
     if (strlen(tmp)<5) {
 	write("Your new password must have more than 5 characters.\n");
@@ -68,7 +68,7 @@ nomask static int newpass(string pass) {
     return 1;
 }
 
-nomask static int npass2(string pass) {
+nomask protected int npass2(string pass) {
     if (pass != tmp) {
         write("\nThe passwords must match.\n");
 	return 0;

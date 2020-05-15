@@ -41,8 +41,8 @@ string query_long(string str);
 string *get_directions();
 
 string desc;
-static int heal_counter;
-static int hb_on;
+nosave int heal_counter;
+nosave int hb_on;
 
 string query_long_desc() { return ::query_long(0); }
 

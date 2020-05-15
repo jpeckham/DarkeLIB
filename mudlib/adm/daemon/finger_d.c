@@ -21,7 +21,7 @@ string get_idle_string(object ob, int verbose);
  
 void create() { seteuid(getuid()); }
  
-static void complete_variables() {
+protected void complete_variables() {
   if(!true_name) true_name = "";
   if(!real_name) real_name = "???";
   if(!last_on) last_on = "no record";

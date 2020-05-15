@@ -4,8 +4,8 @@ inherit "/std/Object";
 
 string spell;
 int spell_pow;
-static object ele_shad;
-static object skill_shad;
+nosave object ele_shad;
+nosave object skill_shad;
 
 void create() {
   ::create();

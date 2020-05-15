@@ -5,7 +5,7 @@
 //    -Diewarzau 8/8/95
 inherit "/std/Object";
 
-static string join_room;
+nosave string join_room;
 string owner;
 int summonuse;
 

@@ -12,7 +12,7 @@
 #include <dirs.h>
 #include <objects.h>
 
-static private void save_me();
+private void save_me();
 void check_inactivity();
 mapping remove_info;
 
@@ -75,7 +75,7 @@ int remove_position_protected(string postn) {
   return 1;
 }
 
-static private void save_me() {
+private void save_me() {
   seteuid(UID_SECURE_DAEMONSAVE);
   save_object(DIR_SECURE_DAEMONS_SAVE+"/inactivity");
   seteuid(getuid());

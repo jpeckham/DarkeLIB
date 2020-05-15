@@ -5,7 +5,7 @@
 #include <nevin.h>
 inherit "/wizards/nevin/std/kuril_river";
 
-static int THROW;
+nosave int THROW;
 
 void init() {
 	::init();

@@ -8,7 +8,7 @@
 #include <voting.h>
 #include <daemons.h>
 
-static string current_class;
+nosave string current_class;
 int elir;
 mapping votes;
 string *candidates;

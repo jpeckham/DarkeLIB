@@ -14,10 +14,10 @@
 inherit "/std/vault";
 inherit "/std/virtual/compile";
 
-static string clan_name;
-static string room_type;
-static int room_num;
-static int under_attack;
+nosave string clan_name;
+nosave string room_type;
+nosave int room_num;
+nosave int under_attack;
 mapping room_info;
 
 void room_err();

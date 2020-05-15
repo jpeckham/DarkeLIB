@@ -3,7 +3,7 @@
 
 inherit OBJECT;
 
-private static object shadow, ob;
+private nosave object shadow, ob;
 
 void create()
 {

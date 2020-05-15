@@ -13,12 +13,12 @@ inherit MONSTER;
 
 private mapping __Eco, __Values, __Costs, __Discriminate;
 
-static int __CheckDiscrimination();
-static int __SellAll();
-static int convert(int x);
-static int cost_bargaining(object who, int x);
-static int value_bargaining(object who, int x);
-static int __AlreadyThere(object ob);
+protected int __CheckDiscrimination();
+protected int __SellAll();
+protected int convert(int x);
+protected int cost_bargaining(object who, int x);
+protected int value_bargaining(object who, int x);
+protected int __AlreadyThere(object ob);
 nomask void die();//TO remove cash
 
 void init() {
@@ -287,7 +287,7 @@ int filter_list(object ob, string str) {
     return 0;  // just to be safe... Did I just comment some code?
 }
 
-static int __SellAll() {
+protected int __SellAll() {
     object *inv;
     int i, worth, val, total;
     string tmp;
@@ -323,7 +323,7 @@ static int __SellAll() {
     return 1;
 }
 
-static int cost_bargaining(object who, int x) {
+protected int cost_bargaining(object who, int x) {
     int val, vend, pl, cha;
 
     pl = (int)who->query_skill("bargaining");
@@ -333,7 +333,7 @@ static int cost_bargaining(object who, int x) {
     return val;
 }
 
-static int value_bargaining(object who, int x) {
+protected int value_bargaining(object who, int x) {
     int val, pl, cha;
 
     pl = (int)who->query_skill("bargaining");
@@ -342,7 +342,7 @@ static int value_bargaining(object who, int x) {
     return val;
 }
 
-static int __AlreadyThere(object ob) {
+protected int __AlreadyThere(object ob) {
     object *inv;
     int i;
 
@@ -352,7 +352,7 @@ static int __AlreadyThere(object ob) {
     return 0;
 }
 
-static int __CheckDiscrimination() {
+protected int __CheckDiscrimination() {
     int x, tmp, i;
     string *dis;
 
@@ -378,7 +378,7 @@ static int __CheckDiscrimination() {
     return 10;
 }
 
-static int convert(int x) {
+protected int convert(int x) {
     if(!x) return 0;
     return 1 + to_int(x * __Eco["exchange rate"]);
 }

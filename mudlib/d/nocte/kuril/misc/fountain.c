@@ -7,7 +7,7 @@
 #include <fountain.h>
 inherit "/std/Object";
 
-static int TELL;
+nosave int TELL;
 
 int check_living(object *inv);
 

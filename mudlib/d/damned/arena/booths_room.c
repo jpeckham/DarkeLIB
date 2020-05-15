@@ -22,13 +22,13 @@ inherit ROOM;
 
 
 
-private static object challenger, challengee;
+private nosave object challenger, challengee;
 
-private static string challenger_oldenv, challengee_oldenv;
+private nosave string challenger_oldenv, challengee_oldenv;
 
-private static int count;
+private nosave int count;
 
-private static int fighting;
+private nosave int fighting;
 
 
 
@@ -494,7 +494,7 @@ void finish_battle(object ob) {
 
 
 
-static void move_all(object ob, string str) {
+protected void move_all(object ob, string str) {
 
     ob->move_player(str);
 

@@ -20,9 +20,9 @@ inherit ROOM;
 
 
 
-private static object challenger, challengee;
+private nosave object challenger, challengee;
 
-private static int waiting;
+private nosave int waiting;
 
 
 

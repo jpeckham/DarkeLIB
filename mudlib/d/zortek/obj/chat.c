@@ -8,7 +8,7 @@
 #include <objects.h>
 #include "/wizards/misery/def.h"
 
-static private mapping channels;
+nosave private mapping channels;
 
 int list_channel(string str);
 

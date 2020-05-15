@@ -16,16 +16,16 @@
 //#define SKTLOG(x,y)	MUSTLOG(x,y)
 #define SKTLOG(x,y)
 
-static private int	style;
-static private int	fdOwned = -1;	/* no socket yet */
-static private function	read_func;
-static private function	close_func;
+nosave private int	style;
+nosave private int	fdOwned = -1;	/* no socket yet */
+nosave private function	read_func;
+nosave private function	close_func;
 
-static private mixed *	write_queue = ({ });
-static private int	blocked;
+nosave private mixed *	write_queue = ({ });
+nosave private int	blocked;
 
 /* For debug purposes only */
-static private mixed addr;
+nosave private mixed addr;
 int stat_me()
 {
     switch ( style )

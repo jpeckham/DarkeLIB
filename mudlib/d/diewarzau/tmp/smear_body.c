@@ -2,11 +2,11 @@
 
 inherit MONSTER;
 
-static int casting_scry;
-static int snooped;
-static object scrying;
-static int delay;
-static object following;
+nosave int casting_scry;
+nosave int snooped;
+nosave object scrying;
+nosave int delay;
+nosave object following;
 
 create() {
   ::create();

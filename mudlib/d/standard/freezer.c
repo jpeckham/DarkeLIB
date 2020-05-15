@@ -4,13 +4,13 @@
 
 inherit ROOM;
 
-static private object *old;
+nosave private object *old;
 
 void create() {
     ::create();
     set_property("no teleport", 1);
-set_property("no scry", 1);
-set_property("no attack", 1);
+    set_property("no scry", 1);
+    set_property("no attack", 1);
     set("short", "The freezer");
     set("long", "The local freezer.");
     set_exits( 
@@ -18,7 +18,7 @@ set_property("no attack", 1);
 }
 
 /*
-static void clean_room() {
+protected void clean_room() {
     object *in_here, *to_clean;
     int i;
 

@@ -5,8 +5,8 @@ inherit "/std/Object";
 int max_points;
 int mp_left;
 int activated;
-static int time_to_regen;
-static int hb_on;
+nosave int time_to_regen;
+nosave int hb_on;
 
 void create() {
   ::create();

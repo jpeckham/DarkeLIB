@@ -17,8 +17,8 @@ inherit CSTACK_ADT;       /* for pushd and popd */
 inherit "/std/user/history";
 // private inherit CSTACK_ADT;       /* for pushd and popd */
 
-private static string tsh_prompt;
-private static int cur, hist_size, pushd_size, custom_prompt;
+private nosave string tsh_prompt;
+private nosave int cur, hist_size, pushd_size, custom_prompt;
 
 string do_nicks(string arg);
 string do_alias(string arg);

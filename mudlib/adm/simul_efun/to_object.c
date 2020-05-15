@@ -46,7 +46,7 @@
 
 #include <debug.h>
 
-static object e(object p, int outside)
+protected object e(object p, int outside)
 {
    if (outside) {
       return p ? environment(p) : 0;

@@ -9,7 +9,7 @@
 inherit "/std/vault_locker_room";
 inherit "/std/virtual/compile";
 
-static int has_error;
+nosave int has_error;
 
 int query_is_locker_room() {
   if(has_error) return 0;

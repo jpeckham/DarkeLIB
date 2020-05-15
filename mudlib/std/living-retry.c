@@ -19,21 +19,21 @@
 #define HEALING_FORMULA (stats["strength"]+stats["constitution"]+stats["charisma"])*2
 
 int invis, ok_to_heal, player_age;
-static int forced, spiritual, physical;
-static int next_lev_exp;
+nosave int forced, spiritual, physical;
+nosave int next_lev_exp;
 int sight_bonus;
 string description;
-static string ritual;
-static string party;
-static string *search_path;
-static int login_flag;
+nosave string ritual;
+nosave string party;
+nosave string *search_path;
+nosave int login_flag;
 private string gender;
 mapping stats;
-static mapping stat_bonus;
+nosave mapping stat_bonus;
 mapping languages;
 string primary_language;
 mapping language_exp;
-static int dev_rate_int;
+nosave int dev_rate_int;
 
 private int xp_to_next_dev;
 
@@ -68,11 +68,11 @@ int max_buffer_size();
 string query_ritual();
 string query_party();
 string query_long(string unused);
-static void init_path();
+protected void init_path();
 int get_dev_rate();
 void remove();
 
-static void init_living() {
+protected void init_living() {
     add_action("cmd_hook", "", 1);
     init_path();
     init_attack();
@@ -207,7 +207,7 @@ int max_buffer_size() {
     return gain_exp;
 }
 
-static void init_path() {
+protected void init_path() {
     string tmp;
 
     search_path = ({ DIR_MORTAL_CMDS, DIR_CLASS_CMDS });
@@ -230,12 +230,12 @@ static void init_path() {
     }
 }
 
-static void init_stats() { stats = ([]); }
+protected void init_stats() { stats = ([]); }
 
 /* Added did_command(cmd); so shadowing would work more efficiently
  * - Geldron 030696
  */
-nomask static int cmd_hook(string cmd) {
+nomask protected int cmd_hook(string cmd) {
     string file, verb, abcmd;
 
     verb = query_verb();

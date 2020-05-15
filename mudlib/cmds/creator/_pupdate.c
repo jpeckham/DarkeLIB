@@ -20,7 +20,7 @@ inherit DAEMON;
 
 
 
-private static int load (string str) 
+private int load (string str) 
 
 {
 

@@ -4,7 +4,7 @@ inherit "/std/spells/shadows/shadow";
 
 object who_shadowed;
 string exp_mesg;
-static int fumble;
+nosave int fumble;
 
 void set_fumble() { fumble = 1; }
 

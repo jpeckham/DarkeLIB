@@ -3,9 +3,9 @@
 //	code for allowing people to follow
 //	created by Descartes of Borg 15 february 1993
 
-static private string *allowed_to_follow;
-static private object *followers;
-static private object following;
+nosave private string *allowed_to_follow;
+nosave private object *followers;
+nosave private object following;
 
 object *query_followers() { return followers; }
 object query_following() { return following; }

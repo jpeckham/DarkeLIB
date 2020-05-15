@@ -6,7 +6,7 @@ inherit "/std/armour";
 
 mapping skills;
 mapping spells;
-static object shadow;
+nosave object shadow;
 
 void create() {
   ::create();

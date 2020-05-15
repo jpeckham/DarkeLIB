@@ -48,7 +48,7 @@ void add_time(int how_much) {
     return;
 }
 
-static void the_end() {
+protected void the_end() {
     time -= 60;
 
     if(time < 61) call_out("end_it", 50);
@@ -69,7 +69,7 @@ static void the_end() {
     let_everyone_know();
 }
 
-static void the_end_long() {
+protected void the_end_long() {
     time -= 240;
 
     if(time < 61) call_out("end_it", 50);
@@ -81,7 +81,7 @@ static void the_end_long() {
     let_everyone_know();
 }
 
-static void end_it() {
+protected void end_it() {
     time -= 50;
     call_out("shut", 10);
     INFORM_D->do_inform("impending_shutdowns",
@@ -92,7 +92,7 @@ static void end_it() {
 
 }
 
-static void shut() {
+protected void shut() {
     object *who, ob;
     int i;
 

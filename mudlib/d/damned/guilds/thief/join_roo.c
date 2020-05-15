@@ -16,11 +16,11 @@
 inherit ROOM;
 
 mapping guild_list;
-static string class_name;
+nosave string class_name;
 string master;
 mixed *inv;
-static private string *related_guilds;
-static private string guild_obj;
+nosave private string *related_guilds;
+nosave private string guild_obj;
 
 private void save_this_room();
 string query_class_name();

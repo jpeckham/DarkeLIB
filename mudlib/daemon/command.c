@@ -7,8 +7,8 @@
 
 #include <dirs.h>
 
-private static mapping __Cmds;
-private static string *__Paths;
+private nosave mapping __Cmds;
+private nosave string *__Paths;
 
 void rehash(mixed *val);
 string find_cmd(string cmd, string *path);

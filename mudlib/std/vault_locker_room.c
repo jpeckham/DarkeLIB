@@ -9,7 +9,7 @@
 
 inherit "/std/vault";
 
-static int load_status;
+nosave int load_status;
 
 void load_lockers();
 

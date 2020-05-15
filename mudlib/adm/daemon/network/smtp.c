@@ -76,15 +76,15 @@ inherit "/std/save.c";
 
 #define log_info(x, y) log_file(x, ctime(time()) + "\n"); log_file(x, y)
 
-static private int smtpSock;
-static private mapping sockets;
-static private mapping mode; // To see if a client is in command or data mode.
-static private mapping mail; // Keep mail messages being send to us here, when
+nosave private int smtpSock;
+nosave private mapping sockets;
+nosave private mapping mode; // To see if a client is in command or data mode.
+nosave private mapping mail; // Keep mail messages being send to us here, when
                              // they're done, tehy can go to the mailer daemon.
-static private mapping resolve_pending;
-static string *months;
+nosave private mapping resolve_pending;
+nosave string *months;
 
-static void setup();
+protected void setup();
 void close_connection(int fd);
 void write_data(int fd, mixed data);
 string smtp_help();
@@ -107,7 +107,7 @@ common_date(int t)
 		r[LT_MIN], r[LT_SEC], r[LT_GMTOFF] / 3600);
 }
 
-static void create()
+protected void create()
 { 
 	accesses = 0;
 	set_persistent(1);
@@ -151,13 +151,13 @@ varargs string query_hostname(int fd, int t)
 	return 0;
 }
 
-static void clean_up()
+protected void clean_up()
 {
  remove();
  return;
 } 
 
-static void setup()
+protected void setup()
 {
 	if ((smtpSock =
 		socket_create(STREAM, "read_callback", "close_callback")) < 0)
@@ -176,7 +176,7 @@ static void setup()
 	}
 }
 
-static void write_data_retry(int fd, mixed data, int counter)
+protected void write_data_retry(int fd, mixed data, int counter)
 {
 	int rc;
 
@@ -223,12 +223,12 @@ void retry_write(mixed* args)
 	write_data_retry(args[0], args[1], args[2]);
 }
 
-static void write_data(int fd, mixed data)
+protected void write_data(int fd, mixed data)
 {
 	write_data_retry(fd, data, 0);
 }
 
-static void store_client_info(int fd)
+protected void store_client_info(int fd)
 {
 	string addr;
 	mixed result;
@@ -250,7 +250,7 @@ static void store_client_info(int fd)
 	}
 }
 
-static void listen_callback(int fd)
+protected void listen_callback(int fd)
 {
 	int nfd;
 
@@ -315,7 +315,7 @@ log_smtp(int fd, int rc, int nbytes, string cmd)
 // read_callback gets called when the SMTP client sends us a request.
 //
 
-static void read_callback(int fd, string str)
+protected void read_callback(int fd, string str)
 {
 	string cmd, args, file, url;
 	string *request;
@@ -460,7 +460,7 @@ SMTP_DEBUG("CMD:"+cmd);
 // close_callback is called when any socket is closed unexpectedly
 // (by the driver instead of as a result of socket_close()).
 
-static void close_callback(int fd)
+protected void close_callback(int fd)
 {
 	if (fd == smtpSock) {
 		log_info(LOG_SMTP_ERR,
@@ -502,13 +502,13 @@ void resolve_callback(string theName, string theAddr, int slot)
 	}
 }
 
-static private void smtp_send(int fd, string code)
+private void smtp_send(int fd, string code)
 {
 	SMTP_DEBUG(code);
 	write_data(fd, code );
 }
 
-static void close_connection(int fd)
+protected void close_connection(int fd)
 {
 int errcode;
 

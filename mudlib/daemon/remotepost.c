@@ -4,12 +4,12 @@
 #include <daemons.h> 
  
 private mapping __MailQueue; 
-static private mapping __IncomingMail; 
+nosave private mapping __IncomingMail; 
  
-static private void save_mailqueue();
-static private void restore_mailqueue();
-static private string *local_targets(string *str);
-static private string *convert_names(string *noms);
+private void save_mailqueue();
+private void restore_mailqueue();
+private string *local_targets(string *str);
+private string *convert_names(string *noms);
 
 void create() { 
     string *muds; 
@@ -110,7 +110,7 @@ int incoming_post(mapping info) {
     return 1; 
   } 
  
-static private string *local_targets(string *str) {
+private string *local_targets(string *str) {
     string a, b; 
     int i;
  
@@ -123,19 +123,19 @@ static private string *local_targets(string *str) {
     return str;
   } 
  
-static private void save_mailqueue() { 
+private void save_mailqueue() { 
     seteuid(UID_SECURE_DAEMONSAVE); 
     save_object(SAVE_MAILQUEUE); 
     seteuid(getuid()); 
   } 
  
-static private void restore_mailqueue() { 
+private void restore_mailqueue() { 
     seteuid(UID_SECURE_DAEMONSAVE); 
     restore_object(SAVE_MAILQUEUE); 
     seteuid(getuid()); 
   } 
          
-static private string *convert_names(string *noms) {
+private string *convert_names(string *noms) {
     string a, b;
     int i;
 

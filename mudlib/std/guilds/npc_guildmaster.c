@@ -8,7 +8,7 @@
 
 inherit MONSTER;
 
-private static string join_room;
+private nosave string join_room;
 
 void set_join_room(string str);
 

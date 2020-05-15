@@ -8,11 +8,11 @@
 
 
 
-private static mixed *queue;
+private nosave mixed *queue;
 
-private static int hptr, tptr, size, primed;
+private nosave int hptr, tptr, size, primed;
 
-private static int count;
+private nosave int count;
 
 
 

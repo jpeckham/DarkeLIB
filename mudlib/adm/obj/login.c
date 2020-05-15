@@ -5,38 +5,38 @@
 #include <daemons.h> 
 #include <objects.h>
  
-static private int __CrackCount; 
-static private string __Name; 
-static private object __Player; 
-static string tmp;
+nosave private int __CrackCount;
+nosave private string __Name;
+nosave private object __Player;
+nosave string tmp;
  
-static void logon();
-static void get_name(string str);
-static void get_password(string str);
-static private int locked_access();
-static private int check_password(string str);
-static private int valid_site(string ip);
-static private int is_copy();
-static void disconnect_copy(string str, object ob);
-static private void exec_user();
-static void new_user(string str);
-static void choose_gender(string str);
-static void enter_email(string str);
-static void enter_real_name(string str);
-static void idle();
-static void receive_message(string cl, string msg);
-static private void internal_remove();
+protected void logon();
+protected void get_name(string str);
+protected void get_password(string str);
+private int locked_access();
+private int check_password(string str);
+private int valid_site(string ip);
+private int is_copy();
+protected void disconnect_copy(string str, object ob);
+private void exec_user();
+protected void new_user(string str);
+protected void choose_gender(string str);
+protected void enter_email(string str);
+protected void enter_real_name(string str);
+protected void idle();
+protected void receive_message(string cl, string msg);
+private void internal_remove();
 
 void remove();
 
-void create() { 
+void create() {
     seteuid(UID_ROOT); 
     __Name = ""; 
     __CrackCount = 0; 
     __Player = 0; 
-  } 
+}
  
-static void logon() { 
+protected void logon() {
     string name;
 
     call_out("idle", LOGON_TIMEOUT); 
@@ -53,14 +53,14 @@ static void logon() {
     input_to("get_name");
 }
 
-static void get_name(string str) { 
+protected void get_name(string str) {
     if(!str || str == "") { 
         message("logon", "\nInvalid entry.  Please try again.\n", this_object()); 
         internal_remove();
         return; 
       } 
     __Name = lower_case(str); 
-    if((int)master()->is_locked()) { 
+    if((int)master()->is_locked()) {
         message("logon", read_file(LOCKED_NEWS), this_object()); 
         if(locked_access()) 
           message("logon", "\n    >>> Access allowed <<<\n", this_object()); 
@@ -70,12 +70,12 @@ static void get_name(string str) {
             return; 
 	  } 
       } 
-    if((int)SHUT_D->mud_lock()) { 
-        message("logon", read_file(MUD_LOCKED_NEWS), this_object()); 
-        if(locked_access()) 
+    if((int)SHUT_D->mud_lock()) {
+        message("logon", read_file(MUD_LOCKED_NEWS), this_object());
+        if(locked_access())
           message("logon", "\n    >>> Access allowed <<<\n",this_object());
 
-        else { 
+        else {
           message("logon", "\n    >>> Access denied <<<\n", this_object());
 
           internal_remove();
@@ -116,9 +116,9 @@ static void get_name(string str) {
       } 
     message("logon", "Password: ", this_object()); 
     input_to("get_password", I_NOECHO | I_NOESC); 
-  } 
+}
  
-static void get_password(string str) { 
+protected void get_password(string str) {
     if(!str || str == "") { 
         message("logon", "\nYou must enter a password.  Try again later.\n", 
           this_object()); 
@@ -149,9 +149,9 @@ static void get_password(string str) {
 
     if(!is_copy()) 
       exec_user();
-  } 
+}
  
-static private int locked_access() { 
+private int locked_access() {
     int i; 
     
     if((int)BANISH_D->is_guest(__Name)) return 1; 
@@ -163,7 +163,7 @@ static private int locked_access() {
     return 0; 
   } 
  
-static private int check_password(string str) { 
+private int check_password(string str) {
     string pass; 
  
     master()->load_player_from_file(__Name, __Player); 
@@ -175,7 +175,7 @@ static private int check_password(string str) {
     return 1;
   } 
  
-static private int valid_site(string ip) { 
+private int valid_site(string ip) {
     string a, b; 
     string *miens; 
     int i; 
@@ -188,7 +188,7 @@ static private int valid_site(string ip) {
     return 0; 
   } 
  
-static private int is_copy() { 
+private int is_copy() {
     object ob; 
  
     if(!(ob = find_player(__Name))) return 0; 
@@ -212,7 +212,7 @@ static private int is_copy() {
     return 1; 
   } 
  
-static void disconnect_copy(string str, object ob) { 
+protected void disconnect_copy(string str, object ob) {
     object tmp; 
  
     if((str = lower_case(str)) == "" || str[0] != 'y') { 
@@ -228,7 +228,7 @@ static void disconnect_copy(string str, object ob) {
     internal_remove();
   } 
  
-static private void exec_user() { 
+private void exec_user() {
     if(MULTI_D->query_prevent_login(__Name)) { 
         internal_remove();
         return; 
@@ -248,7 +248,7 @@ static private void exec_user() {
     destruct(this_object()); 
   } 
  
-static void new_user(string str) { 
+protected void new_user(string str) {
     if((str = lower_case(str)) == "" || str[0] != 'y') { 
         message("logon", "\nOk, then enter the name you really want: ", this_object()); 
         input_to("get_name"); 
@@ -263,7 +263,7 @@ message("logon", "Enter a new password:", this_object());
 return;
 }
 //====================
-static void new_pass(string str){
+protected void new_pass(string str){
     
 
     tmp = str;
@@ -276,7 +276,7 @@ static void new_pass(string str){
     input_to("npass2");
  }
 
-nomask static void npass2(string pass) {
+nomask protected void npass2(string pass) {
     if (pass != tmp) {
         message("logon","\nThe passwords must match.\n",this_object());
 	message("logon","Re-enter new password:",this_object());
@@ -296,7 +296,7 @@ nomask static void npass2(string pass) {
     return;
   } 
  
-static void choose_gender(string str) { 
+protected void choose_gender(string str) {
     if(str != "male" && str != "female") { 
         message("logon", "\nAll characters must be either male or female.\n",
           this_object()); 
@@ -317,7 +317,7 @@ static void choose_gender(string str) {
     input_to("enter_email"); 
   } 
  
-static void enter_email(string str) { 
+protected void enter_email(string str) {
     string a, b; 
  
     if(!str || str == "" || sscanf(str, "%s@%s", a, b) != 2) { 
@@ -339,7 +339,7 @@ static void enter_email(string str) {
     input_to("enter_real_name"); 
   } 
  
-static void enter_real_name(string str) { 
+protected void enter_real_name(string str) {
     if(!str || str == "") str = "Unknown"; 
     __Player->set_rname(str); 
     seteuid(UID_LOG); 
@@ -348,17 +348,17 @@ static void enter_real_name(string str) {
     exec_user(); 
   } 
  
-static void idle() { 
+protected void idle() {
     message("logon", "\nLogin timed out.\n", this_object()); 
     internal_remove();
   } 
  
-static void receive_message(string cl, string msg) { 
+protected void receive_message(string cl, string msg) {
     if(cl != "logon") return; 
     receive(msg); 
   } 
 
-static private void internal_remove() {
+private void internal_remove() {
     if(__Player && !interactive(__Player) && !environment(__Player))
       destruct(__Player);
     destruct(this_object());
