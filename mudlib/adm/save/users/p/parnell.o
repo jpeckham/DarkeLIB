@@ -1,10 +1,10 @@
 #/std/user.c
 encumbrance 500
-props (["extra mp regen":50,"light":0,"castle rooms":6,"xp mod":-20,"hp advance":32,"melee damage":(["crushing":5,]),"handedness":"right hand","last reinc":917917179,"dev point base":72,"mp advance":21,"last read news":1630812709,"has castle":1,"sp points":0,"castle doors":({"wood door",}),"ambidextry":1,"base mp regen":4,"base hp regen":4,"combat color":"%^GREEN%^","dev points":143,])
+props (["extra mp regen":50,"light":0,"castle rooms":6,"xp mod":-20,"hp advance":32,"melee damage":(["crushing":5,]),"handedness":"right hand","last reinc":917917179,"dev point base":72,"mp advance":21,"last read news":1630817785,"has castle":1,"sp points":0,"castle doors":({"wood door",}),"ambidextry":1,"base mp regen":4,"base hp regen":4,"combat color":"%^GREEN%^","dev points":143,])
 true_name "parnell"
 creator "/adm/obj/login#0"
 max_internal_encumbrance 30000
-player_data (["kills":({0,1,0,0,2,0,0,7,8,9,}),"general":(["alignment":40,"exp buffer":0,"sp":1,"max_hp":1500,"hp":1500,"max exp":593591,"experience":-806421931,"quest points":14,"last adjust":1630812709,"max_sp":840,]),])
+player_data (["kills":({0,1,0,0,2,0,0,7,8,9,}),"general":(["alignment":40,"exp buffer":1248537,"sp":1,"max_hp":1500,"hp":1500,"max exp":593591,"experience":-805816226,"quest points":14,"last adjust":1630817796,"max_sp":840,]),])
 magic (["points":2000,"max points":2000,])
 severed ([])
 healing (["quenched":0,])
@@ -18,8 +18,8 @@ spells (["animate skeleton":(["level":6,]),"light":(["level":1,]),"haste":(["lev
 wimpydir "out"
 env_var (["TITLE":"$N is on his rise to power","start":"/d/standard/square","TRACE":"on","LINES":"300","TERM":"ansi","SCORE":"off",])
 money (["mithril":9967445,"silver":1962,"gold":2144,])
-ok_to_heal 61406
-player_age 61400
+ok_to_heal 61461
+player_age 61458
 sight_bonus 3
 gender "female"
 stats (["wisdom":55,"dexterity":120,"intelligence":65,"strength":1000,"charisma":60,"constitution":65,])
@@ -39,8 +39,8 @@ inf_block ({})
 real_name "james"
 email "parnell@primenet.com"
 ip "172.18.0.1"
-last_on "Sun Sep  5 03:31:48 2021"
-password "UpeKnVkzwU"
+last_on "Sun Sep  5 04:56:25 2021"
+password "$6$woIo8FS5uz6Mt95i$YxpZZik84Iqe7/niM8NlJDHjDKBti2Lpu3clOzAM0Mg3lY8WCGVXHOYEdpV0zD0.cUvY3tDThZukUqgwyUshU1"
 cpath "/log"
 race "high-elf"
 original_site "127.0.0.1"

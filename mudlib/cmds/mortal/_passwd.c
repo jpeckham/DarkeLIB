@@ -48,7 +48,7 @@ nomask protected int oldpass(string pass) {
     seteuid(UID_USERACCESS);
     password = (string) this_player()->query_password();
     seteuid(getuid());
-    if (password != crypt(pass, "BOB")[3..]) {
+    if (password != crypt(pass, password)) {
       write("\nPassword not changed.");
       return 0;
     }
@@ -77,7 +77,7 @@ nomask protected int npass2(string pass) {
 	write("You must do this with out being forced.\n");
 	return 0;
     }
-    pass = crypt(pass, "BOB")[3..];
+    pass = crypt(pass,0);
     seteuid(UID_USERACCESS);
     this_player()->set_password(pass);
     seteuid(getuid());

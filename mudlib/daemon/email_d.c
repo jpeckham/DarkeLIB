@@ -110,7 +110,7 @@ string generate_pass(string nm) {
   pl->set_name(nm);
   master()->load_player_from_file(nm, pl);
   pass = (string)ROOM_SETTER->random_password(random(4)+5);
-  pl->set_password(crypt(pass, 0)[3..]);
+  pl->set_password(crypt(pass, 0));
   seteuid(UID_USERSAVE);
   pl->save_player(nm);
   seteuid(getuid());
