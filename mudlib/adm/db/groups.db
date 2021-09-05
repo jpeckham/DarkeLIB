@@ -16,19 +16,19 @@
 #
 # (superuser) group: Defines the general operations personnel
 # that perform the day to day global support or emergency recovery
-(god): parnell traer helios
-(admin): noone rhasper
-(superuser): parnell traer helios thrace caeri rhasper
+(god): parnell
+(admin): parnell
+(superuser): parnell
 #
 # (assist) group: Defines people who require Arch-Wizard access
 # in the performance of bug hunting and/or specific functionality 
 (siteadmin): parnell
-(assist): noone mitchell
+(assist): parnell
 #
 # (arch) group: Defines the combined resources of (superuser) and
 # the (assist) personnel.  Plans are expected to change this to
 # contain (admin) and (assist) eventually to further isolate SU
-(arch): (superuser) (assist) rhasper schroom
+(arch): (superuser) (assist) parnell
 #
 # (approval) group: To be honest, this is pretty much unused at this
 # time and its functionality in the future is uncertain.
@@ -39,12 +39,12 @@
 # DANGER: add people to (mudlib) with extreem care, people in this
 # group _potentially_ could su themselves
 # ZNOTE: Phase 5 (mudlib) isolation
-(mudlib): noone
+(mudlib): parnell
 #
 # (law) group: This is pretty much a "feel" group and its value as
 # as security group is worthless...Consider remolding the (law) group
 # away from security towards (law) adminstration and as a mail group.
-(law): noone
+(law): parnell
 #-------------------------------------------------------
 #  NO NORMAL WIZARD NAME SHOULD APPEAR ABOVE THIS LINE 
 # All groups above offer GLOBAL responsibility and privs
@@ -52,22 +52,22 @@
 # (mentor) group: Defines the people that have demonstrated exceptional
 # commitment as builders, educators, and domain adminstration of multiple
 # areas.  These people are the ones that keep the younger wizzes in line.
-(mentor): noone bron stoney
+(mentor): parnell
 #
 # (elder) group: Defines the people that have completed a major build
 # project and have established themselves as respectable builders.  This
 # is really just a "pat-on-the-back" however since the (mentor) group is
 # embedded, this makes a good mail group of the "top builders"
-(elder): (mentor)  cyric
+(elder): (mentor)  parnell
 #
 # (wizard) group: Contains the complete list of all low ranking immortals
 # that have yet to distinguish or prove themselves in extraordinary ways
-(wizard): noone zephlen geire dreadnought nual felice tailwind hellbringer
+(wizard): parnell
 #
 # (ambassador) group: Unused at this time (BUT REQUIRED FOR NOW)
-(ambassador): noone
+(ambassador): parnell
 # (advocate) group: Unused at this time (future uncertain)
-(advocate): noone
+(advocate): parnell
 #-------------------------------------------------------
 # DOMAIN GROUPS 
 # This area should expect to see significant expansion.
@@ -77,9 +77,9 @@
 (camps): Camps 
 (mines): Mines 
 (nfd): Nfd 
-(caves): Caves cyric
+(caves): Caves
 (arm_dealers): Arm_dealers
 (weavers): Weavers
 (illuminarae): Illuminarae
-(newbieville): Newbieville tailwind thrace
+(newbieville): Newbieville
 

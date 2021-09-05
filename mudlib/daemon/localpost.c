@@ -115,8 +115,6 @@ string *expand_list(string *who) {
 } 
  
 string *expand_group(string grp) { 
-    string *g; 
- 
     if(__MudGroups[grp]) return expand_list(__MudGroups[grp]); 
     else if(__MyGroups[grp]) return expand_list(__MyGroups[grp]); 
     else return ({}); 

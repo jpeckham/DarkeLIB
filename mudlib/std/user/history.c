@@ -29,7 +29,7 @@ void alloc(int size)
 
 void enqueue(string str)
 {
-   string tmp;
+
 
    if(!max)
       return;

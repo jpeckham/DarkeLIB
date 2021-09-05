@@ -18,8 +18,8 @@ mapping make_speech(mapping speakers, string str, int prof);
 
 int cmd_say(string str)
 {
-   string tmp, lang;
-   int prof;
+   string lang;
+
 
    if(!str)
    {

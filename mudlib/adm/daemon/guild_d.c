@@ -217,7 +217,7 @@ string set_gm(string guild, string name) {
   return guilds[guild]["gm"];
 }
 void reset_gm(string guild) {
-  int x;
+
   if(member_array(guild, LEGAL_GUILDS) == -1) return 0;
   if(!mapp(guilds)) guilds = ([]);
   if(!mapp(guilds[guild])) guilds[guild] = ([]);
@@ -619,7 +619,7 @@ void set_guild_obj(string guild, string file) {
   return;
 }
 void create() {
-  string which;
+
 
   guilds = ([]);
   membership = ([]);

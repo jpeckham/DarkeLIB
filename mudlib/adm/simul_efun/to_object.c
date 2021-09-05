@@ -58,7 +58,7 @@ protected object e(object p, int outside)
 object to_object(mixed target)
 {
    int ch;
-   string err;
+
 
    if (objectp(target)) { /* already an object */
       return target;

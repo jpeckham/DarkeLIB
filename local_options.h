@@ -24,7 +24,7 @@
 #define ED_TAB_WIDTH 8
 #undef RECEIVE_ED
 #define RESTRICTED_ED
-#undef SENSIBLE_MODIFIERS
+#define SENSIBLE_MODIFIERS
 
 /****************************************************************************
  *                           MISCELLANEOUS                                  *

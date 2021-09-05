@@ -30,7 +30,7 @@ void do_skill(object from, string arg) {
     string name;
     string target, args;
     object at;
-    int i, which;
+
 
     if(!props["no target"]) {
       if(!arg) {

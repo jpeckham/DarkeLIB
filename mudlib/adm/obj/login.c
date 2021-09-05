@@ -37,7 +37,7 @@ void create() {
 }
  
 protected void logon() {
-    string name;
+
 
     call_out("idle", LOGON_TIMEOUT); 
     if(catch(__Player = new(OB_USER))) { 

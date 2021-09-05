@@ -537,7 +537,7 @@ protected int filter_hm(object ob) { return high_mortalp(ob); }
 protected int filter_mortals(object ob) { 
     return (!wizardp(ob) && !high_mortalp(ob)); 
   } 
-protected private string *build_mudlist(mapping muds) { 
+protected string *build_mudlist(mapping muds) { 
     string *noms, *ret; 
     int i, pos, maxi; 
  

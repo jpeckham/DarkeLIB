@@ -125,7 +125,7 @@ void delete_spell(string spell) {
 void set_last_use(string str) {
     if(!str) return;
     if(!skills) skills = ([]);
-    if(skills[str]) skills;
+    
     skills[str]["last use"] = time();
     return;
 }

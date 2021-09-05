@@ -185,10 +185,10 @@ int kill_ob(object victim, int which) {
     //  Add check to see if victim is already in attackers FIRST,
     //      to save cpu.
     //  -Diewarzau 3/31/96
-
-    to_owner = (string)this_object()->query_owner();
+	tobj = this_object();
+    to_owner = (string)tobj->query_owner();
     v_owner = (string)victim->query_owner();
-    to_name = (string)this_object()->query_name();
+    to_name = (string)tobj->query_name();
     v_owner = (string)victim->query_name();
 
     if(attackers)
@@ -203,30 +203,30 @@ int kill_ob(object victim, int which) {
 	attackers[0] = victim;
 	return 1;
     }
-    if(victim == this_object()) return 0;
+    if(victim == tobj) return 0;
     if(victim->is_pet() && v_owner == to_name) return 0;
-    if(this_object()->is_pet()) {
+    if(tobj->is_pet()) {
 	if(to_owner == v_name || to_owner == v_owner) return 0;
     }
     borg_people = (object *)victim->query_attackers();
     if(victim->is_player())
 	HUNTING_D->add_hunter(v_name, this_object());
     if(!borg_people) borg_people = ({});
-    if(member_array(this_object(), borg_people) == -1)
+    if(member_array(tobj, borg_people) == -1)
 	if(!ok_to_kill(victim)) {
 	    message("my_combat", sprintf(
 		"Supernatural forces prevent you from attacking %s.",
 		(string)victim->query_cap_name()),
-	      this_object());
+		tobj);
 	    return 0;
 	}
 	/* changed from 0 to 1 to faciliate PK patch */
-    if(this_object()->query_attacked()) return 1;
+    if(tobj->query_attacked()) return 1;
     if(attackers) i = member_array(victim, attackers);
     else i = -1;
     attackers = ({ victim }) + attackers;
     any_attack = 1;
-    if(!which) victim->kill_ob(this_object(), 1);
+    if(!which) victim->kill_ob(tobj, 1);
     return 1;
 }
 
@@ -239,10 +239,10 @@ void set_attackers(object *what) {
 //  Here is where we see if we are dead or in combat
 
 void continue_attack() {
-    string attack_limb, lost_limb;
-    string *nin;
+
+
     object *death, me;
-    int n, xxx, exp;
+    int xxx, exp;
     me = this_object();
 
     if(!environment(me) || me->query_ghost()) return;
@@ -327,11 +327,11 @@ object party_leader(object att) {
 
 void execute_attack() {
     object *weapons, *a_weapons, ldr, me;
-    string this_spell, res;
+    string res;
     mapping damage, tmp_res;
     string *tmp, *tmp2;
     string *criticals = ({});
-    mixed w_hit, tmp_mix;
+    mixed w_hit;
 //special combat tracker added to remove possible infinite recurssion
     int spec_com;
     protection = hits = pois = i = j = k = num_attacks = x = defendflag = 0;
@@ -647,11 +647,11 @@ if((int)attackers[0]->query_max_internal_encumbrance() <= 0)
 private void do_criticals(string *criticals) {
   int x, i, j, amt, dur, roll;
   string *tmp, *crit_words, what, what2, *tmp2;
-  object ob;
+
   object *targ_armour, me;
-  int k, l, foc_att; 
+  int k, l; 
   mixed tmp_crits;
-  function special_func;
+
   me = this_object();
   
   for(i=0; i< sizeof(criticals);i++) {
@@ -962,7 +962,7 @@ object *query_attackers() {
 }
 
 int sight_adjustment(object who) {
-      int elight, ret, csa;
+      int elight, ret;
 
     ret = 0;
     if(!pointerp(attackers) || !sizeof(attackers)) return 0;
@@ -981,7 +981,7 @@ int sight_adjustment(object who) {
 
 void miss(string how, string type) {
     string you, me;
-    string *missed;
+
 
     you = (string)attackers[0]->query_cap_name();
     me = query_cap_name();
@@ -1064,7 +1064,7 @@ int mobility(int magic) {
 }
 
 int query_current_protection(string target_thing, string type) {
-    int prot, tmp;
+    int prot;
 
     if(!type || member_array(type,DAMAGE_TYPES) < 0)
 	type = DAMAGE_TYPES[0];
@@ -1077,8 +1077,8 @@ void set_magic_round(int x) { magic_round = x; }
 int query_magic_round() { return magic_round; }
 
 int ok_to_kill(object targ) {
-    int vic_level;
-    string str, title;
+
+
 
     if(targ->is_invincible()) return 0;
     if(wizardp(this_object())) return 1;

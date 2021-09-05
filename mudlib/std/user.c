@@ -37,7 +37,7 @@ int platinum, gold, electrum, silver, copper;
 
 int level, ghost, crash_money, rolls, verbose_moves;
 int birth;
-nosave int count, challenged, count2, disable, time_of_login, autosave;
+nosave int _quitting, challenged, count2, disable, time_of_login, autosave;
 mapping blocked, colours, bank, exp_log;
 string *keep;
 string snatch;
@@ -229,9 +229,9 @@ int set_brief() {
 varargs void move_player(mixed dest, string msg) {
     object prev;
     object *inv;
-    string *my_limbs, here,going,temp1,temp2,temp3;
-    int i, illum, bzbd, adj, tmp;
-    int flag;
+    string here,going,temp1,temp2,temp3;
+    int i, bzbd, adj, tmp;
+
 
     this_object()->set("error report", 0);
     prev = environment( this_object() );
@@ -325,14 +325,14 @@ void remove() {
     who_exc = ({ this_object() });
     if(this_object()->query_invis())
 	who_exc += filter_array(users(),"filter_notanarch",this_object());
-    if(!count)
-	if(previous_object() && previous_object() != this_object() && geteuid(previous_object()) != UID_ROOT && 
+    if(!_quitting
+        && previous_object() && previous_object() != this_object() && geteuid(previous_object()) != UID_ROOT && 
 	  TP != TO) return;
     destroy_autoload_obj();
     CHAT_D->remove_user();
     INFORM_D->remove_user(this_object());
     if(!hiddenp(this_object()))
-	if(count)
+	if(_quitting)
 	    INFORM_D->do_inform("logins_and_quits","Info: " +
 	      capitalize((string)this_object()->query_name()) +
                 " has stepped beyond the boundary of Daybreak Ridge.",
@@ -361,7 +361,7 @@ protected int finish_quit(object ob) {
     object tmp;
 
     crash_money = 0;
-    count = 1;
+    _quitting = 1;
     tmp = environment(TO);
     TO->move(ROOM_VOID);
     TO->move(tmp);
@@ -566,7 +566,7 @@ void setup() {
 // get age.  - Geldron 051296
 varargs protected void heart_beat(int recurs_flag) {
     object *inv, lyc_ob;
-    string tod, *cns;
+    string tod;
     int i, tmp;
 
     if(!recurs_flag) {
@@ -1056,7 +1056,7 @@ void receive_message(string msg_class, string msg) {
     string *words;
     int i, max;
     string str, pre, post;
-    int x, do_wrap;
+    int x;
 
    if (!msg) 
       return;

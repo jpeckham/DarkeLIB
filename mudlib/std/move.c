@@ -24,8 +24,8 @@ int move(mixed dest);
 int remove();
 
 int move(mixed dest) {
-  string *limbs;
-  int i, flag;
+
+
   object ob, spell;
   string str;
   

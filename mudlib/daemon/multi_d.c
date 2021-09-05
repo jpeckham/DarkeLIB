@@ -102,12 +102,12 @@ void quit( string name )
   if( !name ) return;
   if( links[name] )
   {
-    if( !entered[name] )
-    {
-      // Possible cheat attempt.
-      // Law can decide if they want to log it or not.
-      // Will also be caused if chars are linked while logged in.
-    }
+    // if( !entered[name] )
+    // {
+    //   // Possible cheat attempt.
+    //   // Law can decide if they want to log it or not.
+    //   // Will also be caused if chars are linked while logged in.
+    // }
     entered[name] = time();
   }
 }

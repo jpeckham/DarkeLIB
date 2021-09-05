@@ -1,3 +1,3 @@
 #/daemon/events_d.c
 __RebootInterval 24
-__Events (["/adm/daemon/inactivity_d":(["regular":64000,"args":({}),"time":1579368631,"function":"check_inactivity",]),"/daemon/events_d":(["regular":0,"args":({}),"time":1579333234,"function":"change_sky",]),"/adm/daemon/wizchar_d":(["regular":32400,"args":({}),"time":1579340218,"function":"output_log",]),"/daemon/castle_d":(["regular":86400,"args":({}),"time":1579394158,"function":"check_upkeep",]),])
+__Events (["/adm/daemon/inactivity_d":(["time":1630853427,"regular":64000,"args":({}),"function":"check_inactivity",]),"/adm/daemon/wizchar_d":(["time":1630821827,"regular":32400,"args":({}),"function":"output_log",]),"/daemon/events_d":(["time":1630820805,"regular":0,"args":({}),"function":"change_sky",]),"/daemon/castle_d":(["time":1630875827,"regular":86400,"args":({}),"function":"check_upkeep",]),])

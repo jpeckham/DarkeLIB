@@ -32,7 +32,7 @@ varargs int member_array(mixed item, mixed *arr, int flag) {
 }
 
 void destruct(object destructee) {
-    string destee, dester, a;
+    string destee, dester;
 
     destee = geteuid(destructee);
     dester = geteuid(previous_object());

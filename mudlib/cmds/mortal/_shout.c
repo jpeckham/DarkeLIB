@@ -16,7 +16,7 @@ mapping make_speech(mapping speakers, string str, int prof);
 void shout_out(string lang, string str, int prof);
 
 int cmd_shout(string str) {
-    string lang, tmp;
+    
     int sp_cost;
     object *who;
 

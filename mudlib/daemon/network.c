@@ -144,7 +144,7 @@ void read_callback(int sock, string msg, string host) {
     int i, maxi; 
  
     if(!msg) return; 
-    tmp + ""; 
+    
     if(!sscanf(msg, "@@@%s||%s@@@%*s", fun, tmp)) { 
         if(!sscanf(msg, "@@@%s@@@%*s", fun)) return; 
         tmp = ""; 

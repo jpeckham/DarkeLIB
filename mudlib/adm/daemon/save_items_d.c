@@ -47,9 +47,9 @@ private void update_objs();
  
 void downward_compat() {
   class uil tuil;
-  string *dir, file, key, tstr;
+  string *dir, file, key;
   int idx, i;
-  mapping tmpor, tmp;
+
 
   seteuid(getuid());
   dir = get_dir("/adm/save/objects/*.o");
@@ -238,7 +238,7 @@ int unregister_n_items(string key, int *idx) {
 }
 
 int unregister_item(string key, int idx) {
-  int x;
+
   class uil tuil;
   
   if(!(tuil=find_uid_list(key))) return 0;
@@ -249,10 +249,11 @@ int unregister_item(string key, int idx) {
 }
 
 void save_unregistered(string key, int *idx) {
-  int x, i;
-  class uil uar;
+
 
 #if 0
+  int x, i;
+  class uil uar;
   if(!(uar=find_uar_list(key))) {
     i = 0;
     while(unreg_at_reboot[i]) i++;
@@ -322,8 +323,8 @@ void debug_obj_register(int idx) {
 void update_lockers(object env) {
   object *inv, me;
   string key, room_file;
-  int i, num, j;
-  string lfile, ofile;
+  int i, num;
+  
   class uil tuil;
 
   if(!env) return;

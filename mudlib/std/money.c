@@ -14,7 +14,7 @@
 
 private mapping money;
 
-private static object coins_ob;
+private nosave object coins_ob;
 
 
 
@@ -162,7 +162,7 @@ void set_money(string type, int amount) {
 
 
 
-static void reset_money() {
+protected void reset_money() {
 
     string *currs;
 

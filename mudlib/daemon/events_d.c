@@ -153,8 +153,8 @@ void next_change() {
 
 void change_sky() {
     string msg;
-    object *who;
-    int i;
+
+
 
     switch(__TimeOfDay) {
         case "night":

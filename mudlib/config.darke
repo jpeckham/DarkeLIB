@@ -37,40 +37,12 @@ name : DarkeDEV
 port number : 7878
 
 #
-# [ optional ]
-#
-# The address server is an external program that lets the mud translate
-# internet names to numbers (and vice versa).  This program is typically
-# named "addr_server" and is built along with your driver executable.
-# Do not confuse this with a Domain Name Server.
-#
-# This IP address should match where you started the program.  This is
-# almost always "localhost".  The port number should match the command
-# line argument that you gave the addr_server program.  The example
-# below corresponds to running the addr_server on the same machine as
-# your mud and using the following command to start it up:
-#
-#    % addr_server 9990
-#
-address server ip : localhost
-address server port : 9990
-
-#
 # [ REQUIRED ]
 #
 # This should be the absolute pathname to where you placed your copy of
 # the Lima Mudlib.
 #
 mudlib directory : /home/parnell/mud/mudlib
-
-#
-# [ REQUIRED ]
-#
-# This should be the absolute pathname to where you placed your copy of
-# the driver that you built.
-#
-binary directory : /usr/bin
-
 
 # ------------------------------------------------------------------------
 #
@@ -114,11 +86,6 @@ master file : /adm/obj/master
 #
 simulated efun file : /adm/obj/simul_efun
 
-#
-# file to swap to.  not used if time to swap is 0
-# (not used by Lima)
-#
-swap file : /adm/MudOS_swapfile
 
 #
 # Directory to save binaries in.  (if BINARIES is defined)
@@ -175,10 +142,6 @@ maximum read file size : 2000000
 # and write_bytes
 maximum byte transfer : 100000
  
-# Reserve an extra memory area from malloc(), to free when we run out
-# of memory.   If this value is 0, no area will be reserved.
-reserved size : 0
- 
 # Define the size of the shared string hash table.  This number should
 # a prime, probably between 1000 and 30000; if you set it to about 1/5
 # of the number of distinct strings you have, you will get a hit ratio
@@ -218,5 +181,4 @@ compiler stack size : 200
 maximum call depth : 30
 
 # There is a hash table for living objects, used by find_living().
-# (unused currently)
-living hash table size : 100
+living hash table size : 1024

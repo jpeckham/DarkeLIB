@@ -4,7 +4,7 @@
 inherit "/std/guilds/npc_guildmaster";
 
 void create() {
-  object ob;
+
   ::create();
   set_join_room("/d/damned/guilds/join_rooms/child_join");
   set("short", "The Newbie Guildmaster");

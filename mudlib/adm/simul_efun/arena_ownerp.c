@@ -7,7 +7,5 @@
 
 nomask int arena_ownerp(object ob) {
     if(!ob) return 0;
-    if((string)ob->query_name() == "thrace" ||
-      (string)ob->query_name() == "traer") return 1;
     return 0;
 }

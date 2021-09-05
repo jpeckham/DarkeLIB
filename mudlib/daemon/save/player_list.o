@@ -1,3 +1,3 @@
 #/daemon/player_d.c
 monsters ({})
-player_list ({(["quests":0,"major accomplishments":0,"kills":0,"class":0,"guild":0,"level":1,"deaths":0,"name":"parnelli","experience":0,]),})
+player_list ({(["quests":0,"kills":0,"major accomplishments":0,"class":0,"guild":0,"level":1,"name":"parnelli","deaths":0,"experience":0,]),(["quests":0,"major accomplishments":0,"kills":0,"class":0,"guild":0,"level":1,"deaths":0,"name":"test","experience":0,]),})

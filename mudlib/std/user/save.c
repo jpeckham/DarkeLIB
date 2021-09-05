@@ -74,10 +74,10 @@ void assure_save_dir_exists(string file) {
  */
 nomask void
 actually_save_player(string name) {
-    string tmp;
+
 
 	if (previous_object() != master()) return;
-seteuid(UID_USERSAVE);
+	seteuid(UID_USERSAVE);
     assure_save_dir_exists(save_file_name(name));
     save_object(save_file_name(name));
     seteuid(0);

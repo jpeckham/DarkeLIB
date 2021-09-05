@@ -7,7 +7,7 @@
 
 int effective_light(object who)
 {
-  int light, i, tmp;
+  int light;
 
   if(!who) return 0;
     light = total_light(who);
