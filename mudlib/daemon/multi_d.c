@@ -15,15 +15,15 @@
 
 mapping links;
 string *non_voting;
-static mapping entered;
+nosave mapping entered;
 
-static void save_data() {
+protected void save_data() {
     seteuid(UID_DAEMONSAVE);
     save_object(SAVE_MULTI);
     seteuid(getuid());
 }
 
-static void restore_data() { restore_object(SAVE_MULTI); }
+protected void restore_data() { restore_object(SAVE_MULTI); }
 
 void create()
 {

@@ -20,7 +20,7 @@ inherit "/std/virtual/compile";
 
 
 
-static int has_error;
+nosave int has_error;
 
 
 

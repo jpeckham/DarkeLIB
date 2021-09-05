@@ -11,9 +11,9 @@
 #include <daemons.h>
 #include <rooms.h>
 
-static private int no_clean;
+nosave private int no_clean;
 private int encumbrance;
-static private object last_location;
+nosave private object last_location;
 
 void set_weight(int x);
 void set_no_clean(int x);

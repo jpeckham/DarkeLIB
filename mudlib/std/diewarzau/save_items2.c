@@ -12,7 +12,7 @@ inherit "/adm/daemon/locker_hash.c"
 
 
 
-static int count;
+nosave int count;
 
 class uil *unique_id = allocate(10);
 

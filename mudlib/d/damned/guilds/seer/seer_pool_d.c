@@ -10,9 +10,9 @@ inherit DAEMON;
 
 
 
-static mapping personal;
+nosave mapping personal;
 
-static mapping party;
+nosave mapping party;
 
 mapping guild_pool;
 

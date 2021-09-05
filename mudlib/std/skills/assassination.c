@@ -5,7 +5,7 @@ inherit "/std/skills/skill";
 
 object weap;
 int bonus;
-static int rev_flag;
+nosave int rev_flag;
 
 void do_stab(object from, object at, mapping wc, int skill);
 

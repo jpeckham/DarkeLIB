@@ -2,7 +2,7 @@
 
 inherit MONSTER;
 
-static int count;
+nosave int count;
 
 create() {
   object ob;

@@ -20,9 +20,9 @@ inherit OBJECT;
 
 string ritual;
 
-static int skill;
-static int resist_flag;
-static string *bonus;
+nosave int skill;
+nosave int resist_flag;
+nosave string *bonus;
 private object who_casting;
 
 object *casters;

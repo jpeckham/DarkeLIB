@@ -9,12 +9,12 @@
 #include <security.h>
 #include <ansi.h>
 
-static private mapping channels;
+nosave private mapping channels;
 
 int list_channel(string str);
 int hist_channel(string str);
 
-static int compare(string one, string two) {
+protected int compare(string one, string two) {
     return strcmp(one, two);
 }
 mapping query_channel(string str) {return channels[str];}

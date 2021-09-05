@@ -1,7 +1,7 @@
 #include <std.h>
 inherit OBJECT;
 
-static int ROLLED;
+nosave int ROLLED;
 
 void init() {
 	::init();

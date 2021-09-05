@@ -36,11 +36,11 @@ inherit OBJECT;
 
 
 
-static int skill;
+nosave int skill;
 
-static int resist_flag;
+nosave int resist_flag;
 
-static string *bonus;
+nosave string *bonus;
 
 private object who_casting;
 

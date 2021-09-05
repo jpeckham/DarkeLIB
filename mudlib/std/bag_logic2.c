@@ -32,7 +32,7 @@ string closed_long_desc;
 
 mapping lock_data;
 
-static int disarm_flag;
+nosave int disarm_flag;
 
 
 

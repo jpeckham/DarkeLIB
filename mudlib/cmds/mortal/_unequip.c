@@ -34,12 +34,12 @@ int cmd_unequip(string arg) {
     return 1;
 }
 
-static void forces(string str, object ob) {
+protected void forces(string str, object ob) {
     if(ob)
 	ob->force_me(str);
 }
 
-static void relay_message(object ob) {
+protected void relay_message(object ob) {
     if(ob)
 	message("unequip", "Done Unequiping.", ob);
 }

@@ -4,8 +4,8 @@
 
 #define DEFAULT_MSG "You do not see that here.\n"
 
-private static int moon_light;
-private static mapping moons;
+private nosave int moon_light;
+private nosave mapping moons;
 
 void init_sky();
 void set_moon_light();

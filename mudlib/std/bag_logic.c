@@ -15,7 +15,7 @@ inherit CONTAINER;
 string open_long_desc;
 string closed_long_desc;
 mapping lock_data;
-static int disarm_flag;
+nosave int disarm_flag;
 
 void toggle_lock();
 void disarm_trap();

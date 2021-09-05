@@ -2,7 +2,7 @@
 
 
 
-static string storage_key;
+nosave string storage_key;
 
 int register_idx;
 

@@ -12,7 +12,7 @@
 
 inherit "/std/bag_logic";
 
-static int TELL;
+nosave int TELL;
 
 //status query_storage_locker() { return 1; }
 

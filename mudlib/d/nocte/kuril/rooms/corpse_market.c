@@ -3,7 +3,7 @@
 
 inherit "std/vault";
 
-static int open;
+nosave int open;
 
 void create(){
 	::create();

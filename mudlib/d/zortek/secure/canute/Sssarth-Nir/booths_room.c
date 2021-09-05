@@ -13,13 +13,13 @@
 
 inherit ROOM;
 
-private static object challenger, challengee;
-private static mapping challenger_limbs, challengee_limbs;
-private static string *challenger_limbs2, *challengee_limbs2;
-private static string challenger_oldenv, challengee_oldenv;
-private static int count, challenger_oldhp, challenger_oldmp;
-private static int challengee_oldhp, challengee_oldmp;
-private static int fighting;
+private nosave object challenger, challengee;
+private nosave mapping challenger_limbs, challengee_limbs;
+private nosave string *challenger_limbs2, *challengee_limbs2;
+private nosave string challenger_oldenv, challengee_oldenv;
+private nosave int count, challenger_oldhp, challenger_oldmp;
+private nosave int challengee_oldhp, challengee_oldmp;
+private nosave int fighting;
 
 nomask int in_use();
 nomask int ok_bet();

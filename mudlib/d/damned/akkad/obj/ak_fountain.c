@@ -16,7 +16,7 @@ inherit "/std/Object";
 #define ENV 	environment
 #define DELAY   random(60) + 120
 
-static int TELL;
+nosave int TELL;
 
 int check_living(object *inv);
 

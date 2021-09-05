@@ -8,17 +8,17 @@ inherit OBJECT;
 private string __Forward;
 private mapping __MyGroups;
 private mapping *__BoxInfo;
-static int __Current, __JustSending, __FwdFlag;
-static private int *__Delete;
-static private string __Owner;
-static mapping __MudGroups, __TmpPost;
+nosave int __Current, __JustSending, __FwdFlag;
+nosave private int *__Delete;
+nosave private string __Owner;
+nosave mapping __MudGroups, __TmpPost;
 
 void headers(int x);
 void do_mail(string str);
 void get_to(string str);
 void add_group(string str);
 void remove_group(string str);
-static private void restore_post_box();
+private void restore_post_box();
 void do_groups(string str);
 void do_help(string str);
 void do_save(string cmd, string str);
@@ -674,7 +674,7 @@ int drop () { return 1; }
 
 int get() { return 0; }
 
-static void restore_post_box() {
+private void restore_post_box() {
     mapping borg;
 
     borg = (mapping)LOCALPOST_D->query_post_data(__Owner);
@@ -683,7 +683,7 @@ static void restore_post_box() {
     __Forward = borg["forward"];
 }
 
-static void save_post_box() {
+protected void save_post_box() {
     LOCALPOST_D->remake_post_box(__Owner, ([ "box info" : __BoxInfo,
       "forward" : __Forward, "my groups" : __MyGroups ]));
 }

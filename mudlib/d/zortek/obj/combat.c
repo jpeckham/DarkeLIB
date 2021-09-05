@@ -26,18 +26,18 @@
 inherit BODY;
 inherit SKILLS;
 
-static int paralyzed, magic_round;
-static int hunting;
+nosave int paralyzed, magic_round;
+nosave int hunting;
 int wimpy;
 private string wimpydir;
-private static object *attackers;
-private static int any_attack;
-private static int casting;
-private static object *hunters;
-private static mapping magic_protection;
-private static string paralyze_message;
-private static string target_thing;
-private static object current;
+private nosave object *attackers;
+private nosave int any_attack;
+private nosave int casting;
+private nosave object *hunters;
+private nosave mapping magic_protection;
+private nosave string paralyze_message;
+private nosave string target_thing;
+private nosave object current;
 
 int ok_to_kill(object targ);
 void miss(string how, string type);

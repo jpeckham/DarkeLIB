@@ -5,7 +5,7 @@
     created by Descartes of Borg 931204
 */
 
-static private mapping __More;
+nosave private mapping __More;
 
 void do_more(string str);
 void do_help();
@@ -45,7 +45,7 @@ varargs int more(mixed what, string cl, function endmore) {
     return 1;
 }
 
-static void do_more(string cmd) {
+protected void do_more(string cmd) {
     string arg;
     string *matches;
     int i;

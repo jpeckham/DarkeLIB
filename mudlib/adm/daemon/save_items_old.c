@@ -6,9 +6,9 @@
 #include <dirs.h>
 #include <rooms.h>
 
-static mapping dir_register;
-static object *lroom_register;
-static int count;
+nosave mapping dir_register;
+nosave object *lroom_register;
+nosave int count;
 mapping all_lockers;
 mapping obj_register;
 

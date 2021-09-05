@@ -4,12 +4,12 @@
  
 private string __Letter; 
 private string *__Undeleted; 
-static private int __LetterPtr, __PostalPtr; 
-static private string *__LettersDir, *__PostalDir; 
+nosave private int __LetterPtr, __PostalPtr; 
+nosave private string *__LettersDir, *__PostalDir; 
  
-static void manage_letters();
-static private void save_letter(string str);
-static private int restore_letter(string str);
+protected void manage_letters();
+private void save_letter(string str);
+private int restore_letter(string str);
 
 int clean_up_names(){
    string *dirs;
@@ -104,7 +104,7 @@ void create() {
     call_out("clean_up_mudmails", 130);
   } 
  
-static private int valid_access(object ob) { 
+private int valid_access(object ob) { 
     if(base_name(previous_object()) == OB_POSTAL) return 1;
     return (geteuid(ob) == UID_POSTAL || geteuid(ob) == UID_ROOT); 
   } 
@@ -142,13 +142,13 @@ void reassign_letter(string id, mapping forwards) {
     save_letter(DIR_LETTERS+"/"+id[strlen(id)-1..strlen(id)-1]+"/"+id);
 }         
  
-static private void save_letter(string str) { 
+private void save_letter(string str) { 
     seteuid(UID_POSTALSAVE); 
     save_object(str); 
     seteuid(getuid()); 
   } 
  
-static private int restore_letter(string id) { 
+private int restore_letter(string id) { 
     string dir; 
     int x; 
  
@@ -193,7 +193,7 @@ void delete_letter(string id, string who) {
     seteuid(getuid());
 }
  
-static void manage_letters() { 
+void manage_letters() { 
     string str, ext; 
     string *tmp; 
     int i; 
@@ -226,7 +226,7 @@ static void manage_letters() {
     call_out("manage_letters", 120); 
 } 
     
-static void manage_postal() { 
+protected void manage_postal() { 
     string pl, ext; 
  
     if(!pointerp(__PostalDir) || !sizeof(__PostalDir)) return; 

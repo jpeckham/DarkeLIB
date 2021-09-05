@@ -25,15 +25,15 @@ class d_table {
     string *results;
 }
 
-static mixed *cont_damage;
-static int hb_on;
+nosave mixed *cont_damage;
+nosave int hb_on;
 class d_table dmg_table;
 class table *crit_tables = ({ });
 mapping alpha = ([ "A" : 0, "B" : 1, "C" : 2, "D" : 3, "E" : 4 ]);
 
 int find_table(string type);
-static private void initialize_dmg_table();
-static private void initialize_criticals();
+private void initialize_dmg_table();
+private void initialize_criticals();
 string *parse_message(string line, string a_name, string t_name, string verb);
 
 void create() {
@@ -101,7 +101,7 @@ void heart_beat() {
     return;
 }
 
-static private void initialize_dmg_table() {
+private void initialize_dmg_table() {
     string *damage, *line;
     int i, sz;
 
@@ -131,7 +131,7 @@ static private void initialize_dmg_table() {
     return;
 }
 
-static private void initialize_criticals() {
+private void initialize_criticals() {
     string *table_dir, *table, *line;
     string name, crit_type;
 class table tmp_table;

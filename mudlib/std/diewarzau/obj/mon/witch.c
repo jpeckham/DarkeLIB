@@ -6,11 +6,11 @@ inherit MONSTER;
 
 
 
-static object scrying;
+nosave object scrying;
 
-static int casting_scry;
+nosave int casting_scry;
 
-static int snooped;
+nosave int snooped;
 
 
 

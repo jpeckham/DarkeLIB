@@ -9,7 +9,7 @@
 
 inherit DAEMON;
 
-static void conv(string text) {
+protected void conv(string text) {
     int i;
 
     if( text ) {

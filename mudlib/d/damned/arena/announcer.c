@@ -18,7 +18,7 @@ inherit MONSTER;
 
 
 
-static int count;
+nosave int count;
 
 
 

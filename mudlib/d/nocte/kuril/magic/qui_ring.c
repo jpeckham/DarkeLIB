@@ -9,7 +9,7 @@
 
 inherit "/std/armour";
 
-static int CHARGES;
+nosave int CHARGES;
 
 void init() {
 	::init();
